@@ -35,7 +35,7 @@ public class Estados extends javax.swing.JInternalFrame {
         btEditar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtUnidades = new javax.swing.JTable();
+        jtEstados = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
@@ -50,18 +50,26 @@ public class Estados extends javax.swing.JInternalFrame {
 
         btFechar.setText("Fechar");
 
-        jtUnidades.setModel(new javax.swing.table.DefaultTableModel(
+        jtEstados.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Código", "Nome", "Sigla"
             }
-        ));
-        jScrollPane1.setViewportView(jtUnidades);
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jtEstados);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -102,7 +110,7 @@ public class Estados extends javax.swing.JInternalFrame {
     private javax.swing.JButton btNovo;
     private javax.swing.JButton btRemover;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jtUnidades;
+    private javax.swing.JTable jtEstados;
     // End of variables declaration//GEN-END:variables
 
     public Painel getPainel() {
