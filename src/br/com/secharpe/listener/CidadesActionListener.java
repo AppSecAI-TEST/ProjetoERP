@@ -1,5 +1,6 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.model.Estados;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -25,10 +26,10 @@ public class CidadesActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Cadastrar":
-                if(cadastro.getNome().isEmpty() && cadastro.getEstado() != 0){
+                if(cadastro.getNome().isEmpty() && cadastro.getEstado().equals("")){
                     System.out.println("Insira corretamente as informações!");
                 }else{
-                    System.out.println(new br.com.secharpe.model.Cidades(1, cadastro.getNome(), cadastro.getEstado()).toString());
+                    System.out.println(new br.com.secharpe.model.Cidades(1, cadastro.getNome(), new Estados(1, cadastro.getEstado(), "SC")).toString());
                 }
                 break;
             case "Fechar":

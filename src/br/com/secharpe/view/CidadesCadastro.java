@@ -110,8 +110,8 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
     public String getNome(){
         return this.jTextField1.getText();
     }
-    public int getEstado(){
-        return jComboBox1.getSelectedIndex();
+    public String getEstado(){
+        return jComboBox1.getSelectedItem().toString();
     }
     public Painel getPainel() {
         return painel;

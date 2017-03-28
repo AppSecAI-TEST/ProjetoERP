@@ -3,9 +3,9 @@ package br.com.secharpe.model;
 public class Cidades {
     private int codigo;
     private String nome;
-    private int estado;
+    private Estados estado;
 
-    public Cidades(int codigo, String nome, int estado) {
+    public Cidades(int codigo, String nome, Estados estado) {
         this.codigo = codigo;
         this.nome = nome;
         this.estado = estado;
@@ -13,7 +13,11 @@ public class Cidades {
 
     @Override
     public String toString() {
-        return "Cidades:\n" + "Código: " + codigo + "\nNome: " + nome + "\nEstado: " + estado;
+        return "Cidades:\n" + "Código: " + codigo + "\nNome: " + nome + "\nEstado: " + estado.getNome();
+    }
+
+    String getNome() {
+        return this.nome;
     }
 
     
