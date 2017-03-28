@@ -13,7 +13,7 @@ public class Cidades {
 
     @Override
     public String toString() {
-        return "Cidades:\n" + "Código=" + codigo + "nNome=" + nome + "\nEstado=" + estado;
+        return "Cidades:\n" + "Código: " + codigo + "\nNome: " + nome + "\nEstado: " + estado;
     }
 
     
