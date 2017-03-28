@@ -13,11 +13,15 @@ public class Cidades {
 
     @Override
     public String toString() {
+<<<<<<< HEAD
         return "Cidades:\n" + "Código: " + codigo + "\nNome: " + nome + "\nEstado: " + estado.getNome();
     }
 
     String getNome() {
         return this.nome;
+=======
+        return "Cidades:\n" + "Código: " + codigo + "\nNome: " + nome + "\nEstado: " + estado;
+>>>>>>> origin/master
     }
 
     

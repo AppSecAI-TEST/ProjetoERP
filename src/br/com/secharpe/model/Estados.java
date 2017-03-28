@@ -6,7 +6,7 @@ public class Estados {
     private String nome;
     private String sigla;
 
-    public Estados(int codigo, String nome, String sigla) {
+    public Estados(int codigo, String nome, String   sigla) {
         this.codigo = codigo;
         this.nome = nome;
         this.sigla = sigla;
