@@ -25,7 +25,7 @@ public class EmpresaViewActionListener implements ActionListener {
         switch (e.getActionCommand()) {
             case "Salvar":
                 empresa.editarCampo(false);
-                System.out.println(new br.com.secharpe.model.Empresa(1, empresa.getNomeEmpresarial(), empresa.getNomeFantasia(), empresa.getCNPJ(), empresa.getLogradouro(), empresa.getBairro(),  empresa.getCidade(), empresa.getNumero(), empresa.getComplemento(), empresa.getSite(), empresa.getEmail(), empresa.getTelefone()).toString());
+                System.out.println(empresa.getEmpresa().toString());
                 break;
             case "Editar":
                 empresa.editarCampo(true);

@@ -130,4 +130,12 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
         }
         return instance;
     }
+
+    public br.com.secharpe.model.Estados getEstado() {
+        br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
+        estado.setCodigo(0); //implementar futuramente com o banco de dados
+        estado.setNome(tfNome.getText());
+        estado.setSigla(tfSigla.getText());
+        return estado;
+    }
 }

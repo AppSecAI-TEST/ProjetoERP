@@ -2,21 +2,23 @@ package br.com.secharpe.listener;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import br.com.secharpe.view.AnotacoesCadastro;
+import br.com.secharpe.view.Anotacoes;
 
 /**
  *
  * @author Darabas
  */
-public class UnidadesActionListener implements ActionListener {
+public class AnotacoesActionListener implements ActionListener {
 
-    private br.com.secharpe.view.UnidadesCadastro cadastro;
-    private br.com.secharpe.view.Unidades view;
+    private AnotacoesCadastro cadastro;
+    private Anotacoes view;
 
-    public UnidadesActionListener(br.com.secharpe.view.UnidadesCadastro cadastro) {
+    public AnotacoesActionListener(AnotacoesCadastro cadastro) {
         this.cadastro = cadastro;
     }
 
-    public UnidadesActionListener(br.com.secharpe.view.Unidades view) {
+    public AnotacoesActionListener(Anotacoes view) {
         this.view = view;
     }
 
@@ -25,7 +27,7 @@ public class UnidadesActionListener implements ActionListener {
         switch (e.getActionCommand()) {
             case "Cadastrar":
                 if (cadastro.validar()) {
-                    System.out.println(cadastro.getUnidade().toString());
+                    System.out.println(cadastro.getAnotacoes().toString());
                 } else {
                     System.out.println("Insira corretamente as informações!");
                 }

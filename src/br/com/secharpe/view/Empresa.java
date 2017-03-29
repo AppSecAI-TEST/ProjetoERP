@@ -6,7 +6,6 @@
 package br.com.secharpe.view;
 
 import br.com.secharpe.listener.EmpresaViewActionListener;
-import java.math.BigInteger;
 
 /**
  *
@@ -390,61 +389,33 @@ private javax.swing.text.DefaultFormatterFactory getFormatoCnpj() {
         ftNumero.setText("");
     }
 
-    public String getNomeEmpresarial() {
-        return tfEmpresarial.getText();
-    }
-
-    public String getNomeFantasia() {
-        return tfFantasia.getText();
-    }
-
-    public String getBairro() {
-        return tfBairro.getText();
-    }
-
-    public int getComplemento() {
-        return Integer.parseInt(tfComplemento.getText());
-    }
-
-    public String getEmail() {
-        return tfEmail.getText();
-    }
-
-    public String getLogradouro() {
-        return tfLogradouro.getText();
-    }
-
-    public String getSite() {
-        return tfSite.getText();
-    }
-
-    public long getCNPJ() {
+    public br.com.secharpe.model.Empresa getEmpresa() {
         String cnpj = ftCNPJ.getText();
-        cnpj = "" + cnpj.charAt(0) + cnpj.charAt(1) + cnpj.charAt(3) + cnpj.charAt(4) + cnpj.charAt(5) + cnpj.charAt(7) + cnpj.charAt(8) + cnpj.charAt(9) + cnpj.charAt(11) + cnpj.charAt(12) + cnpj.charAt(13) + cnpj.charAt(14)+ cnpj.charAt(16)+ cnpj.charAt(17);
-        System.out.println(cnpj);
-        return new Long(cnpj);
-        
-    }
-
-    public int getNumero() {
-        if(ftNumero.getText().equals("")){
-            return 0;
-        }
-        return Integer.parseInt(ftNumero.getText());
-    }
-
-    public long getTelefone() {
+        cnpj = cnpj.charAt(0) + cnpj.charAt(1) + cnpj.charAt(3) + cnpj.charAt(4) + cnpj.charAt(5) + cnpj.charAt(7) + cnpj.charAt(8) + cnpj.charAt(9) + cnpj.charAt(11) + cnpj.charAt(12) + cnpj.charAt(13) + cnpj.charAt(14) + cnpj.charAt(16) + cnpj.charAt(17) + "";
         String telefone = ftTelefone.getText();
         telefone = "" + telefone.charAt(1) + telefone.charAt(2) + telefone.charAt(5) + telefone.charAt(6) + telefone.charAt(9) + telefone.charAt(10) + telefone.charAt(11) + telefone.charAt(12) + telefone.charAt(14) + telefone.charAt(15) + telefone.charAt(16) + telefone.charAt(17);
-        System.out.println(telefone);
-        return new Long(telefone);
+        br.com.secharpe.model.Empresa empresa = new br.com.secharpe.model.Empresa();
+        empresa.setBairro(tfBairro.getText());
+        empresa.setCNPJ(Integer.parseInt(cnpj));
+        br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades(); //implementar futuramente com o banco de dados
+        br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados(); //implementar futuramente com o banco de dados
+        estado.setCodigo(cbEstado.getSelectedIndex());//implementar com o banco
+        estado.setNome("Nome"); //implementar futuramente com o banco de dados
+        estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
+        cidade.setCodigo(cbCidade.getSelectedIndex()); //implementar futuramente com o banco de dados
+        cidade.setEstado(estado); //implementar futuramente com o banco de dados
+        cidade.setNome("Nome"); //implementar futuramente com o banco de dados
+        empresa.setCidade(cidade); //implementar futuramente com o banco de dados
+        empresa.setCodigo(0);
+        empresa.setComplemento(tfComplemento.getText());
+        empresa.setEmail(tfEmail.getText());
+        empresa.setLogradouro(tfLogradouro.getText());
+        empresa.setNomeEmpresarial(tfEmpresarial.getText());
+        empresa.setNomeFantasia(tfFantasia.getText());
+        empresa.setNumero(Integer.parseInt(ftNumero.getText()));
+        empresa.setSite(tfSite.getText());
+        empresa.setTelefone(Long.valueOf(telefone));
+        return empresa;
     }
 
-    public br.com.secharpe.model.Estados getEstado() {
-        return new br.com.secharpe.model.Estados(1, "Estado", "SG");
-    }
-
-    public br.com.secharpe.model.Cidades getCidade() {
-        return new br.com.secharpe.model.Cidades(1, "Estado", getEstado());
-    }
 }

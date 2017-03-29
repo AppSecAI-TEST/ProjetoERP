@@ -28,7 +28,7 @@ public class EstadosActionListener implements ActionListener {
                 if(cadastro.getNome().isEmpty() && cadastro.getSigla().isEmpty()){
                     System.out.println("Insira corretamente as informações!");
                 }else{
-                    System.out.println(new br.com.secharpe.model.Estados(1, cadastro.getNome(), cadastro.getSigla()).toString());
+                    System.out.println(cadastro.getEstado().toString());
                 }
                 break;
             case "Fechar":

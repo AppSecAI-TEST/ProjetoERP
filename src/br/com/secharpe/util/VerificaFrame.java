@@ -12,9 +12,9 @@ public abstract class VerificaFrame {
 
     public static void exibirFrame(Painel painel, JInternalFrame frame) {
         frame.setVisible(true);
+        frame.toFront();
         centralizar(painel, frame);
         painel.getDesktopPane().add(frame);
-        frame.toFront();
     }
 
     /**

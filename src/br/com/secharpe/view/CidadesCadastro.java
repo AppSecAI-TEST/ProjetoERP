@@ -6,6 +6,8 @@
 package br.com.secharpe.view;
 
 import br.com.secharpe.listener.CidadesActionListener;
+import br.com.secharpe.model.Cidades;
+import br.com.secharpe.model.Estados;
 
 /**
  *
@@ -35,8 +37,8 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
 
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
+        tfNome = new javax.swing.JTextField();
+        cbEstado = new javax.swing.JComboBox();
         btCadastrar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
 
@@ -72,8 +74,8 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
                                 .addComponent(jLabel1)
                                 .addGap(24, 24, 24)))
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(cbEstado, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(50, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -82,11 +84,11 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
                 .addGap(20, 20, 20)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tfNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btCadastrar)
@@ -101,17 +103,22 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btCadastrar;
     private javax.swing.JButton btFechar;
-    private javax.swing.JComboBox jComboBox1;
+    private javax.swing.JComboBox cbEstado;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField tfNome;
     // End of variables declaration//GEN-END:variables
 
-    public String getNome(){
-        return this.jTextField1.getText();
-    }
-    public String getEstado(){
-        return jComboBox1.getSelectedItem().toString();
+    public Cidades getCidade(){
+        Cidades cidade = new Cidades();
+        cidade.setCodigo(0);
+        cidade.setNome(tfNome.getText());
+        Estados estado = new Estados();
+        estado.setCodigo(cbEstado.getSelectedIndex());//implementar futuramente com o banco de dados
+        estado.setNome("Nome"); //implementar futuramente com o banco de dados
+        estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
+        cidade.setEstado(estado); //implementar futuramente com o banco de dados
+        return cidade;
     }
     public Painel getPainel() {
         return painel;
@@ -124,5 +131,8 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
             instance = new CidadesCadastro();
         }
         return instance;
+    }
+    public boolean validar(){
+        return ((!tfNome.getText().equals("")) || (cbEstado.getSelectedIndex() != 0));
     }
 }

@@ -26,10 +26,10 @@ public class CidadesActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Cadastrar":
-                if(cadastro.getNome().isEmpty() && cadastro.getEstado().equals("")){
-                    System.out.println("Insira corretamente as informações!");
+                if(cadastro.validar()){
+                    System.out.println(cadastro.getCidade().toString());
                 }else{
-                    System.out.println(new br.com.secharpe.model.Cidades(1, cadastro.getNome(), new Estados(1, cadastro.getEstado(), "SC")).toString());
+                    System.out.println("Insira corretamente as informações!");
                 }
                 break;
             case "Fechar":
