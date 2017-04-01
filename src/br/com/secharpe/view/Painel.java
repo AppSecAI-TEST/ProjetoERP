@@ -21,6 +21,7 @@ private static final long serialVersionUID = 1L;
     br.com.secharpe.principal.listener.SairMenuItem handlerSairMenuItem = new br.com.secharpe.principal.listener.SairMenuItem(this);
     br.com.secharpe.principal.listener.EmpresaMenuItem handlerEmpresaMenuItem = new br.com.secharpe.principal.listener.EmpresaMenuItem(this);
     br.com.secharpe.principal.listener.AnotacoesMenuItem handlerAnotacoesMenuItem = new br.com.secharpe.principal.listener.AnotacoesMenuItem(this);
+    br.com.secharpe.principal.listener.ClientesMenuItem handlerClientesMenuItem = new br.com.secharpe.principal.listener.ClientesMenuItem(this);
 
     public JDesktopPane getDesktopPane() {
         return desktopPane;
@@ -38,6 +39,7 @@ private static final long serialVersionUID = 1L;
         sairMenuItem.addActionListener(handlerSairMenuItem);
         empresaMenuItem.addActionListener(handlerEmpresaMenuItem);
         anotacoesMenuItem.addActionListener(handlerAnotacoesMenuItem);
+        clientesMenuItem.addActionListener(handlerClientesMenuItem);
     }
 
     /**
@@ -58,6 +60,7 @@ private static final long serialVersionUID = 1L;
         cidadesMenuItem = new javax.swing.JMenuItem();
         estadosMenuItem = new javax.swing.JMenuItem();
         empresaMenuItem = new javax.swing.JMenuItem();
+        clientesMenuItem = new javax.swing.JMenuItem();
         utilitariosMenu = new javax.swing.JMenu();
         anotacoesMenuItem = new javax.swing.JMenuItem();
         sobreMenu = new javax.swing.JMenu();
@@ -91,6 +94,9 @@ private static final long serialVersionUID = 1L;
         empresaMenuItem.setMnemonic('d');
         empresaMenuItem.setText("Empresas");
         cadastroMenu.add(empresaMenuItem);
+
+        clientesMenuItem.setText("Clientes");
+        cadastroMenu.add(clientesMenuItem);
 
         menuBar.add(cadastroMenu);
 
@@ -160,6 +166,7 @@ private static final long serialVersionUID = 1L;
     private javax.swing.JMenu arquivoMenu;
     private javax.swing.JMenu cadastroMenu;
     private javax.swing.JMenuItem cidadesMenuItem;
+    private javax.swing.JMenuItem clientesMenuItem;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenuItem empresaMenuItem;
     private javax.swing.JMenuItem estadosMenuItem;

@@ -2,39 +2,28 @@ package br.com.secharpe.model;
 
 /**
  *
- * @author Luan Darabas
- * @author Luiz Alexandre da Luz
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
-public class Clientes {
 
+public class Clientes {
+    //Informação Sistema
     private int codigo;
+    
+    //Informações do Cliente
     private String nome;
     private String email;
-    private String rg;
     private int cpf;
+    private int rg;
     private int telefone;
     private int celular;
+    
     //Informações Endereço
-    private String cidade;
+    private Estados estado;
+    private Cidades cidade;
     private String bairro;
     private String endereco;
     private int numero;
-    private int complemento;
-
-    public Clientes(int codigo, String nome, String email, String rg, int cpf, int telefone, int celular, String cidade, String bairro, String endereco, int numero, int complemento) {
-        this.codigo = codigo;
-        this.nome = nome;
-        this.email = email;
-        this.rg = rg;
-        this.cpf = cpf;
-        this.telefone = telefone;
-        this.celular = celular;
-        this.cidade = cidade;
-        this.bairro = bairro;
-        this.endereco = endereco;
-        this.numero = numero;
-        this.complemento = complemento;
-    }
+    private String complemento;
 
     public int getCodigo() {
         return codigo;
@@ -48,12 +37,12 @@ public class Clientes {
         return email;
     }
 
-    public String getRg() {
-        return rg;
-    }
-
     public int getCpf() {
         return cpf;
+    }
+
+    public int getRg() {
+        return rg;
     }
 
     public int getTelefone() {
@@ -64,7 +53,11 @@ public class Clientes {
         return celular;
     }
 
-    public String getCidade() {
+    public Estados getEstado() {
+        return estado;
+    }
+
+    public Cidades getCidade() {
         return cidade;
     }
 
@@ -80,7 +73,7 @@ public class Clientes {
         return numero;
     }
 
-    public int getComplemento() {
+    public String getComplemento() {
         return complemento;
     }
 
@@ -96,12 +89,12 @@ public class Clientes {
         this.email = email;
     }
 
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
     public void setCpf(int cpf) {
         this.cpf = cpf;
+    }
+
+    public void setRg(int rg) {
+        this.rg = rg;
     }
 
     public void setTelefone(int telefone) {
@@ -112,7 +105,11 @@ public class Clientes {
         this.celular = celular;
     }
 
-    public void setCidade(String cidade) {
+    public void setEstado(Estados estado) {
+        this.estado = estado;
+    }
+
+    public void setCidade(Cidades cidade) {
         this.cidade = cidade;
     }
 
@@ -128,13 +125,15 @@ public class Clientes {
         this.numero = numero;
     }
 
-    public void setComplemento(int complemento) {
+    public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 
+    
     @Override
     public String toString() {
-        return "Clientes:n" + "Código: " + codigo + "\nNome: " + nome + "\nE-mail: " + email + "\nRG: " + rg + "\nCPF: " + cpf + "\nTelefone: " + telefone + "\nCelular=" + celular + "\nCidade: " + cidade + "Bairro: " + bairro + "\nEndereco: " + endereco + "\nNúmero: " + numero + "\nComplemento: " + complemento;
+        return "Clientes:\n" + "Codigo Interno:" + codigo + "\nNome: " + nome + "\nEmail: " + email + "\nCPF: " + cpf + "\nRG: " + rg + "\nTelefone: " + telefone + "\nCelular: " + celular + "\nEstado: " + estado.getNome() + "\nCidade:" + cidade.getNome() + "\nBairro: " + bairro + "\nEndereço: " + endereco + "\nNumero: " + numero + "\nComplemento: " + complemento;
     }
-
+    
+    
 }

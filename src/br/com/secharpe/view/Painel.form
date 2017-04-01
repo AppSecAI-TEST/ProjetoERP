@@ -48,6 +48,11 @@
                 <Property name="text" type="java.lang.String" value="Empresas"/>
               </Properties>
             </MenuItem>
+            <MenuItem class="javax.swing.JMenuItem" name="clientesMenuItem">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Clientes"/>
+              </Properties>
+            </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="utilitariosMenu">
