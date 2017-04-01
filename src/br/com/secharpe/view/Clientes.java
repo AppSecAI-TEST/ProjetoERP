@@ -43,13 +43,13 @@ public class Clientes extends javax.swing.JInternalFrame {
 
         setTitle("Clientes");
 
-        btSalvar.setText("Novo");
+        btSalvar.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
 
-        btRemover.setText("Remover");
+        btRemover.setText(br.com.secharpe.util.Propriedades.getProp("form.remove"));
 
-        btEditar.setText("Editar");
+        btEditar.setText(br.com.secharpe.util.Propriedades.getProp("form.edit"));
 
-        btFechar.setText("Fechar");
+        btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
         jtClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -87,15 +87,15 @@ public class Clientes extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
-                        .addComponent(btRemover)
+                        .addComponent(btRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btEditar)
+                        .addComponent(btEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(btFechar)
+                        .addComponent(btFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -109,7 +109,7 @@ public class Clientes extends javax.swing.JInternalFrame {
                     .addComponent(btEditar)
                     .addComponent(btFechar)
                     .addComponent(btSalvar))
-                .addGap(80, 80, 80))
+                .addGap(10, 10, 10))
         );
 
         pack();
