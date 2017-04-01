@@ -22,7 +22,7 @@ public class Clientes extends javax.swing.JInternalFrame {
     public Clientes(Painel painel) {
         this.painel = painel;
         initComponents();
-        jButton1.addActionListener(handlerClientes);
+        btSalvar.addActionListener(handlerClientes);
     }
 
     /**
@@ -34,9 +34,50 @@ public class Clientes extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
+        btSalvar = new javax.swing.JButton();
+        btRemover = new javax.swing.JButton();
+        btEditar = new javax.swing.JButton();
+        btFechar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtClientes = new javax.swing.JTable();
 
-        jButton1.setText("Novo");
+        setTitle("Clientes");
+
+        btSalvar.setText("Novo");
+
+        btRemover.setText("Remover");
+
+        btEditar.setText("Editar");
+
+        btFechar.setText("Fechar");
+
+        jtClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Nome", "CPF", "RG", "Estado", "Cidade", "Bairro", "Telefone", "Celular", "Email"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false, false, false
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(jtClientes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -44,15 +85,31 @@ public class Clientes extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
-                .addContainerGap(327, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btRemover)
+                        .addGap(18, 18, 18)
+                        .addComponent(btEditar)
+                        .addGap(18, 18, 18)
+                        .addComponent(btFechar)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 499, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(216, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(39, 39, 39))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btRemover)
+                    .addComponent(btEditar)
+                    .addComponent(btFechar)
+                    .addComponent(btSalvar))
+                .addGap(80, 80, 80))
         );
 
         pack();
@@ -60,7 +117,12 @@ public class Clientes extends javax.swing.JInternalFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btEditar;
+    private javax.swing.JButton btFechar;
+    private javax.swing.JButton btRemover;
+    private javax.swing.JButton btSalvar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jtClientes;
     // End of variables declaration//GEN-END:variables
 
     public Painel getPainel() {

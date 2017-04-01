@@ -22,7 +22,7 @@ private static final long serialVersionUID = 1L;
     br.com.secharpe.principal.listener.EmpresaMenuItem handlerEmpresaMenuItem = new br.com.secharpe.principal.listener.EmpresaMenuItem(this);
     br.com.secharpe.principal.listener.AnotacoesMenuItem handlerAnotacoesMenuItem = new br.com.secharpe.principal.listener.AnotacoesMenuItem(this);
     br.com.secharpe.principal.listener.ClientesMenuItem handlerClientesMenuItem = new br.com.secharpe.principal.listener.ClientesMenuItem(this);
-
+    br.com.secharpe.principal.listener.ProdutosMenuItem handlerProdutosMenuItem = new br.com.secharpe.principal.listener.ProdutosMenuItem(this);
     public JDesktopPane getDesktopPane() {
         return desktopPane;
     }
@@ -40,6 +40,7 @@ private static final long serialVersionUID = 1L;
         empresaMenuItem.addActionListener(handlerEmpresaMenuItem);
         anotacoesMenuItem.addActionListener(handlerAnotacoesMenuItem);
         clientesMenuItem.addActionListener(handlerClientesMenuItem);
+        produtosMenuItem.addActionListener(handlerProdutosMenuItem);
     }
 
     /**
@@ -56,13 +57,15 @@ private static final long serialVersionUID = 1L;
         arquivoMenu = new javax.swing.JMenu();
         sairMenuItem = new javax.swing.JMenuItem();
         cadastroMenu = new javax.swing.JMenu();
+        clientesMenuItem = new javax.swing.JMenuItem();
+        produtosMenuItem = new javax.swing.JMenuItem();
+        utilitariosMenu = new javax.swing.JMenu();
+        anotacoesMenuItem = new javax.swing.JMenuItem();
+        adicionaisMenu = new javax.swing.JMenu();
         unidadesMenuItem = new javax.swing.JMenuItem();
         cidadesMenuItem = new javax.swing.JMenuItem();
         estadosMenuItem = new javax.swing.JMenuItem();
         empresaMenuItem = new javax.swing.JMenuItem();
-        clientesMenuItem = new javax.swing.JMenuItem();
-        utilitariosMenu = new javax.swing.JMenu();
-        anotacoesMenuItem = new javax.swing.JMenuItem();
         sobreMenu = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -79,24 +82,16 @@ private static final long serialVersionUID = 1L;
         cadastroMenu.setMnemonic('e');
         cadastroMenu.setText("Cadastros");
 
-        unidadesMenuItem.setMnemonic('t');
-        unidadesMenuItem.setText("Unidades");
-        cadastroMenu.add(unidadesMenuItem);
-
-        cidadesMenuItem.setMnemonic('y');
-        cidadesMenuItem.setText("Cidades");
-        cadastroMenu.add(cidadesMenuItem);
-
-        estadosMenuItem.setMnemonic('p');
-        estadosMenuItem.setText("Estados");
-        cadastroMenu.add(estadosMenuItem);
-
-        empresaMenuItem.setMnemonic('d');
-        empresaMenuItem.setText("Empresas");
-        cadastroMenu.add(empresaMenuItem);
-
         clientesMenuItem.setText("Clientes");
+        clientesMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                clientesMenuItemActionPerformed(evt);
+            }
+        });
         cadastroMenu.add(clientesMenuItem);
+
+        produtosMenuItem.setText("Produtos");
+        cadastroMenu.add(produtosMenuItem);
 
         menuBar.add(cadastroMenu);
 
@@ -106,6 +101,26 @@ private static final long serialVersionUID = 1L;
         utilitariosMenu.add(anotacoesMenuItem);
 
         menuBar.add(utilitariosMenu);
+
+        adicionaisMenu.setText("Adicionais");
+
+        unidadesMenuItem.setMnemonic('t');
+        unidadesMenuItem.setText("Unidades");
+        adicionaisMenu.add(unidadesMenuItem);
+
+        cidadesMenuItem.setMnemonic('y');
+        cidadesMenuItem.setText("Cidades");
+        adicionaisMenu.add(cidadesMenuItem);
+
+        estadosMenuItem.setMnemonic('p');
+        estadosMenuItem.setText("Estados");
+        adicionaisMenu.add(estadosMenuItem);
+
+        empresaMenuItem.setMnemonic('d');
+        empresaMenuItem.setText("Empresas");
+        adicionaisMenu.add(empresaMenuItem);
+
+        menuBar.add(adicionaisMenu);
 
         sobreMenu.setMnemonic('h');
         sobreMenu.setText("Sobre");
@@ -121,11 +136,15 @@ private static final long serialVersionUID = 1L;
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 279, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void clientesMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesMenuItemActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_clientesMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
@@ -162,6 +181,7 @@ private static final long serialVersionUID = 1L;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu adicionaisMenu;
     private javax.swing.JMenuItem anotacoesMenuItem;
     private javax.swing.JMenu arquivoMenu;
     private javax.swing.JMenu cadastroMenu;
@@ -171,6 +191,7 @@ private static final long serialVersionUID = 1L;
     private javax.swing.JMenuItem empresaMenuItem;
     private javax.swing.JMenuItem estadosMenuItem;
     private javax.swing.JMenuBar menuBar;
+    private javax.swing.JMenuItem produtosMenuItem;
     private javax.swing.JMenuItem sairMenuItem;
     private javax.swing.JMenu sobreMenu;
     private javax.swing.JMenuItem unidadesMenuItem;

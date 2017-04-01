@@ -28,7 +28,7 @@ public class ClienteCadastroViewActionListener implements ActionListener {
             case "salvar":
                 Clientes cr = new Clientes();
                 cr = cad.getCliente();
-                System.out.println(cr.getNome());
+                System.out.println(cr.toString());
 
         }
 
