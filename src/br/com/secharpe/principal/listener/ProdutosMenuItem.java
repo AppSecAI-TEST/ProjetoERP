@@ -27,7 +27,9 @@ public class ProdutosMenuItem implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+         if(VerificaFrame.verificaFrame(painel, produto)){
+            VerificaFrame.exibirFrame(painel, produto);
+        }
     }
 
 }
