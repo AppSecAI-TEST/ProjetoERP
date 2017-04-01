@@ -77,7 +77,7 @@
             <MenuItem class="javax.swing.JMenuItem" name="empresaMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="100"/>
-                <Property name="text" type="java.lang.String" value="Empresas"/>
+                <Property name="text" type="java.lang.String" value="Empresa"/>
               </Properties>
             </MenuItem>
           </SubComponents>

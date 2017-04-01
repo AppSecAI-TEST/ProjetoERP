@@ -49,9 +49,9 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
 
         tfSigla.setPreferredSize(new java.awt.Dimension(150, 20));
 
-        btCadastrar.setText("Cadastrar");
+        btCadastrar.setText(br.com.secharpe.util.Propriedades.getProp("form.save"));
 
-        btFechar.setText("Fechar");
+        btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -61,10 +61,9 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(btCadastrar)
-                        .addGap(41, 41, 41)
-                        .addComponent(btFechar))
+                        .addComponent(btCadastrar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(btFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)

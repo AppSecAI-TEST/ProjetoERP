@@ -117,7 +117,7 @@ private static final long serialVersionUID = 1L;
         adicionaisMenu.add(estadosMenuItem);
 
         empresaMenuItem.setMnemonic('d');
-        empresaMenuItem.setText("Empresas");
+        empresaMenuItem.setText("Empresa");
         adicionaisMenu.add(empresaMenuItem);
 
         menuBar.add(adicionaisMenu);

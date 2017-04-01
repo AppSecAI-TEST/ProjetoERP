@@ -43,10 +43,9 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
-                          <Component id="btCadastrar" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                          <Component id="btFechar" min="-2" max="-2" attributes="0"/>
+                          <Component id="btCadastrar" min="-2" pref="80" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="51" max="-2" attributes="0"/>
+                          <Component id="btFechar" min="-2" pref="80" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
@@ -114,12 +113,16 @@
         </Component>
         <Component class="javax.swing.JButton" name="btCadastrar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cadastrar"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.save&quot;)" type="code"/>
+            </Property>
           </Properties>
         </Component>
         <Component class="javax.swing.JButton" name="btFechar">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Fechar"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.close&quot;)" type="code"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

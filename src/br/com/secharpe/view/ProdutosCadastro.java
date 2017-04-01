@@ -56,17 +56,17 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
         jLabel7 = new javax.swing.JLabel();
         pEstoqueMinimo = new javax.swing.JTextField();
         pAdicionarTipo = new javax.swing.JButton();
-        pTipo = new javax.swing.JComboBox<>();
-        pFabricante = new javax.swing.JComboBox<>();
+        pTipo = new javax.swing.JComboBox<String>();
+        pFabricante = new javax.swing.JComboBox<String>();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         pPrecoCusto = new javax.swing.JTextField();
         pPrecoVenda = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        pUnidade = new javax.swing.JComboBox<>();
+        pUnidade = new javax.swing.JComboBox<String>();
         pAdicionarUnidade = new javax.swing.JButton();
+        pFechar = new javax.swing.JButton();
         pSalvar = new javax.swing.JButton();
-        pRemover = new javax.swing.JButton();
 
         setClosable(true);
         setIconifiable(true);
@@ -91,9 +91,9 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
         jLabel7.setText("Estoque Minimo:");
 
-        pTipo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        pTipo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        pFabricante.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        pFabricante.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel8.setText("Preço Custo:");
 
@@ -103,9 +103,9 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
         pUnidade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Unidade", "Kilos", "Metro" }));
 
-        pSalvar.setText("Fechar");
+        pFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
-        pRemover.setText("Salvar");
+        pSalvar.setText(br.com.secharpe.util.Propriedades.getProp("form.save"));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -140,10 +140,12 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                                     .addComponent(jLabel5))))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(pFabricante, 0, 113, Short.MAX_VALUE)
-                                .addComponent(pTipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(pCodInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(pCodInterno, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(pUnidade, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(pFabricante, 0, 113, Short.MAX_VALUE)
+                                    .addComponent(pTipo, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(pPrecoVenda)
@@ -157,16 +159,13 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                             .addComponent(pEstoqueMinimo, javax.swing.GroupLayout.DEFAULT_SIZE, 95, Short.MAX_VALUE)
                             .addComponent(pPrecoCusto))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(pUnidade, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel10)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(10, 10, 10)
-                                .addComponent(pRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(pSalvar)))))
+                                .addComponent(pSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(pFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(pAdicionarUnidade, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)
@@ -219,9 +218,9 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                             .addComponent(jLabel8)
                             .addComponent(pPrecoCusto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(pPrecoVenda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(pRemover)
-                            .addComponent(pSalvar))))
-                .addGap(21, 21, 21))
+                            .addComponent(pSalvar)
+                            .addComponent(pFechar))))
+                .addGap(10, 10, 10))
         );
 
         pack();
@@ -249,10 +248,10 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField pEstoqueAtual;
     private javax.swing.JTextField pEstoqueMinimo;
     private javax.swing.JComboBox<String> pFabricante;
+    private javax.swing.JButton pFechar;
     private javax.swing.JTextField pNome;
     private javax.swing.JTextField pPrecoCusto;
     private javax.swing.JTextField pPrecoVenda;
-    private javax.swing.JButton pRemover;
     private javax.swing.JButton pSalvar;
     private javax.swing.JComboBox<String> pTipo;
     private javax.swing.JComboBox<String> pUnidade;

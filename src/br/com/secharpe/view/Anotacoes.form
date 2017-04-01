@@ -24,19 +24,19 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" alignment="1" pref="391" max="32767" attributes="0"/>
+          <Component id="jScrollPane1" alignment="1" max="32767" attributes="0"/>
           <Group type="102" alignment="1" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="btVer" min="-2" max="-2" attributes="0"/>
+              <Component id="btVer" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
-              <Component id="btNovo" min="-2" max="-2" attributes="0"/>
+              <Component id="btNovo" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btRemover" min="-2" max="-2" attributes="0"/>
+              <Component id="btRemover" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btEditar" min="-2" max="-2" attributes="0"/>
+              <Component id="btEditar" linkSize="1" min="-2" pref="90" max="-2" attributes="0"/>
               <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Component id="btFechar" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="-2" attributes="0"/>
+              <Component id="btFechar" linkSize="1" min="-2" pref="90" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -79,27 +79,37 @@
     </Container>
     <Component class="javax.swing.JButton" name="btVer">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Ver"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.view&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btNovo">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Novo"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.new&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btRemover">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Remover"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.remove&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btEditar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Editar"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.edit&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btFechar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fechar"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.close&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>
