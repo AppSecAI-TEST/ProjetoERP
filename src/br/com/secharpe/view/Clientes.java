@@ -23,6 +23,7 @@ public class Clientes extends javax.swing.JInternalFrame {
         this.painel = painel;
         initComponents();
         btSalvar.addActionListener(handlerClientes);
+        btFechar.addActionListener(handlerClientes);
     }
 
     /**

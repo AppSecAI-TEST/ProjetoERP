@@ -23,6 +23,7 @@ public class Produtos extends javax.swing.JInternalFrame {
        initComponents();
        btNovo.addActionListener(handlerProdutos);
        btEditar.addActionListener(handlerProdutos);
+       btFechar.addActionListener(handlerProdutos);
     }
 
     /**
