@@ -27,8 +27,8 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" attributes="0">
-              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="1" attributes="0">
                   <Component id="jLabel2" min="-2" pref="31" max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
@@ -38,21 +38,21 @@
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" attributes="0">
                           <Component id="pCodigo" alignment="1" min="-2" pref="235" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="pDescricao" pref="235" max="32767" attributes="0"/>
-                              <Component id="pNome" alignment="1" max="32767" attributes="0"/>
+                              <Component id="pDescricao" max="32767" attributes="0"/>
+                              <Component id="pNome" alignment="1" min="-2" pref="235" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                       <Group type="103" groupAlignment="1" attributes="0">
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
+                          <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="101" max="-2" attributes="0"/>
                                   <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                               </Group>
@@ -67,17 +67,17 @@
                           <Component id="pCodInterno" alignment="0" min="-2" pref="71" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                               <Component id="pUnidade" min="-2" pref="113" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="pFabricante" pref="113" max="32767" attributes="0"/>
-                                  <Component id="pTipo" max="32767" attributes="0"/>
+                              <Group type="103" alignment="1" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="pFabricante" max="32767" attributes="0"/>
+                                  <Component id="pTipo" min="-2" pref="113" max="-2" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="pPrecoVenda" max="32767" attributes="0"/>
-                          <Component id="pEstoqueAtual" pref="79" max="32767" attributes="0"/>
+                          <Component id="pPrecoVenda" min="-2" pref="79" max="-2" attributes="0"/>
+                          <Component id="pEstoqueAtual" min="-2" pref="79" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
@@ -86,13 +86,13 @@
                       </Group>
                       <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="pEstoqueMinimo" pref="95" max="32767" attributes="0"/>
-                          <Component id="pPrecoCusto" max="32767" attributes="0"/>
+                          <Component id="pEstoqueMinimo" min="-2" pref="95" max="-2" attributes="0"/>
+                          <Component id="pPrecoCusto" min="-2" pref="95" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="32767" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="10" pref="10" max="-2" attributes="0"/>
                               <Component id="pSalvar" min="-2" pref="80" max="-2" attributes="0"/>
                               <EmptySpace min="-2" max="-2" attributes="0"/>
@@ -103,18 +103,18 @@
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="1" max="-2" attributes="0">
-                  <Component id="pAdicionarUnidade" pref="39" max="32767" attributes="0"/>
+                  <Component id="pAdicionarUnidade" max="32767" attributes="0"/>
                   <Component id="pAdicionarTipo" alignment="0" max="32767" attributes="0"/>
-                  <Component id="pAdicionarFabricante" max="32767" attributes="0"/>
+                  <Component id="pAdicionarFabricante" min="-2" pref="39" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="23" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="pCodigo" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -168,7 +168,7 @@
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -296,16 +296,12 @@
     </Component>
     <Component class="javax.swing.JButton" name="pFechar">
       <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.close&quot;)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Fechar"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="pSalvar">
       <Properties>
-        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
-          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.save&quot;)" type="code"/>
-        </Property>
+        <Property name="text" type="java.lang.String" value="Salvar"/>
       </Properties>
     </Component>
   </SubComponents>

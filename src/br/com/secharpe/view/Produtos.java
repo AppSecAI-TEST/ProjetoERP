@@ -82,7 +82,7 @@ public class Produtos extends javax.swing.JInternalFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 409, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -104,7 +104,7 @@ public class Produtos extends javax.swing.JInternalFrame {
                     .addComponent(btRemover)
                     .addComponent(btEditar)
                     .addComponent(btFechar))
-                .addGap(10, 10, 10))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
 
         pack();
