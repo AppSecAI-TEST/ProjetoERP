@@ -1,11 +1,13 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.util.Vars;
 import br.com.secharpe.util.VerificaFrame;
 import br.com.secharpe.view.Cidades;
 import br.com.secharpe.view.CidadesCadastro;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class CidadesViewActionListener implements ActionListener {
 
@@ -24,21 +26,18 @@ public class CidadesViewActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            case "Novo":             
-                CidadesCadastro cidadesCadastro = new CidadesCadastro();
-                if (VerificaFrame.verificaFrame(cidades.getPainel(), cidadesCadastro)) {
-                    VerificaFrame.exibirFrame(cidades.getPainel(), cidadesCadastro);
-                }
-                break;
-            case "Remover":
-                break;
-            case "Editar":
-                break;
-            case "Fechar":
-                System.out.println("aa");
-                cidades.dispose();
-                break;
+        String action = e.getActionCommand();
+        if (action.equals(Vars.PROP_NEW)) {
+            CidadesCadastro cidadesCadastro = new CidadesCadastro();
+            if (VerificaFrame.verificaFrame(cidades.getPainel(), cidadesCadastro)) {
+                VerificaFrame.exibirFrame(cidades.getPainel(), cidadesCadastro);
+            }
+        } else if (action.equals(Vars.PROP_REMOVE)) {
+            JOptionPane.showMessageDialog(null, "W.I.P.");
+        } else if (action.equals(Vars.PROP_EDIT)) {
+            JOptionPane.showMessageDialog(null, "W.I.P.");
+        } else if (action.equals(Vars.PROP_CLOSE)) {
+            cidades.dispose();
         }
     }
 

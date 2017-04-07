@@ -1,5 +1,6 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.util.Vars;
 import br.com.secharpe.view.Empresa;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
@@ -22,21 +23,16 @@ public class EmpresaViewActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            case "Salvar":
+        String action = e.getActionCommand();
+        if (action.equals(Vars.PROP_SAVECOMPANY)) {
                 empresa.editarCampo(false);
                 System.out.println(empresa.getEmpresa().toString());
-                break;
-            case "Editar":
-                empresa.editarCampo(true);
-                break;
-            case "Limpar":
-                empresa.clean();
-                break;
-            case "Fechar":
-                empresa.dispose();
-                break;
-        }
+        } else if (action.equals(Vars.PROP_EDIT)) {
+            empresa.editarCampo(true);
+        } else if (action.equals(Vars.PROP_ERASE)) {
+            empresa.clean();
+        } else if (action.equals(Vars.PROP_CLOSE)) {
+            empresa.dispose();}
     }
 
 }

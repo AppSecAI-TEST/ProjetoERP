@@ -3,24 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.secharpe.listener;
 
+import br.com.secharpe.util.Vars;
 import br.com.secharpe.util.VerificaFrame;
 import br.com.secharpe.view.Produtos;
 import br.com.secharpe.view.ProdutosCadastro;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author LuizAlexandre17 <luizalexandre17@unesc.net>
  */
 public class ProdutoViewActionListener implements ActionListener {
+
     private Painel painel;
     private Produtos produtos;
-
 
     public ProdutoViewActionListener(Produtos produto) {
         this.produtos = produto;
@@ -29,26 +30,18 @@ public class ProdutoViewActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            case "Novo":             
-                ProdutosCadastro produtoCadastro = new ProdutosCadastro();
-                if (VerificaFrame.verificaFrame(produtos.getPainel(), produtoCadastro)) {
-                    VerificaFrame.exibirFrame(produtos.getPainel(), produtoCadastro);
-                }
-                break;
-            case "Remover":
-                break;
-            case "Editar":
-                break;
-            case "Fechar":
-                System.out.println("aa");
-                produtos.dispose();
-                break;
+        String action = e.getActionCommand();
+        if (action.equals(Vars.PROP_NEW)) {
+            ProdutosCadastro produtoCadastro = new ProdutosCadastro();
+            if (VerificaFrame.verificaFrame(produtos.getPainel(), produtoCadastro)) {
+                VerificaFrame.exibirFrame(produtos.getPainel(), produtoCadastro);
+            }
+        } else if (action.equals(Vars.PROP_REMOVE)) {
+            JOptionPane.showMessageDialog(null, "W.I.P.");
+        } else if (action.equals(Vars.PROP_EDIT)) {
+            JOptionPane.showMessageDialog(null, "W.I.P.");
+        } else if (action.equals(Vars.PROP_CLOSE)) {
+            produtos.dispose();
         }
     }
 }
-
-
-
-
-

@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import br.com.secharpe.model.Clientes;
 import br.com.secharpe.view.ClientesCadastro;
+import br.com.secharpe.util.Vars;
 
 /**
  *
@@ -24,12 +25,13 @@ public class ClienteCadastroViewActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        switch (ae.getActionCommand()) {
-            case "Salvar":
-                Clientes cr = new Clientes();
-                cr = cad.getCliente();
-                System.out.println(cr.toString());
-
+        String action = ae.getActionCommand();
+        if (action.equals(Vars.PROP_SAVE)) {
+            Clientes cr = new Clientes();
+            cr = cad.getCliente();
+            System.out.println(cr.toString());
+        } else if (action.equals(Vars.PROP_CLOSE)) {
+            cad.dispose();
         }
 
     }

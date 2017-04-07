@@ -42,6 +42,8 @@ public class Clientes extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jtClientes = new javax.swing.JTable();
 
+        setClosable(true);
+        setIconifiable(true);
         setTitle("Clientes");
 
         btSalvar.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
@@ -54,20 +56,17 @@ public class Clientes extends javax.swing.JInternalFrame {
 
         jtClientes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null, null, null}
+
             },
             new String [] {
-                "Código", "Nome", "CPF", "RG", "Estado", "Cidade", "Bairro", "Telefone", "Celular", "Email"
+                "Nome", "CPF", "RG", "Estado", "Cidade", "Bairro", "Telefone", "Celular", "Email"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Object.class, java.lang.Object.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.String.class
+                java.lang.String.class, java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
+                false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -78,6 +77,7 @@ public class Clientes extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
+        jtClientes.setToolTipText("");
         jScrollPane1.setViewportView(jtClientes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

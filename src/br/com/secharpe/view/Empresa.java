@@ -248,13 +248,13 @@ public class Empresa extends javax.swing.JInternalFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        btSalvar.setText("Salvar");
+        btSalvar.setText(br.com.secharpe.util.Propriedades.getProp("form.savecompany"));
 
-        btEditar.setText("Editar");
+        btEditar.setText(br.com.secharpe.util.Propriedades.getProp("form.edit"));
 
-        btLimpar.setText("Limpar");
+        btLimpar.setText(br.com.secharpe.util.Propriedades.getProp("form.erase"));
 
-        btSair.setText("Fechar");
+        btSair.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

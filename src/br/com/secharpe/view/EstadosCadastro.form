@@ -26,9 +26,9 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="btCadastrar" min="-2" pref="80" max="-2" attributes="0"/>
-                      <EmptySpace max="32767" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Component id="btCadastrar" pref="0" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
                       <Component id="btFechar" min="-2" pref="80" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
@@ -44,10 +44,7 @@
                       </Group>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="tfNome" min="-2" pref="150" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <Component id="tfSigla" min="-2" pref="50" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="tfSigla" alignment="0" min="-2" pref="50" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>

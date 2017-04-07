@@ -387,22 +387,30 @@
     </Container>
     <Component class="javax.swing.JButton" name="btSalvar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Salvar"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.savecompany&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btEditar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Editar"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.edit&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btLimpar">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Limpar"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.erase&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btSair">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Fechar"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+          <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;form.close&quot;)" type="code"/>
+        </Property>
       </Properties>
     </Component>
   </SubComponents>

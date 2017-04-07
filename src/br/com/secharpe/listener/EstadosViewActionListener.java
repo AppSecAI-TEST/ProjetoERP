@@ -1,13 +1,13 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.util.Vars;
 import br.com.secharpe.util.VerificaFrame;
-import br.com.secharpe.view.Cidades;
-import br.com.secharpe.view.CidadesCadastro;
 import br.com.secharpe.view.Estados;
 import br.com.secharpe.view.EstadosCadastro;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
 
 public class EstadosViewActionListener implements ActionListener {
 
@@ -26,21 +26,18 @@ public class EstadosViewActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            case "Novo":             
-                EstadosCadastro cidadesCadastro = new EstadosCadastro();
-                if (VerificaFrame.verificaFrame(estados.getPainel(), cidadesCadastro)) {
-                    VerificaFrame.exibirFrame(estados.getPainel(), cidadesCadastro);
-                }
-                break;
-            case "Remover":
-                break;
-            case "Editar":
-                break;
-            case "Fechar":
-                System.out.println("aa");
-                estados.dispose();
-                break;
+        String action = e.getActionCommand();
+        if (action.equals(Vars.PROP_NEW)) {
+            EstadosCadastro cidadesCadastro = new EstadosCadastro();
+            if (VerificaFrame.verificaFrame(estados.getPainel(), cidadesCadastro)) {
+                VerificaFrame.exibirFrame(estados.getPainel(), cidadesCadastro);
+            }
+        } else if (action.equals(Vars.PROP_REMOVE)) {
+            JOptionPane.showMessageDialog(null, "W.I.P.");
+        } else if (action.equals(Vars.PROP_EDIT)) {
+            JOptionPane.showMessageDialog(null, "W.I.P.");
+        } else if (action.equals(Vars.PROP_CLOSE)) {
+            estados.dispose();
         }
     }
 

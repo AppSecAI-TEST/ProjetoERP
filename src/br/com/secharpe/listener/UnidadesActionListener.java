@@ -1,5 +1,6 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.util.Vars;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -22,17 +23,15 @@ public class UnidadesActionListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        switch (e.getActionCommand()) {
-            case "Cadastrar":
-                if (cadastro.validar()) {
-                    System.out.println(cadastro.getUnidade().toString());
-                } else {
-                    System.out.println("Insira corretamente as informações!");
-                }
-                break;
-            case "Fechar":
-                cadastro.dispose();
-                break;
+        String action = e.getActionCommand();
+        if (action.equals(Vars.PROP_SAVE)) {
+            if (cadastro.validar()) {
+                System.out.println(cadastro.getUnidade().toString());
+            } else {
+                System.out.println("Insira corretamente as informações!");
+            }
+        } else if (action.equals(Vars.PROP_CLOSE)) {
+            cadastro.dispose();
         }
         //view.getTable().getSelectionModel().addListSelectionListener(new ListSelectionListener() {
         //  public void valueChanged(ListSelectionEvent event) {

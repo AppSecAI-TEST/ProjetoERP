@@ -53,10 +53,7 @@ public class Anotacoes extends javax.swing.JInternalFrame {
 
         jtAnotacoes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Título", "Descrição"
@@ -114,7 +111,7 @@ public class Anotacoes extends javax.swing.JInternalFrame {
                     .addComponent(btEditar)
                     .addComponent(btFechar)
                     .addComponent(btVer))
-                .addGap(0, 86, Short.MAX_VALUE))
+                .addGap(0, 18, Short.MAX_VALUE))
         );
 
         pack();

@@ -21,7 +21,7 @@ public final class Propriedades {
         verificacao:
         try {
 
-            output = new FileOutputStream(Constants.PROP_FILE);
+            output = new FileOutputStream(Vars.PROP_FILE);
 
             // set the properties value
             if (prpt.equals("") && value.equals("")) {
@@ -50,7 +50,7 @@ public final class Propriedades {
     public static String getProp(String prpt) {
         FileInputStream input = null;
         try {
-            input = new FileInputStream(Constants.PROP_FILE);
+            input = new FileInputStream(Vars.PROP_FILE);
             Properties prop = new Properties();
             prop.load(input);
             return prop.getProperty(prpt);
