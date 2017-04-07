@@ -24,6 +24,7 @@ private static final long serialVersionUID = 1L;
     br.com.secharpe.principal.listener.AnotacoesMenuItem handlerAnotacoesMenuItem = new br.com.secharpe.principal.listener.AnotacoesMenuItem(this);
     br.com.secharpe.principal.listener.ClientesMenuItem handlerClientesMenuItem = new br.com.secharpe.principal.listener.ClientesMenuItem(this);
     br.com.secharpe.principal.listener.ProdutosMenuItem handlerProdutosMenuItem = new br.com.secharpe.principal.listener.ProdutosMenuItem(this);
+    br.com.secharpe.principal.listener.SobreMenuItem handlerSobre = new br.com.secharpe.principal.listener.SobreMenuItem();
     public JDesktopPane getDesktopPane() {
         return desktopPane;
     }
@@ -42,6 +43,7 @@ private static final long serialVersionUID = 1L;
         anotacoesMenuItem.addActionListener(handlerAnotacoesMenuItem);
         clientesMenuItem.addActionListener(handlerClientesMenuItem);
         produtosMenuItem.addActionListener(handlerProdutosMenuItem);
+        infoMenu.addActionListener(handlerSobre);
     }
 
     /**
@@ -158,8 +160,7 @@ private static final long serialVersionUID = 1L;
     }//GEN-LAST:event_clientesMenuItemActionPerformed
 
     private void infoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoMenuActionPerformed
-        // TODO add your handling code here:
-        JOptionPane.showMessageDialog(null, "Software criado por Luiz Alexandre e Luan Darabas, Ciencias da Computação, 5 fase", "Informações", JOptionPane.INFORMATION_MESSAGE);
+        // TODO add your handling code here:       
     }//GEN-LAST:event_infoMenuActionPerformed
 
     /**
