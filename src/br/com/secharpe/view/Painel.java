@@ -7,6 +7,7 @@
 package br.com.secharpe.view;
 
 import javax.swing.JDesktopPane;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -59,14 +60,15 @@ private static final long serialVersionUID = 1L;
         cadastroMenu = new javax.swing.JMenu();
         clientesMenuItem = new javax.swing.JMenuItem();
         produtosMenuItem = new javax.swing.JMenuItem();
-        utilitariosMenu = new javax.swing.JMenu();
-        anotacoesMenuItem = new javax.swing.JMenuItem();
         adicionaisMenu = new javax.swing.JMenu();
         unidadesMenuItem = new javax.swing.JMenuItem();
         cidadesMenuItem = new javax.swing.JMenuItem();
         estadosMenuItem = new javax.swing.JMenuItem();
         empresaMenuItem = new javax.swing.JMenuItem();
+        utilitariosMenu = new javax.swing.JMenu();
+        anotacoesMenuItem = new javax.swing.JMenuItem();
         sobreMenu = new javax.swing.JMenu();
+        infoMenu = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,13 +97,6 @@ private static final long serialVersionUID = 1L;
 
         menuBar.add(cadastroMenu);
 
-        utilitariosMenu.setText("Utilitários");
-
-        anotacoesMenuItem.setText("Anotações");
-        utilitariosMenu.add(anotacoesMenuItem);
-
-        menuBar.add(utilitariosMenu);
-
         adicionaisMenu.setText("Adicionais");
 
         unidadesMenuItem.setMnemonic('t');
@@ -122,8 +117,24 @@ private static final long serialVersionUID = 1L;
 
         menuBar.add(adicionaisMenu);
 
+        utilitariosMenu.setText("Utilitários");
+
+        anotacoesMenuItem.setText("Anotações");
+        utilitariosMenu.add(anotacoesMenuItem);
+
+        menuBar.add(utilitariosMenu);
+
         sobreMenu.setMnemonic('h');
         sobreMenu.setText("Sobre");
+
+        infoMenu.setText("Info");
+        infoMenu.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                infoMenuActionPerformed(evt);
+            }
+        });
+        sobreMenu.add(infoMenu);
+
         menuBar.add(sobreMenu);
 
         setJMenuBar(menuBar);
@@ -136,7 +147,7 @@ private static final long serialVersionUID = 1L;
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 281, Short.MAX_VALUE)
+            .addComponent(desktopPane, javax.swing.GroupLayout.DEFAULT_SIZE, 283, Short.MAX_VALUE)
         );
 
         pack();
@@ -145,6 +156,11 @@ private static final long serialVersionUID = 1L;
     private void clientesMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesMenuItemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_clientesMenuItemActionPerformed
+
+    private void infoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoMenuActionPerformed
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Software criado por Luiz Alexandre e Luan Darabas, Ciencias da Computação, 5 fase", "Informações", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_infoMenuActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,6 +206,7 @@ private static final long serialVersionUID = 1L;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenuItem empresaMenuItem;
     private javax.swing.JMenuItem estadosMenuItem;
+    private javax.swing.JMenuItem infoMenu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem produtosMenuItem;
     private javax.swing.JMenuItem sairMenuItem;

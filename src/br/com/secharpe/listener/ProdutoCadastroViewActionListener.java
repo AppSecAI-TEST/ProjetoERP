@@ -25,7 +25,7 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         switch (ae.getActionCommand()) {
-            case "salvar":
+            case "Salvar":
                 Produtos cr = new Produtos();
                 cr = cad.getProduto();
                 System.out.println(cr.toString());
