@@ -2,20 +2,32 @@ package br.com.secharpe.listener;
 
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionListener;
+import br.com.secharpe.log.Log;
+import java.io.File;
+import br.com.secharpe.view.Login;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class LoginActionListener implements ActionListener {
+    
+     br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
+    
 
     private final br.com.secharpe.view.Login login;
+    
+    File User = new File("log.log");
 
     public LoginActionListener(br.com.secharpe.view.Login login) {
         this.login = login;
+        
     }
 
     @Override
     public void actionPerformed(java.awt.event.ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Entrar":
-                if (new br.com.secharpe.model.Login(login.getUsuario(), login.getSenha()).Login()) {
+                if (new br.com.secharpe.model.LoginModel(login.getUsuario(), login.getSenha()).Login()) {
                     login.dispose();
                     /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

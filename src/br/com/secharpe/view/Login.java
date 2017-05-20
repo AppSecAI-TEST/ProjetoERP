@@ -1,22 +1,44 @@
 package br.com.secharpe.view;
 
 import br.com.secharpe.listener.LoginActionListener;
+import java.io.File;
+import br.com.secharpe.model.LoginModel;
+
 
 /**
  *
  * @author comp8
  */
 public class Login extends javax.swing.JFrame {
+    
 
     private LoginActionListener handlerLogin = new LoginActionListener(this);
+    br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
+    br.com.secharpe.model.LoginModel logx = new  br.com.secharpe.model.LoginModel("x","x");
+    
 
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        File User = new File("log.log");
+       //Cria Arquivo log na pasta
+        if (User.exists()) {
+            String user;
+            user = log.lerArquivo("log.log");
+            tfUsuario.setText(user);
+            logx.newUser(user, "x");
+            
+            
+            
+        }
+        else {
+            String user2 = tfUsuario.toString();
+            
+        }
         btEntrar.addActionListener(handlerLogin);
-        
+
     }
 
     @SuppressWarnings("unchecked")
@@ -37,7 +59,11 @@ public class Login extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
-        tfUsuario.setText("admin");
+        tfUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                tfUsuarioActionPerformed(evt);
+            }
+        });
 
         btEntrar.setText("Entrar");
 
@@ -103,6 +129,10 @@ public class Login extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void tfUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfUsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfUsuarioActionPerformed
 
     /**
      * @param args the command line arguments
