@@ -101,9 +101,6 @@
           </Properties>
         </Component>
         <Component class="javax.swing.JPasswordField" name="pfSenha">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="e8d95a51f3af4a3b134bf6bb680a213a"/>
-          </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel3">
           <Properties>

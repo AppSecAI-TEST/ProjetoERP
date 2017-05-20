@@ -60,8 +60,6 @@ public class Login extends javax.swing.JFrame {
 
         btEntrar.setText("Entrar");
 
-        pfSenha.setText("e8d95a51f3af4a3b134bf6bb680a213a");
-
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/com/secharpe/image/user-512.png"))); // NOI18N
         jLabel3.setText("jLabel3");
 

@@ -10,8 +10,8 @@ public class LoginModel {
 
     br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
 
-    private String USUARIO = "admin";
-    private String SENHA = "e8d95a51f3af4a3b134bf6bb680a213a";
+    private String USUARIO = "x";
+    private String SENHA = "x";
     private String usuario;
     private String senha;
 

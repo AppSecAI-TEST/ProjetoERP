@@ -11,31 +11,33 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoginActionListener implements ActionListener {
-    
-     br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
-    
+
+    br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
 
     private final br.com.secharpe.view.Login login;
-    
+
     File User = new File("log.log");
 
     public LoginActionListener(br.com.secharpe.view.Login login) {
         this.login = login;
     }
-    
-    
-    
 
     @Override
     public void actionPerformed(java.awt.event.ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Entrar":
-                new br.com.secharpe.model.LoginModel(login.getUsuario(), login.getSenha());
+                if(!User.exists()){
+            try {
+                log.escrever(login.getUsuario());
+            } catch (IOException ex) {
+                Logger.getLogger(LoginActionListener.class.getName()).log(Level.SEVERE, null, ex);
+            }
+                }
                 if (new br.com.secharpe.model.LoginModel(login.getUsuario(), login.getSenha()).Login()) {
                     login.dispose();
                     /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+                    //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+                    /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
                      * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
                      */
                     try {
@@ -54,7 +56,7 @@ public class LoginActionListener implements ActionListener {
                     } catch (javax.swing.UnsupportedLookAndFeelException ex) {
                         java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
                     }
-        //</editor-fold>
+                    //</editor-fold>
 
                     /* Create and display the form */
                     java.awt.EventQueue.invokeLater(new Runnable() {
