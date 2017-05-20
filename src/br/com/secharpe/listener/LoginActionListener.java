@@ -3,6 +3,7 @@ package br.com.secharpe.listener;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionListener;
 import br.com.secharpe.log.Log;
+import br.com.secharpe.model.LoginModel;
 import java.io.File;
 import br.com.secharpe.view.Login;
 import java.io.IOException;
@@ -20,13 +21,16 @@ public class LoginActionListener implements ActionListener {
 
     public LoginActionListener(br.com.secharpe.view.Login login) {
         this.login = login;
-        
     }
+    
+    
+    
 
     @Override
     public void actionPerformed(java.awt.event.ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Entrar":
+                new br.com.secharpe.model.LoginModel(login.getUsuario(), login.getSenha());
                 if (new br.com.secharpe.model.LoginModel(login.getUsuario(), login.getSenha()).Login()) {
                     login.dispose();
                     /* Set the Nimbus look and feel */

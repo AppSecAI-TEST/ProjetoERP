@@ -4,38 +4,31 @@ import br.com.secharpe.listener.LoginActionListener;
 import java.io.File;
 import br.com.secharpe.model.LoginModel;
 
-
 /**
  *
  * @author comp8
  */
 public class Login extends javax.swing.JFrame {
-    
 
     private LoginActionListener handlerLogin = new LoginActionListener(this);
     br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
-    br.com.secharpe.model.LoginModel logx = new  br.com.secharpe.model.LoginModel("x","x");
     
 
     /**
      * Creates new form Login
      */
+    String user;
+
     public Login() {
         initComponents();
         File User = new File("log.log");
-       //Cria Arquivo log na pasta
+
+        //Cria Arquivo log na pasta
         if (User.exists()) {
-            String user;
             user = log.lerArquivo("log.log");
             tfUsuario.setText(user);
-            logx.newUser(user, "x");
-            
-            
-            
-        }
-        else {
+        } else {
             String user2 = tfUsuario.toString();
-            
         }
         btEntrar.addActionListener(handlerLogin);
 
@@ -178,6 +171,12 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JPasswordField pfSenha;
     private javax.swing.JTextField tfUsuario;
     // End of variables declaration//GEN-END:variables
+
+    public String User() {
+        return this.user;
+    }
+
+    
 
     public String getUsuario() {
         return this.tfUsuario.getText();
