@@ -21,6 +21,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     Painel painel;
 
     public ClientesCadastro() {
+        new br.com.secharpe.util.Log().put("ClientesCadastro", "Abrindo janela");
         this.painel = painel;
         initComponents();
         btSalvarCliente.addActionListener(clienteAl);

@@ -1,0 +1,12 @@
+[Wed May 24 09:39:41 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed May 24 09:39:41 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela[Wed May 24 09:40:19 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed May 24 09:40:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed May 24 09:40:26 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed May 24 09:40:26 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed May 24 09:40:33 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed May 24 09:40:34 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed May 24 09:40:52 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed May 24 09:40:52 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed May 24 09:41:13 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed May 24 09:41:13 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed May 24 09:56:39 BRT 2017] [MESSAGECTRL.JAVA] [callMessage] [0] :: Mensagem :: s] [Título :: a] [Ícone :: 1

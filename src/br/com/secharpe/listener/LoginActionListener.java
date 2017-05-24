@@ -2,21 +2,18 @@ package br.com.secharpe.listener;
 
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionListener;
-import br.com.secharpe.log.Log;
-import br.com.secharpe.model.LoginModel;
 import java.io.File;
-import br.com.secharpe.view.Login;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class LoginActionListener implements ActionListener {
 
-    br.com.secharpe.log.Log log = new br.com.secharpe.log.Log();
+    br.com.secharpe.util.Util log = new br.com.secharpe.util.Util();
 
     private final br.com.secharpe.view.Login login;
 
-    File User = new File("log.log");
+    File file = new File("user.last");
 
     public LoginActionListener(br.com.secharpe.view.Login login) {
         this.login = login;
@@ -26,14 +23,14 @@ public class LoginActionListener implements ActionListener {
     public void actionPerformed(java.awt.event.ActionEvent e) {
         switch (e.getActionCommand()) {
             case "Entrar":
-                if(!User.exists()){
-            try {
-                log.escrever(login.getUsuario());
-            } catch (IOException ex) {
-                Logger.getLogger(LoginActionListener.class.getName()).log(Level.SEVERE, null, ex);
-            }
-                }
-                if (new br.com.secharpe.model.LoginModel(login.getUsuario(), login.getSenha()).Login()) {
+                if (login.getLogin().Login()) {
+                    if (!login.getLogin().getUsuario().equals(log.lerArquivo())) {
+                        try {
+                            log.escrever(login.getLogin().getUsuario());
+                        } catch (IOException ex) {
+                            Logger.getLogger(LoginActionListener.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
                     login.dispose();
                     /* Set the Nimbus look and feel */
                     //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -64,6 +61,8 @@ public class LoginActionListener implements ActionListener {
                             new Painel().setVisible(true);
                         }
                     });
+                }else {
+                    
                 }
                 break;
             case "Sair":

@@ -14,13 +14,15 @@ import br.com.secharpe.model.Estados;
  * @author Usuario
  */
 public class CidadesCadastro extends javax.swing.JInternalFrame {
-    
+
     private Painel painel;
     CidadesActionListener handlerCidades = new CidadesActionListener(this);
+
     /**
      * Creates new form CidadesCadastro
      */
     public CidadesCadastro() {
+        new br.com.secharpe.util.Log().put("CidadesCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);
@@ -108,7 +110,7 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField tfNome;
     // End of variables declaration//GEN-END:variables
 
-    public Cidades getCidade(){
+    public Cidades getCidade() {
         Cidades cidade = new Cidades();
         cidade.setCodigo(0);
         cidade.setNome(tfNome.getText());
@@ -119,6 +121,7 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
         cidade.setEstado(estado); //implementar futuramente com o banco de dados
         return cidade;
     }
+
     public Painel getPainel() {
         return painel;
     }
@@ -131,7 +134,8 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
         }
         return instance;
     }
-    public boolean validar(){
+
+    public boolean validar() {
         return ((!tfNome.getText().equals("")) || (cbEstado.getSelectedIndex() != 0));
     }
 }

@@ -20,6 +20,7 @@ public class Empresa extends javax.swing.JInternalFrame {
      * Creates new form Empresa
      */
     public Empresa(Painel painel) {
+        new br.com.secharpe.util.Log().put("Empresa", "Abrindo janela");
         this.painel = painel;
         initComponents();
         btEditar.addActionListener(handlerEmpresa);

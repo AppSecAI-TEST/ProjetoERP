@@ -20,6 +20,7 @@ public class Estados extends javax.swing.JInternalFrame {
      * Creates new form Cidades
      */
     public Estados(Painel painel) {
+        new br.com.secharpe.util.Log().put("Estados", "Abrindo janela");
         this.painel = painel;
         initComponents();
         btNovo.addActionListener(handlerEstados);

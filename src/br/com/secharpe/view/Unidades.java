@@ -8,6 +8,7 @@ import javax.swing.JTable;
  * @author Darabas
  */
 public class Unidades extends javax.swing.JInternalFrame {
+
     private static final long serialVersionUID = 1L;
 
     UnidadesViewActionListener handlerUnidades = new UnidadesViewActionListener(this);
@@ -16,8 +17,8 @@ public class Unidades extends javax.swing.JInternalFrame {
     /**
      * Creates new form Unidades
      */
-
     public Unidades(Painel painel) {
+        new br.com.secharpe.util.Log().put("Unidades", "Abrindo janela");
         this.painel = painel;
         init();
     }

@@ -3,18 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.secharpe.view;
 
 import javax.swing.JDesktopPane;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author Usuario
  */
 public class Painel extends javax.swing.JFrame {
-private static final long serialVersionUID = 1L;
+
+    private static final long serialVersionUID = 1L;
 
     br.com.secharpe.principal.listener.UnidadesMenuItem handlerUnidadesMenuItem = new br.com.secharpe.principal.listener.UnidadesMenuItem(this);
     br.com.secharpe.principal.listener.CidadesMenuItem handlerCidadesMenuItem = new br.com.secharpe.principal.listener.CidadesMenuItem(this);
@@ -25,6 +24,7 @@ private static final long serialVersionUID = 1L;
     br.com.secharpe.principal.listener.ClientesMenuItem handlerClientesMenuItem = new br.com.secharpe.principal.listener.ClientesMenuItem(this);
     br.com.secharpe.principal.listener.ProdutosMenuItem handlerProdutosMenuItem = new br.com.secharpe.principal.listener.ProdutosMenuItem(this);
     br.com.secharpe.principal.listener.SobreMenuItem handlerSobre = new br.com.secharpe.principal.listener.SobreMenuItem();
+
     public JDesktopPane getDesktopPane() {
         return desktopPane;
     }
@@ -33,6 +33,7 @@ private static final long serialVersionUID = 1L;
      * Creates new form Painel
      */
     public Painel() {
+        new br.com.secharpe.util.Log().put("Painel", "Abrindo janela");
         initComponents();
         setExtendedState(javax.swing.JFrame.MAXIMIZED_BOTH);
         unidadesMenuItem.addActionListener(handlerUnidadesMenuItem);
@@ -87,11 +88,6 @@ private static final long serialVersionUID = 1L;
         cadastroMenu.setText("Cadastros");
 
         clientesMenuItem.setText("Clientes");
-        clientesMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clientesMenuItemActionPerformed(evt);
-            }
-        });
         cadastroMenu.add(clientesMenuItem);
 
         produtosMenuItem.setText("Produtos");
@@ -130,11 +126,6 @@ private static final long serialVersionUID = 1L;
         sobreMenu.setText("Sobre");
 
         infoMenu.setText("Info");
-        infoMenu.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                infoMenuActionPerformed(evt);
-            }
-        });
         sobreMenu.add(infoMenu);
 
         menuBar.add(sobreMenu);
@@ -155,41 +146,33 @@ private static final long serialVersionUID = 1L;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void clientesMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clientesMenuItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clientesMenuItemActionPerformed
-
-    private void infoMenuActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_infoMenuActionPerformed
-        // TODO add your handling code here:       
-    }//GEN-LAST:event_infoMenuActionPerformed
-
     /**
      * @param args the command line arguments
      */
     /*public static void main(String args[]) {
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-        //</editor-fold>
+     try {
+     for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+     if ("Nimbus".equals(info.getName())) {
+     javax.swing.UIManager.setLookAndFeel(info.getClassName());
+     break;
+     }
+     }
+     } catch (ClassNotFoundException ex) {
+     java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+     } catch (InstantiationException ex) {
+     java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+     } catch (IllegalAccessException ex) {
+     java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+     } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+     java.util.logging.Logger.getLogger(Painel.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+     }
+     //</editor-fold>
+     //</editor-fold>
 
-        java.awt.EventQueue.invokeLater(() -> {
-            new Painel().setVisible(true);
-        });
-    }*/
+     java.awt.EventQueue.invokeLater(() -> {
+     new Painel().setVisible(true);
+     });
+     }*/
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenu adicionaisMenu;

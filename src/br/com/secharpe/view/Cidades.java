@@ -20,6 +20,7 @@ public class Cidades extends javax.swing.JInternalFrame {
      * Creates new form Cidades
      */
     public Cidades(Painel painel) {
+        new br.com.secharpe.util.Log().put("Cidades", "Abrindo janela");
         this.painel = painel;
         initComponents();
         btNovo.addActionListener(handlerCidades);
@@ -119,7 +120,7 @@ public class Cidades extends javax.swing.JInternalFrame {
     private javax.swing.JTable jtUnidades;
     // End of variables declaration//GEN-END:variables
 
-    public Painel getPainel(){
+    public Painel getPainel() {
         return this.painel;
     }
     private static Cidades instance;

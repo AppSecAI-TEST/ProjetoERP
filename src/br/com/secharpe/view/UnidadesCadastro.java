@@ -8,23 +8,24 @@ import br.com.secharpe.listener.key.UnidadesKeyListener;
  * @author Darabas
  */
 public class UnidadesCadastro extends javax.swing.JInternalFrame {
-    
+
     UnidadesKeyListener keyUnidades = new UnidadesKeyListener(this);
     UnidadesActionListener handlerUnidades = new UnidadesActionListener(this);
-    
+
     private Painel painel;
 
     /**
      * Creates new form Unidades
      */
     public UnidadesCadastro() {
+        new br.com.secharpe.util.Log().put("UnidadesCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerUnidades);
         btFechar.addActionListener(handlerUnidades);
         tfNome.addKeyListener(keyUnidades);
         tfSigla.addKeyListener(keyUnidades);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -120,20 +121,20 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
     public Painel getPainel() {
         return painel;
     }
-    
+
     private static UnidadesCadastro instance;
-    
+
     public static UnidadesCadastro getInstance(Painel painel) {
         if (instance == null) {
             instance = new UnidadesCadastro();
         }
         return instance;
     }
-    
+
     public void sendInfo() {
         btCadastrar.doClick();
     }
-    
+
     public br.com.secharpe.model.Unidades getUnidade() {
         br.com.secharpe.model.Unidades unidade = new br.com.secharpe.model.Unidades();
         unidade.setCodigo(0);//implementar depois com o banco (setar auto increment e remover esta linha)
@@ -141,7 +142,7 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
         unidade.setSigla(tfSigla.getText());
         return unidade;
     }
-    
+
     public boolean validar() {
         return ((!tfNome.getText().equals("")) || (!tfSigla.getText().equals("")));
     }

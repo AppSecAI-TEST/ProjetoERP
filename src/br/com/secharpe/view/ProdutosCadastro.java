@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.view;
 
 import br.com.secharpe.model.Produtos;
@@ -15,10 +10,12 @@ import br.com.secharpe.listener.ProdutoCadastroViewActionListener;
 public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
     ProdutoCadastroViewActionListener hadlerProdutos = new ProdutoCadastroViewActionListener(this);
+
     /**
      * Creates new form CadastroProduto
      */
     public ProdutosCadastro() {
+        new br.com.secharpe.util.Log().put("ProdutosCadastro", "Abrindo janela");
         initComponents();
         pSalvar.addActionListener(hadlerProdutos);
         pFechar.addActionListener(hadlerProdutos);
@@ -115,7 +112,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(11, Short.MAX_VALUE)
+                .addContainerGap(14, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1)

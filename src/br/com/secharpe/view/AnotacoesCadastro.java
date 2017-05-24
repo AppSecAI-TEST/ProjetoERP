@@ -21,6 +21,7 @@ public class AnotacoesCadastro extends javax.swing.JInternalFrame {
      * Creates new form CidadesCadastro
      */
     public AnotacoesCadastro() {
+        new br.com.secharpe.util.Log().put("AnotacoesCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);

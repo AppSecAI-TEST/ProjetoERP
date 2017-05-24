@@ -4,27 +4,30 @@
  * and open the template in the editor.
  */
 package br.com.secharpe.view;
+
 import br.com.secharpe.listener.ProdutoViewActionListener;
+
 /**
  *
  * @author LuizAlexandre17 <luizalexandre17@unesc.net>
  */
 public class Produtos extends javax.swing.JInternalFrame {
-    
- ProdutoViewActionListener handlerProdutos = new ProdutoViewActionListener(this);
- Painel painel;
+
+    ProdutoViewActionListener handlerProdutos = new ProdutoViewActionListener(this);
+    Painel painel;
+
     /**
      * Creates new form Produtos
      */
-   
 
     public Produtos(Painel painel) {
-       this.painel = painel;
-       initComponents();
-       btNovo.addActionListener(handlerProdutos);
-       btEditar.addActionListener(handlerProdutos);
-       btFechar.addActionListener(handlerProdutos);
-       btRemover.addActionListener(handlerProdutos);
+        new br.com.secharpe.util.Log().put("Produtos", "Abrindo janela");
+        this.painel = painel;
+        initComponents();
+        btNovo.addActionListener(handlerProdutos);
+        btEditar.addActionListener(handlerProdutos);
+        btFechar.addActionListener(handlerProdutos);
+        btRemover.addActionListener(handlerProdutos);
     }
 
     /**

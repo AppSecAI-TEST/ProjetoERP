@@ -10,15 +10,16 @@ package br.com.secharpe.view;
  * @author Usuario
  */
 public class Sobre extends javax.swing.JFrame {
+
     private static final long serialVersionUID = 1L;
 
     /**
      * Creates new form sOBRE
      */
     public Sobre() {
+        new br.com.secharpe.util.Log().put("Sobre", "Abrindo janela");
         initComponents();
     }
-
 
     /**
      * This method is called from within the constructor to initialize the form.

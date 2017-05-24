@@ -20,6 +20,7 @@ public class Anotacoes extends javax.swing.JInternalFrame {
     private Painel painel;
 
     public Anotacoes(Painel painel) {
+        new br.com.secharpe.util.Log().put("Anotacoes", "Abrindo janela");
         this.painel = painel;
         initComponents();
         btEditar.addActionListener(handlerAnotacoes);

@@ -20,6 +20,7 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
      * Creates new form CidadesCadastro
      */
     public EstadosCadastro() {
+        new br.com.secharpe.util.Log().put("EstadosCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);

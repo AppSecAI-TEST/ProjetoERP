@@ -20,6 +20,7 @@ public class Clientes extends javax.swing.JInternalFrame {
      * Creates new form Clientes
      */
     public Clientes(Painel painel) {
+        new br.com.secharpe.util.Log().put("Clientes", "Abrindo janela");
         this.painel = painel;
         initComponents();
         btSalvar.addActionListener(handlerClientes);
