@@ -66,9 +66,9 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 nfe.printStackTrace(new PrintWriter(sw));
                 String exceptionAsString = sw.toString();
                 logimp.put("ERRO", exceptionAsString);
-                nfe.printStackTrace();
+               logimp.put("ClientesCadastro", "getCliente", exceptionAsString);
 
- 
+            } 
         }
         return null;
     }

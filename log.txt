@@ -221,3 +221,12 @@
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
 
+[Fri May 26 11:15:39 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri May 26 11:15:39 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri May 26 11:15:39 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri May 26 11:16:03 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri May 26 11:16:03 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri May 26 11:16:03 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri May 26 11:18:10 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri May 26 11:18:11 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri May 26 11:18:11 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo

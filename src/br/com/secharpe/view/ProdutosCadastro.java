@@ -2,6 +2,9 @@ package br.com.secharpe.view;
 
 import br.com.secharpe.model.Produtos;
 import br.com.secharpe.listener.ProdutoCadastroViewActionListener;
+import br.com.secharpe.util.Log;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 /**
  *
@@ -10,6 +13,7 @@ import br.com.secharpe.listener.ProdutoCadastroViewActionListener;
 public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
     ProdutoCadastroViewActionListener hadlerProdutos = new ProdutoCadastroViewActionListener(this);
+    Log logimp = new Log();
 
     /**
      * Creates new form CadastroProduto
@@ -22,21 +26,31 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
     }
 
     public Produtos getProduto() {
-        Produtos p = new Produtos();
-        p.setCodigo(Integer.parseInt(pCodigo.getText()));
-        p.setNome(pNome.getText());
-        p.setDescrição(pDescricao.getText());
-        p.setEstoqueAtual(Integer.parseInt(pEstoqueAtual.getText()));
-        p.setEstoqueMin(Integer.parseInt(pEstoqueMinimo.getText()));
-        p.setFabricante(pFabricante.getSelectedItem().toString());
-        p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
-        p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
-        p.setTipo(pTipo.getSelectedItem().toString());
-        p.setUnidade(pUnidade.getSelectedItem().toString());
-        return p;
+        try {
+            Produtos p = new Produtos();
+            p.setCodigo(Integer.parseInt(pCodigo.getText()));
+            p.setNome(pNome.getText());
+            p.setDescrição(pDescricao.getText());
+            p.setEstoqueAtual(Integer.parseInt(pEstoqueAtual.getText()));
+            p.setEstoqueMin(Integer.parseInt(pEstoqueMinimo.getText()));
+            p.setFabricante(pFabricante.getSelectedItem().toString());
+            p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
+            p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
+            p.setTipo(pTipo.getSelectedItem().toString());
+            p.setUnidade(pUnidade.getSelectedItem().toString());
+            return p;
+        } catch (NumberFormatException nfe) {
+            System.out.println("A String digitado não corresponde a informação");
+            StringWriter sw = new StringWriter();
+            nfe.printStackTrace(new PrintWriter(sw));
+            String exceptionAsString = sw.toString();
+            logimp.put("ERRO", exceptionAsString);
+            logimp.put("ProdutosCadastro", "getProduto", exceptionAsString);
+        }
+        return null;
     }
 
-    @SuppressWarnings("unchecked")
+        @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
