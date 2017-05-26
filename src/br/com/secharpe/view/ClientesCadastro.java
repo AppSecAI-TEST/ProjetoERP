@@ -7,6 +7,9 @@ package br.com.secharpe.view;
 
 import br.com.secharpe.listener.ClienteCadastroViewActionListener;
 import br.com.secharpe.model.Clientes;
+import br.com.secharpe.util.Log;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 
 /**
  *
@@ -18,6 +21,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
      * Creates new form Clientes
      */
     ClienteCadastroViewActionListener clienteAl = new ClienteCadastroViewActionListener(this);
+    Log logimp = new Log();
     Painel painel;
 
     public ClientesCadastro() {
@@ -30,30 +34,41 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
 
     public Clientes getCliente() {
         Clientes cl = new Clientes();
-        if (cNome.getText() != null) {
-            br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
-            br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades();
-            cl.setNome(cNome.getText());
-            cl.setCpf(Integer.parseInt(cCPF.getText()));
-            cl.setRg(Integer.parseInt(cRG.getText()));
-            estado.setCodigo(cEstado.getSelectedIndex());//implementar com o banco
-            estado.setNome("Nome"); //implementar futuramente com o banco de dados
-            estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
-            cidade.setCodigo(cCidade.getSelectedIndex()); //implementar futuramente com o banco de dados
-            cidade.setEstado(estado); //implementar futuramente com o banco de dados
-            cidade.setNome("Nome"); //implementar futuramente com o banco de dados
-            cl.setCidade(cidade); //implementar futuramente com o banco de dados
-            cl.setEstado(estado);
-            cl.setCodigo(0);
-            cl.setComplemento(cComplemento.getText());
-            cl.setEmail(cEmail.getText());
-            cl.setCelular(Integer.parseInt(jTextField10.getText()));
-            cl.setTelefone(Integer.parseInt(jTextField9.getText()));
-            cl.setBairro(cBairro.getText());
-            cl.setEndereco(cEndereço.getText());
-            cl.setNumero(Integer.parseInt(cNumero.getText()));
 
-            return cl;
+        if (cNome.getText() != null) {
+            try {
+                br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
+                br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades();
+                cl.setNome(cNome.getText());
+                cl.setCpf(Integer.parseInt(cCPF.getText()));
+                cl.setRg(Integer.parseInt(cRG.getText()));
+                estado.setCodigo(cEstado.getSelectedIndex());//implementar com o banco
+                estado.setNome("Nome"); //implementar futuramente com o banco de dados
+                estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
+                cidade.setCodigo(cCidade.getSelectedIndex()); //implementar futuramente com o banco de dados
+                cidade.setEstado(estado); //implementar futuramente com o banco de dados
+                cidade.setNome("Nome"); //implementar futuramente com o banco de dados
+                cl.setCidade(cidade); //implementar futuramente com o banco de dados
+                cl.setEstado(estado);
+                cl.setCodigo(0);
+                cl.setComplemento(cComplemento.getText());
+                cl.setEmail(cEmail.getText());
+                cl.setCelular(Integer.parseInt(jTextField10.getText()));
+                cl.setTelefone(Integer.parseInt(jTextField9.getText()));
+                cl.setBairro(cBairro.getText());
+                cl.setEndereco(cEndereço.getText());
+                cl.setNumero(Integer.parseInt(cNumero.getText()));
+
+                return cl;
+            } catch (NumberFormatException nfe) {
+                System.out.println("A String digitado não corresponde a informação");
+                StringWriter sw = new StringWriter();
+                nfe.printStackTrace(new PrintWriter(sw));
+                String exceptionAsString = sw.toString();
+                logimp.put("ERRO", exceptionAsString);
+                nfe.printStackTrace();
+
+ 
         }
         return null;
     }

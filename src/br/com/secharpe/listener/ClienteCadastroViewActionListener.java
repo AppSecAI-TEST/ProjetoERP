@@ -29,6 +29,7 @@ public class ClienteCadastroViewActionListener implements ActionListener {
         if (action.equals(Vars.PROP_SAVE)) {
             Clientes cr = new Clientes();
             cr = cad.getCliente();
+            if(cr != null)
             System.out.println(cr.toString());
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cad.dispose();

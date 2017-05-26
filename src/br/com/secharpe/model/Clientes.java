@@ -98,8 +98,13 @@ public class Clientes {
     }
 
     public void setTelefone(int telefone) {
-        this.telefone = telefone;
-    }
+        try {this.telefone = telefone;
+        } catch(NumberFormatException nfe) {
+            System.out.println("ERRO");
+            nfe.getMessage();
+        }
+        }
+    
 
     public void setCelular(int celular) {
         this.celular = celular;
