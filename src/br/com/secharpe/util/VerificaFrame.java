@@ -11,10 +11,11 @@ import javax.swing.JInternalFrame;
 public abstract class VerificaFrame {
 
     public static void exibirFrame(Painel painel, JInternalFrame frame) {
+        painel.getDesktopPane().add(frame);
         frame.setVisible(true);
         frame.toFront();
         centralizar(painel, frame);
-        painel.getDesktopPane().add(frame);
+        
     }
 
     /**

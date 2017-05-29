@@ -1,12 +1,14 @@
 package br.com.secharpe.util;
 
+import java.io.File;
+
 /**
  *
  * @author luandr
  */
 public final class Vars {
     //GLOBALS
-    public final static String PROP_FILE = "src\\br\\com\\secharpe\\util\\config.properties";
+    public final static String PROP_FILE = "src" + File.separator + "br" + File.separator + "com" + File.separator + "secharpe" + File.separator + "util" + File.separator + "config.properties";   
     public static final String PROP_NEW = br.com.secharpe.util.Propriedades.getProp("form.new");
     public static final String PROP_REMOVE = br.com.secharpe.util.Propriedades.getProp("form.remove");
     public static final String PROP_EDIT = br.com.secharpe.util.Propriedades.getProp("form.edit");

@@ -31,6 +31,8 @@ public class Login extends javax.swing.JFrame {
                 new br.com.secharpe.util.Log().put("Login", "CONSTRUTOR", 2, ex.getMessage());
             }
         }
+        pfSenha.setText("senha");
+        btEntrar.requestFocus();
         btEntrar.addActionListener(handlerLogin);
     }
 
