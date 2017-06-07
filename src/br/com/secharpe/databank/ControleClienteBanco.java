@@ -27,7 +27,7 @@ public class ControleClienteBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "delete from produtos where codigo = ?";
+            String sql = "delete from clientes where codigo = ?";
             ps = conn.prepareStatement(sql);
 
             ps.execute();

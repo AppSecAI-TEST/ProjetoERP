@@ -265,7 +265,7 @@ public class ControleProdutoBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro where codigo = ?";
+            String sql = "select from produtos codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
