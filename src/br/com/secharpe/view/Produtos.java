@@ -63,14 +63,14 @@ public class Produtos extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Codigo", "Estado", "Nome", "Descrição", "Estq. Atual", "Estq. Min", "Estq. Max", "Preço Custo", "Preço Final", "Tipo", "Fabricante", "Unidade"
+                "Codigo", "Nome", "Descrição", "Preço Custo", "Preço Final", "Fabricante", "Unidade", "Tipo", "Estq. Min", "Estq. Atual"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Integer.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
             };
             boolean[] canEdit = new boolean [] {
-                false, true, true, true, true, true, true, true, true, true, true, true
+                false, false, false, false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -82,6 +82,13 @@ public class Produtos extends javax.swing.JInternalFrame {
             }
         });
         jScrollPane1.setViewportView(jtUnidades);
+        if (jtUnidades.getColumnModel().getColumnCount() > 0) {
+            jtUnidades.getColumnModel().getColumn(0).setPreferredWidth(20);
+            jtUnidades.getColumnModel().getColumn(3).setPreferredWidth(55);
+            jtUnidades.getColumnModel().getColumn(4).setPreferredWidth(50);
+            jtUnidades.getColumnModel().getColumn(8).setPreferredWidth(35);
+            jtUnidades.getColumnModel().getColumn(9).setPreferredWidth(35);
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

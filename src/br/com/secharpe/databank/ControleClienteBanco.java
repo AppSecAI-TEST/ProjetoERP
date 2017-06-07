@@ -67,9 +67,21 @@ public class ControleClienteBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into clientes (codigo,nome) values(?,?)";
+            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,estado,cidade,bairro,endereço,numero,complemento) values(?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1,cliente.getCodigo());
+
+            ps.setString(2, cliente.getNome());
+            ps.setString(3, cliente.getEmail());
+            ps.setInt(4, cliente.getCpf());
+            ps.setInt(5, cliente.getRg());
+            ps.setInt(6, cliente.getTelefone());
+            ps.setInt(7, cliente.getCelular());
+            ps.setString(8, cliente.getEstado().toString());
+            ps.setString(9, cliente.getCidade().toString());
+            ps.setString(10, cliente.getBairro());
+            ps.setString(11, cliente.getEndereco());
+            ps.setInt(12, cliente.getNumero());
+            ps.setString(13, cliente.getComplemento());
 
             ps.execute();
 
@@ -111,7 +123,7 @@ public class ControleClienteBanco {
             conn = Connection.getConnection();
             String sql = "update produtos set descricao = ? where codigo = ?";
             ps = conn.prepareStatement(sql);
-            
+
             ps.setInt(2, cliente.getCodigo());
             ps.execute();
 
@@ -160,7 +172,7 @@ public class ControleClienteBanco {
                 String descricao = rs.getString(2);
                 Clientes c = new Clientes();
                 c.setCodigo(codigo);
-                
+
                 lista.add(c);
             }
         } catch (SQLException e) {
@@ -197,7 +209,7 @@ public class ControleClienteBanco {
                 Integer cod = rs.getInt(1);
                 String descricao = rs.getString(2);
                 Clientes c = new Clientes();
-               
+
                 return c;
             }
         } catch (SQLException e) {

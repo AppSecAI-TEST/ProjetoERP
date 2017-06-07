@@ -76,7 +76,7 @@ public class ControleProdutoBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade) values(?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro) values(?,?,?,?,?,?,?,?,?,?,lucro)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, produto.getCodigo());
             ps.setString(2, produto.getNome());
@@ -87,7 +87,8 @@ public class ControleProdutoBanco {
             ps.setFloat(7, produto.getPreçoFinal());
             ps.setString(8, produto.getTipo());
             ps.setString(9, produto.getFabricante());
-            ps.setString(9, produto.getUnidade());
+            ps.setString(10, produto.getUnidade());
+            ps.setInt(11, produto.getLucro());
 
             ps.execute();
 
@@ -95,12 +96,19 @@ public class ControleProdutoBanco {
 
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
+            StringWriter sw = new StringWriter();
+            e.printStackTrace(new PrintWriter(sw));
+            String exceptionAsString = sw.toString();
+            log.put("ControleProdutoBanco", "insert", exceptionAsString);
 
             if (conn != null) {
                 try {
                     conn.rollback();
                 } catch (SQLException ex) {
-                    System.out.println("ERRO: " + ex.getMessage());
+                    System.out.println("ERRO: " + ex.getMessage()); 
+                    ex.printStackTrace(new PrintWriter(sw));
+                    exceptionAsString = sw.toString();
+                    log.put("ControleProdutoBanco", "update", exceptionAsString);
                 }
             }
 
@@ -185,14 +193,37 @@ public class ControleProdutoBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo, descricao from produtos";
+            String sql = "select codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro from produtos";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Integer codigo = rs.getInt(1);
-                String descricao = rs.getString(2);
+                String nome = rs.getString(2);
+                String descricao = rs.getString(3);
+                Integer estoqueat = rs.getInt(4);
+                Integer estoquemin = rs.getInt(5);
+                Float precocusto = rs.getFloat(6);
+                Float precofinal = rs.getFloat(7);
+                String tipo = rs.getString(8);
+                String fabr = rs.getString(9);
+                String un = rs.getString(10);
+                Integer lucro = rs.getInt(11);
+
                 Produtos p = new Produtos();
+
+                p.setCodigo(codigo);
+                p.setNome(nome);
+                p.setDescrição(descricao);
+                p.setEstoqueAtual(estoqueat);
+                p.setEstoqueMin(estoquemin);
+                p.setPreçoCusto(precocusto);
+                p.setPreçoFinal(precofinal); //Futuramente aplicar lucro + preço Custo
+                p.setFabricante(fabr);
+                p.setUnidade(un);
+                p.setTipo(tipo);
+                p.setLucro(lucro);
+
                 p.setCodigo(codigo);
                 lista.add(p);
             }
@@ -234,15 +265,37 @@ public class ControleProdutoBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo, descricao from produtos where codigo = ?";
+            String sql = "select codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
-                Integer cod = rs.getInt(1);
-                String descricao = rs.getString(2);
+
+                String nome = rs.getString(2);
+                String descricao = rs.getString(3);
+                Integer estoqueat = rs.getInt(4);
+                Integer estoquemin = rs.getInt(5);
+                Float precocusto = rs.getFloat(6);
+                Float precofinal = rs.getFloat(7);
+                String tipo = rs.getString(8);
+                String fabr = rs.getString(9);
+                String un = rs.getString(10);
+                Integer lucro = rs.getInt(11);
+
                 Produtos p = new Produtos();
-                p.setCodigo(cod);
+
+                p.setCodigo(codigo);
+                p.setNome(nome);
+                p.setDescrição(descricao);
+                p.setEstoqueAtual(estoqueat);
+                p.setEstoqueMin(estoquemin);
+                p.setPreçoCusto(precocusto);
+                p.setPreçoFinal(precofinal); //Futuramente aplicar lucro + preço Custo
+                p.setFabricante(fabr);
+                p.setUnidade(un);
+                p.setTipo(tipo);
+                p.setLucro(lucro);
+
                 return p;
             }
         } catch (SQLException e) {
@@ -267,4 +320,3 @@ public class ControleProdutoBanco {
     }
 
 }
-

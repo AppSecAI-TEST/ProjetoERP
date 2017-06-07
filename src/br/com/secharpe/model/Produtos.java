@@ -18,6 +18,15 @@ public class Produtos {
     private String Tipo;
     private String Fabricante;
     private String Unidade;
+    private int Lucro;
+    
+    public int getLucro(){
+        return Lucro;
+    }
+    
+    public void setLucro(int lucro){
+        this.Lucro = lucro;
+    }
 
     public String getTipo() {
         return Tipo;
