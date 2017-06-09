@@ -1,11 +1,15 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.util.Log;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.zip.DataFormatException;
 
 public class LoginActionListener implements ActionListener {
 
@@ -29,8 +33,16 @@ public class LoginActionListener implements ActionListener {
                             log.escrever(login.getLogin().getUsuario());
                         } catch (IOException ex) {
                             Logger.getLogger(LoginActionListener.class.getName()).log(Level.SEVERE, null, ex);
+                            Log log = new Log();
+                            StringWriter sw = new StringWriter();
+                            ex.printStackTrace(new PrintWriter(sw));
+                            String exceptionAsString = sw.toString();
+                            System.out.println();
+                            log.put("ERRO", exceptionAsString);
+                            log.put("LoginActionListener", "Entrar", exceptionAsString);
                         }
                     }
+                    
                     login.dispose();
                     /* Set the Nimbus look and feel */
                     //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -61,8 +73,8 @@ public class LoginActionListener implements ActionListener {
                             new Painel().setVisible(true);
                         }
                     });
-                }else {
-                    
+                } else {
+
                 }
                 break;
             case "Sair":

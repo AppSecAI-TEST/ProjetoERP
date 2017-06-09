@@ -8,8 +8,11 @@ package br.com.secharpe.view;
 import br.com.secharpe.listener.ClienteCadastroViewActionListener;
 import br.com.secharpe.model.Clientes;
 import br.com.secharpe.util.Log;
+import java.awt.Graphics;
+import java.awt.Image;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -26,10 +29,13 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
 
     public ClientesCadastro() {
         new br.com.secharpe.util.Log().put("ClientesCadastro", "Abrindo janela");
+        
         this.painel = painel;
+        
         initComponents();
         btSalvarCliente.addActionListener(clienteAl);
         btSairCliente.addActionListener(clienteAl);
+        
     }
 
     public Clientes getCliente() {
@@ -40,8 +46,22 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
                 br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades();
                 cl.setNome(cNome.getText());
-                cl.setCpf(Integer.parseInt(cCPF.getText()));
-                cl.setRg(Integer.parseInt(cRG.getText()));
+                if (cCPF.getText() != null && !cCPF.getText().trim().equals("")) {
+                    cl.setCpf(Integer.parseInt((cCPF.getText())));
+                }
+                if (cRG.getText() != null && !cRG.getText().trim().equals("")) {
+                    cl.setRg(Integer.parseInt(cRG.getText()));
+                }
+                if (cCelular.getText() != null && !cCelular.getText().trim().equals("")) {
+                    cl.setCelular(Integer.parseInt(cCelular.getText()));
+                }
+                if (cTelefone.getText() != null && !cTelefone.getText().trim().equals("")) {
+                    cl.setTelefone(Integer.parseInt(cTelefone.getText()));
+                }
+                if (cNumero.getText() != null && !cNumero.getText().trim().equals("")) {
+                    cl.setNumero(Integer.parseInt(cNumero.getText()));
+                }
+
                 estado.setCodigo(cEstado.getSelectedIndex());//implementar com o banco
                 estado.setNome("Nome"); //implementar futuramente com o banco de dados
                 estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
@@ -53,11 +73,8 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 cl.setCodigo(0);
                 cl.setComplemento(cComplemento.getText());
                 cl.setEmail(cEmail.getText());
-                cl.setCelular(Integer.parseInt(jTextField10.getText()));
-                cl.setTelefone(Integer.parseInt(jTextField9.getText()));
                 cl.setBairro(cBairro.getText());
                 cl.setEndereco(cEndereço.getText());
-                cl.setNumero(Integer.parseInt(cNumero.getText()));
 
                 return cl;
             } catch (NumberFormatException nfe) {
@@ -65,10 +82,20 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 StringWriter sw = new StringWriter();
                 nfe.printStackTrace(new PrintWriter(sw));
                 String exceptionAsString = sw.toString();
+                System.out.println();
                 logimp.put("ERRO", exceptionAsString);
-               logimp.put("ClientesCadastro", "getCliente", exceptionAsString);
+                logimp.put("ClientesCadastro", "getCliente", exceptionAsString);
 
-            } 
+            }
+            catch (NullPointerException nf){
+                System.out.println("ERRO Null Pointer");
+                StringWriter sw = new StringWriter();
+                nf.printStackTrace(new PrintWriter(sw));
+                String exceptionAsString = sw.toString();
+                System.out.println();
+                logimp.put("ERRO", exceptionAsString);
+                logimp.put("ClientesCadastro", "getCliente", exceptionAsString);
+            }
         }
         return null;
     }
@@ -82,10 +109,10 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        cEstado = new javax.swing.JComboBox<String>();
-        cCidade = new javax.swing.JComboBox<String>();
-        jTextField9 = new javax.swing.JTextField();
-        jTextField10 = new javax.swing.JTextField();
+        cEstado = new javax.swing.JComboBox<>();
+        cCidade = new javax.swing.JComboBox<>();
+        cTelefone = new javax.swing.JTextField();
+        cCelular = new javax.swing.JTextField();
         cEmail = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
@@ -110,13 +137,14 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
         cComplemento = new javax.swing.JTextField();
         jLabel17 = new javax.swing.JLabel();
         cCodInterno = new javax.swing.JTextField();
+        jPanel1 = new javax.swing.JPanel();
 
         setClosable(true);
         setTitle("Cadastrar Clientes");
 
-        cEstado.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        cCidade.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cCidade.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jLabel9.setText("Bairro");
 
@@ -150,6 +178,17 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
 
         cCodInterno.setEditable(false);
 
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 270, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -182,7 +221,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                                     .addComponent(cBairro)
                                     .addComponent(cEmail)
                                     .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(cTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(0, 125, Short.MAX_VALUE)))))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -216,13 +255,15 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addComponent(jLabel12)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addGap(22, 22, 22))
+                                .addComponent(cCelular, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(16, 16, 16)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(cNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -256,8 +297,8 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel12)
-                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cTelefone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -276,6 +317,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JButton btSalvarCliente;
     private javax.swing.JTextField cBairro;
     private javax.swing.JTextField cCPF;
+    private javax.swing.JTextField cCelular;
     private javax.swing.JComboBox<String> cCidade;
     private javax.swing.JTextField cCodInterno;
     private javax.swing.JTextField cComplemento;
@@ -285,6 +327,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JTextField cNome;
     private javax.swing.JTextField cNumero;
     private javax.swing.JTextField cRG;
+    private javax.swing.JTextField cTelefone;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
@@ -298,12 +341,13 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 
     public Painel getPainel() {
         return this.painel;
     }
+    
+    
 
 }

@@ -5,6 +5,7 @@ import br.com.secharpe.listener.ProdutoCadastroViewActionListener;
 import br.com.secharpe.util.Log;
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -26,31 +27,51 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
     }
 
     public Produtos getProduto() {
-        try {
-            Produtos p = new Produtos();
-            p.setCodigo(Integer.parseInt(pCodigo.getText()));
-            p.setNome(pNome.getText());
-            p.setDescrição(pDescricao.getText());
-            p.setEstoqueAtual(Integer.parseInt(pEstoqueAtual.getText()));
-            p.setEstoqueMin(Integer.parseInt(pEstoqueMinimo.getText()));
-            p.setFabricante(pFabricante.getSelectedItem().toString());
-            p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
-            p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
-            p.setTipo(pTipo.getSelectedItem().toString());
-            p.setUnidade(pUnidade.getSelectedItem().toString());
-            return p;
-        } catch (NumberFormatException nfe) {
-            System.out.println("A String digitado não corresponde a informação");
-            StringWriter sw = new StringWriter();
-            nfe.printStackTrace(new PrintWriter(sw));
-            String exceptionAsString = sw.toString();
-            logimp.put("ERRO", exceptionAsString);
-            logimp.put("ProdutosCadastro", "getProduto", exceptionAsString);
+        if (pCodigo.getText() != null || pCodigo.getText() != "0") {
+            try {
+                Produtos p = new Produtos();
+                p.setCodigo(Integer.parseInt(pCodigo.getText()));
+                p.setNome(pNome.getText());
+                p.setDescrição(pDescricao.getText());
+                if (pEstoqueAtual.getText() != null && !pEstoqueAtual.getText().trim().equals("")) {
+                    p.setEstoqueAtual(Integer.parseInt(pEstoqueAtual.getText()));
+                }
+                if (pEstoqueMinimo.getText() != null && !pEstoqueMinimo.getText().trim().equals("")) {
+                    p.setEstoqueMin(Integer.parseInt(pEstoqueMinimo.getText()));
+                }
+                if (pPrecoCusto.getText() != null && !pPrecoCusto.getText().trim().equals("")) {
+                    p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
+                }
+                if (pPrecoVenda.getText() != null && !pPrecoVenda.getText().trim().equals("")) {
+                    p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
+                }
+
+                p.setFabricante(pFabricante.getSelectedItem().toString());
+
+                p.setTipo(pTipo.getSelectedItem().toString());
+                p.setUnidade(pUnidade.getSelectedItem().toString());
+                return p;
+            } catch (NumberFormatException nfe) {
+                System.out.println("A String digitado não corresponde a informação");
+                StringWriter sw = new StringWriter();
+                nfe.printStackTrace(new PrintWriter(sw));
+                String exceptionAsString = sw.toString();
+                logimp.put("ERRO", exceptionAsString);
+                logimp.put("ProdutosCadastro", "getProduto", exceptionAsString);
+            } catch (NullPointerException x) {
+                System.out.println("Null Pointer");
+                StringWriter sw = new StringWriter();
+                x.printStackTrace(new PrintWriter(sw));
+                String exceptionAsString = sw.toString();
+                logimp.put("ERRO", exceptionAsString);
+                logimp.put("ProdutosCadastro", "getProduto", exceptionAsString);
+            }
+            return null;
         }
         return null;
     }
 
-        @SuppressWarnings("unchecked")
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -84,6 +105,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
         setClosable(true);
         setIconifiable(true);
+        setResizable(true);
         setTitle("Cadastrar Produto");
         setPreferredSize(new java.awt.Dimension(500, 500));
 
