@@ -51,6 +51,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
                 p.setTipo(pTipo.getSelectedItem().toString());
                 p.setUnidade(pUnidade.getSelectedItem().toString());
+                logimp.put("Cadastro", "Produto Cadastrado");
                 return p;
             } catch (NumberFormatException nfe) {
                 System.out.println("A String digitado não corresponde a informação");

@@ -75,7 +75,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 cl.setEmail(cEmail.getText());
                 cl.setBairro(cBairro.getText());
                 cl.setEndereco(cEndereço.getText());
-
+                logimp.put("Cadastro", "Cliente Cadastrado");
                 return cl;
             } catch (NumberFormatException nfe) {
                 System.out.println("A String digitado não corresponde a informação");

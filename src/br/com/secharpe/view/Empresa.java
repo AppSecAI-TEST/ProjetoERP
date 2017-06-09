@@ -6,7 +6,7 @@
 package br.com.secharpe.view;
 
 import br.com.secharpe.listener.EmpresaViewActionListener;
-
+import br.com.secharpe.util.Log;
 /**
  *
  * @author Darabas
@@ -15,6 +15,7 @@ public class Empresa extends javax.swing.JInternalFrame {
 
     EmpresaViewActionListener handlerEmpresa = new EmpresaViewActionListener(this);
     private Painel painel;
+    Log log = new Log();
 
     /**
      * Creates new form Empresa
@@ -417,6 +418,8 @@ private javax.swing.text.DefaultFormatterFactory getFormatoCnpj() {
         empresa.setNumero(Integer.parseInt(ftNumero.getText()));
         empresa.setSite(tfSite.getText());
         empresa.setTelefone(Long.valueOf(telefone));
+        log.put("Cadastro", "Empresa Cadastrada");
+        
         return empresa;
     }
 

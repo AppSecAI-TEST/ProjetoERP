@@ -8,13 +8,14 @@ package br.com.secharpe.view;
 import br.com.secharpe.listener.CidadesActionListener;
 import br.com.secharpe.model.Cidades;
 import br.com.secharpe.model.Estados;
+import br.com.secharpe.util.Log;
 
 /**
  *
  * @author Usuario
  */
 public class CidadesCadastro extends javax.swing.JInternalFrame {
-
+    Log log = new Log();
     private Painel painel;
     CidadesActionListener handlerCidades = new CidadesActionListener(this);
 
@@ -119,6 +120,7 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
         estado.setNome("Nome"); //implementar futuramente com o banco de dados
         estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
         cidade.setEstado(estado); //implementar futuramente com o banco de dados
+        log.put("Cadastro", "Cidade Cadastrada");
         return cidade;
     }
 
