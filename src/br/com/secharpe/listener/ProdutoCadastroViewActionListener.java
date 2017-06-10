@@ -5,11 +5,15 @@
  */
 package br.com.secharpe.listener;
 
+import br.com.secharpe.exception.SistemaException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import br.com.secharpe.model.Produtos;
+import br.com.secharpe.util.MessageCtrl;
 import br.com.secharpe.util.Vars;
 import br.com.secharpe.view.ProdutosCadastro;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -28,8 +32,15 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
         String action = ae.getActionCommand();
         if (action.equals(Vars.PROP_SAVE)) {
             Produtos cr = new Produtos();
-            cr = cad.getProduto();
-            System.out.println(cr.toString());
+            try {
+                cr = cad.getProduto();
+                System.out.println(cr.toString());
+            } catch (NullPointerException ex) {
+                
+            } catch (SistemaException ex) {
+               MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
+            }
+            
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cad.dispose();
         }

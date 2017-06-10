@@ -19,5 +19,6 @@ public final class Vars {
     public static final String PROP_SAVECOMPANY = br.com.secharpe.util.Propriedades.getProp("form.savecompany");
     public static final String LOGIN_ENTER = br.com.secharpe.util.Propriedades.getProp("login.enter");
     public static final String PATH_TO_ICON_FOLDER = "/br/com/secharpe/util/image/";
+    public static final String TITLE_MESSAGE_DEFAULT = "Ooops, um erro ocorreu!";
 
 }

@@ -1,8 +1,10 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.exception.SistemaException;
 import br.com.secharpe.model.Produtos;
 import br.com.secharpe.listener.ProdutoCadastroViewActionListener;
 import br.com.secharpe.util.Log;
+import br.com.secharpe.util.MessageCtrl;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import javax.swing.JOptionPane;
@@ -26,7 +28,20 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
         pFechar.addActionListener(hadlerProdutos);
     }
 
-    public Produtos getProduto() throws NullPointerException {
+    public Produtos getProduto() throws NullPointerException, SistemaException {
+        if (pCodigo.getText().trim().equals("") || pCodigo.getText().trim().equals("0")) {
+                throw new SistemaException("Insira o Codigo");
+            } 
+        if (pDescricao.getText().trim().equals("")) {
+                throw new SistemaException("Insira a Descrição");
+            } 
+        if (pEstoqueAtual.getText().trim().equals("") || pEstoqueAtual.getText().trim().equals("0")) {
+                throw new SistemaException("Insira o Estoque Atual");
+            } 
+        if (pEstoqueMinimo.getText().trim().equals("") || pEstoqueMinimo.getText().trim().equals("0")) {
+                throw new SistemaException("Insira o Estoque Minimo");
+            } 
+        
         if (pCodigo.getText() != null || pCodigo.getText() != "0") {
             try {
                 Produtos p = new Produtos();
@@ -54,6 +69,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                 logimp.put("Cadastro", "Produto Cadastrado");
                 return p;
             } catch (NumberFormatException nfe) {
+                MessageCtrl.callMessage("A String digitado não corresponde a informação", "Ops, um erro ocorreu", 8);
                 System.out.println("A String digitado não corresponde a informação");
                 StringWriter sw = new StringWriter();
                 nfe.printStackTrace(new PrintWriter(sw));
@@ -61,6 +77,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                 logimp.put("ERRO", exceptionAsString);
                 logimp.put("ProdutosCadastro", "getProduto", exceptionAsString);
             } catch (NullPointerException x) {
+                
                 System.out.println("Null Pointer");
                 StringWriter sw = new StringWriter();
                 x.printStackTrace(new PrintWriter(sw));
