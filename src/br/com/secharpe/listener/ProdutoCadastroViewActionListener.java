@@ -34,7 +34,10 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
             Produtos cr = new Produtos();
             try {
                 cr = cad.getProduto();
-                System.out.println(cr.toString());
+                if(cr != null){
+                    System.out.println(cr.toString());
+                }
+                
             } catch (NullPointerException ex) {
                 
             } catch (SistemaException ex) {

@@ -30,7 +30,10 @@ public class ClienteCadastroViewActionListener implements ActionListener {
             Clientes cr = new Clientes();
             try {
                 cr = cad.getCliente();
-                System.out.println(cr.toString());
+                if (cr != null){
+                    System.out.println(cr.toString());
+                }
+               
             } catch (SistemaException ex) {
                 MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
             }
