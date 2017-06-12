@@ -140,7 +140,6 @@ Log log = new Log();
                 Cidades cid = new Cidades();
 
                cid.setNome(nome);
-               cid.setEstadoSigla(estado);
                
 
                 

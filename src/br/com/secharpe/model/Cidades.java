@@ -5,7 +5,6 @@ public class Cidades {
     private int codigo;
     private String nome;
     private Estados estado;
-    private String siglaestado;
     
     public int getCodigo() {
         return codigo;
@@ -26,13 +25,7 @@ public class Cidades {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    public void setEstadoSigla (String sestado){
-        this.siglaestado = sestado;
-    }
     
-    public String getEstadoSgial (){
-        return siglaestado;
-    }
     public void setEstado(Estados estado) {
         this.estado = estado;
     }

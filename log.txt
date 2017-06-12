@@ -4304,3 +4304,6 @@
 	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
 	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
 
+[Mon Jun 12 15:35:52 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: No data is available
+[Mon Jun 12 15:42:56 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: No data is available
+[Mon Jun 12 15:43:44 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: No data is available
