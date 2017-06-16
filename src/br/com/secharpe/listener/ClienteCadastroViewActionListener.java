@@ -5,6 +5,7 @@
  */
 package br.com.secharpe.listener;
 
+import br.com.secharpe.databank.ClienteDAO;
 import br.com.secharpe.exception.SistemaException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -26,12 +27,24 @@ public class ClienteCadastroViewActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         String action = ae.getActionCommand();
+        if (action.equals(Vars.PROP_REMOVE)){
+           Clientes cr = new Clientes();
+           try{
+               ClienteDAO clientedao = new ClienteDAO();
+                cr = cad.getCliente();
+                // clientedao.delete(cr); 
+           } catch (SistemaException ex) {
+                MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
+        }
+        }
         if (action.equals(Vars.PROP_SAVE)) {
             Clientes cr = new Clientes();
             try {
+                ClienteDAO clientedao = new ClienteDAO();
                 cr = cad.getCliente();
                 if (cr != null){
                     System.out.println(cr.toString());
+                   // clientedao.insert(cr); 
                 }
                
             } catch (SistemaException ex) {

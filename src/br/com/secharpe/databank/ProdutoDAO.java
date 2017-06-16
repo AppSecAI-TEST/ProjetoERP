@@ -19,7 +19,7 @@ import java.io.StringWriter;
  *
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
-public class ControleProdutoBanco {
+public class ProdutoDAO {
 
     Log log = new Log();
 
@@ -76,7 +76,7 @@ public class ControleProdutoBanco {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro) values(?,?,?,?,?,?,?,?,?,?,lucro)";
+            String sql = "insert into produtos (codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro) values(?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, produto.getCodigo());
             ps.setString(2, produto.getNome());

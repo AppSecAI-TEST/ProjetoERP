@@ -5,8 +5,9 @@
  */
 package br.com.secharpe.databank;
 
-import br.com.secharpe.model.Estados;
+import br.com.secharpe.model.Unidades;
 import br.com.secharpe.util.Log;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.PreparedStatement;
@@ -19,18 +20,19 @@ import java.util.List;
  *
  * @author LuizAlexandre17 <luizalexandre17@unesc.net>
  */
-public class ControleEstadoBanco {
+public class UnidadeDAO {
 
     Log log = new Log();
 
-    public void delete(Estados estado) {
+    public void delete(Unidades uni) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
+
         try {
             conn = Connection.getConnection();
-            String sql = "delete from estados where sigla = ?";
+            String sql = "delete from unidade where codigo = ?";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, estado.getSigla());
+            ps.setInt(1, uni.getCodigo());
             ps.execute();
 
             conn.commit();
@@ -39,7 +41,7 @@ public class ControleEstadoBanco {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "delete", exceptionAsString);
+            log.put("ControleUnidadeBanco", "delete", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -49,7 +51,7 @@ public class ControleEstadoBanco {
                     sw = new StringWriter();
                     e.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "delete", exceptionAsString);
+                    log.put("ControleUnidadeBanco", "delete", exceptionAsString);
                 }
             }
 
@@ -71,15 +73,16 @@ public class ControleEstadoBanco {
         }
     }
 
-    public void insert(Estados estado) {
+    public void insert(Unidades un) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into estados (nome,sigla) values(?,?)";
+            String sql = "insert into unidade (codigo,nome,sigla) values(?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, estado.getNome());
-            ps.setString(2, estado.getSigla());
+            ps.setInt(1, un.getCodigo());
+            ps.setString(2, un.getNome());
+            ps.setString(3, un.getSigla());
 
             ps.execute();
 
@@ -90,7 +93,7 @@ public class ControleEstadoBanco {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "insert", exceptionAsString);
+            log.put("ControleUnidadeBanco", "insert", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -99,7 +102,7 @@ public class ControleEstadoBanco {
                     System.out.println("ERRO: " + ex.getMessage());
                     ex.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "update", exceptionAsString);
+                    log.put("ControleUnidadeBanco", "insert", exceptionAsString);
                 }
             }
 
@@ -121,37 +124,35 @@ public class ControleEstadoBanco {
         }
     }
 
-    public List<Estados> getAll() {
-        List<Estados> lista = new ArrayList<Estados>();
+    public List<Unidades> getAll() {
+        List<Unidades> lista = new ArrayList<Unidades>();
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select nome,sigla from estados";
+            String sql = "select codigo,nome,sigla from unidade";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                String nome = rs.getString(1);
-                String sigla = rs.getString(2);
+                Integer codigo = rs.getInt(1);
+                String nome = rs.getString(2);
+                String sigla = rs.getString(3);
+
+                Unidades unid = new Unidades();
                 
+                unid.setCodigo(codigo);
+                unid.setNome(nome);
+                unid.setSigla(sigla);
 
-                Estados est = new Estados();
-
-               
-                est.setNome(nome);
-                est.setSigla(sigla);
-               
-
-                
-                lista.add(est);
+                lista.add(unid);
             }
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "getAll", exceptionAsString);
+            log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
         } finally {
             if (ps != null) {
                 try {
@@ -161,7 +162,7 @@ public class ControleEstadoBanco {
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
+                    log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
                 }
             }
             if (conn != null) {
@@ -172,10 +173,11 @@ public class ControleEstadoBanco {
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
+                    log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
                 }
             }
         }
         return lista;
     }
+
 }

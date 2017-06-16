@@ -6,9 +6,9 @@
 
 package br.com.secharpe.databank;
 
-import br.com.secharpe.model.Unidades;
+import br.com.secharpe.model.Cidades;
+import br.com.secharpe.model.Estados;
 import br.com.secharpe.util.Log;
-
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.PreparedStatement;
@@ -21,19 +21,17 @@ import java.util.List;
  *
  * @author LuizAlexandre17 <luizalexandre17@unesc.net>
  */
-public class ControleUnidadeBanco {
-    Log log = new Log();
+public class CidadeDAO {
+Log log = new Log();
 
-    public void delete(Unidades uni) {
+    public void delete(Cidades cidade) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
-       
         try {
             conn = Connection.getConnection();
-            String sql = "delete from unidade where nome = ?";
+            String sql = "delete from cidades where codigo = ?";
             ps = conn.prepareStatement(sql);
-            
-            ps.setString(1, uni.getNome());
+            ps.setInt(1, cidade.getCodigo());
             ps.execute();
 
             conn.commit();
@@ -42,7 +40,7 @@ public class ControleUnidadeBanco {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleUnidadeBanco", "delete", exceptionAsString);
+            log.put("ControleCidadeBanco", "delete", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -52,7 +50,7 @@ public class ControleUnidadeBanco {
                     sw = new StringWriter();
                     e.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleUnidadeBanco", "delete", exceptionAsString);
+                    log.put("ControleCidadeBanco", "delete", exceptionAsString);
                 }
             }
 
@@ -74,15 +72,16 @@ public class ControleUnidadeBanco {
         }
     }
 
-    public void insert(Unidades un) {
+    public void insert(Cidades cidade) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into unidade (nome,sigla) values(?,?)";
+            String sql = "insert into cidades (codigo,nome,estado) values(?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, un.getNome());
-            ps.setString(2, un.getSigla());
+            ps.setInt(1, cidade.getCodigo());
+            ps.setString(2, cidade.getNome());
+            ps.setString(3, cidade.getEstado().getSigla().toString());
 
             ps.execute();
 
@@ -93,7 +92,7 @@ public class ControleUnidadeBanco {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleUnidadeBanco", "insert", exceptionAsString);
+            log.put("ControleCidadeBanco", "insert", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -102,7 +101,7 @@ public class ControleUnidadeBanco {
                     System.out.println("ERRO: " + ex.getMessage());
                     ex.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleUnidadeBanco", "update", exceptionAsString);
+                    log.put("ControleCidadeBanco", "insert", exceptionAsString);
                 }
             }
 
@@ -124,36 +123,34 @@ public class ControleUnidadeBanco {
         }
     }
 
-    public List<Unidades> getAll() {
-        List<Unidades> lista = new ArrayList<Unidades>();
+    public List<Cidades> getAll() {
+        List<Cidades> lista = new ArrayList<Cidades>();
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select nome,sigla from unidade";
+            String sql = "select codigo,nome,estado from cidades";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                String nome = rs.getString(1);
-                String sigla = rs.getString(2);
+                Integer codigo = rs.getInt(1);
+                String nome = rs.getString(2);
+                String estado = rs.getString(3);
                 
-
-                Unidades unid = new Unidades();
-
-               unid.setNome(nome);
-               unid.setSigla(sigla);
-               
-
-                
-                lista.add(unid);
+                Cidades cid = new Cidades();
+               cid.setCodigo(codigo);
+               cid.setNome(nome);
+               //cid.setEstado(estado);
+         
+                lista.add(cid);
             }
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
+            log.put("ControleCidadeBanco", "getAll", exceptionAsString);
         } finally {
             if (ps != null) {
                 try {
@@ -163,7 +160,7 @@ public class ControleUnidadeBanco {
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
+                    log.put("ControleCidadeBanco", "getAll", exceptionAsString);
                 }
             }
             if (conn != null) {
@@ -174,11 +171,10 @@ public class ControleUnidadeBanco {
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
+                    log.put("ControleCidadeBanco", "getAll", exceptionAsString);
                 }
             }
         }
         return lista;
     }
-
 }

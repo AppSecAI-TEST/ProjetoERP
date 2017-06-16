@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.secharpe.databank;
 
-import br.com.secharpe.model.Cidades;
 import br.com.secharpe.model.Estados;
 import br.com.secharpe.util.Log;
 import java.io.PrintWriter;
@@ -21,17 +19,18 @@ import java.util.List;
  *
  * @author LuizAlexandre17 <luizalexandre17@unesc.net>
  */
-public class ControleCidadeBanco {
-Log log = new Log();
+public class EstadoDAO {
 
-    public void delete(Cidades cidade) {
+    Log log = new Log();
+
+    public void delete(Estados estado) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "delete from cidades where nome = ?";
+            String sql = "delete from estados where codigo = ?";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, cidade.getNome());
+            ps.setInt(1, estado.getCodigo());
             ps.execute();
 
             conn.commit();
@@ -40,7 +39,7 @@ Log log = new Log();
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleCidadeBanco", "delete", exceptionAsString);
+            log.put("ControleEstadoBanco", "delete", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -50,7 +49,7 @@ Log log = new Log();
                     sw = new StringWriter();
                     e.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleCidadeBanco", "delete", exceptionAsString);
+                    log.put("ControleEstadoBanco", "delete", exceptionAsString);
                 }
             }
 
@@ -72,15 +71,16 @@ Log log = new Log();
         }
     }
 
-    public void insert(Cidades cidade) {
+    public void insert(Estados estado) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into cidades (nome,estado) values(?,?)";
+            String sql = "insert into estados (codigo,nome,sigla) values(?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, cidade.getNome());
-            ps.setString(2, cidade.getEstado().getSigla().toString());
+            ps.setInt(1, estado.getCodigo());
+            ps.setString(2, estado.getNome());
+            ps.setString(3, estado.getSigla());
 
             ps.execute();
 
@@ -91,7 +91,7 @@ Log log = new Log();
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleCidadeBanco", "insert", exceptionAsString);
+            log.put("ControleEstadoBanco", "insert", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -100,7 +100,7 @@ Log log = new Log();
                     System.out.println("ERRO: " + ex.getMessage());
                     ex.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleCidadeBanco", "update", exceptionAsString);
+                    log.put("ControleEstadoBanco", "insert", exceptionAsString);
                 }
             }
 
@@ -122,35 +122,38 @@ Log log = new Log();
         }
     }
 
-    public List<Cidades> getAll() {
-        List<Cidades> lista = new ArrayList<Cidades>();
+    public List<Estados> getAll() {
+        List<Estados> lista = new ArrayList<Estados>();
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select nome,estado from cidades";
+            String sql = "select codigo,nome,sigla from estados";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                String nome = rs.getString(1);
-                String estado = rs.getString(2);
+                Integer codigo = rs.getInt(1);
+                String nome = rs.getString(2);
+                String sigla = rs.getString(3);
                 
 
-                Cidades cid = new Cidades();
+                Estados est = new Estados();
 
-               cid.setNome(nome);
+               
+                est.setNome(nome);
+                est.setSigla(sigla);
                
 
                 
-                lista.add(cid);
+                lista.add(est);
             }
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleCidadeBanco", "getAll", exceptionAsString);
+            log.put("ControleEstadoBanco", "getAll", exceptionAsString);
         } finally {
             if (ps != null) {
                 try {
@@ -160,7 +163,7 @@ Log log = new Log();
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleCidadeBanco", "getAll", exceptionAsString);
+                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
                 }
             }
             if (conn != null) {
@@ -171,7 +174,7 @@ Log log = new Log();
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleCidadeBanco", "getAll", exceptionAsString);
+                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
                 }
             }
         }

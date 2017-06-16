@@ -20,12 +20,12 @@ public class EmpresaDAO {
 
     Log log = new Log();
 
-    public void delete(Clientes cliente) throws SistemaException {
+    public void delete(Empresa empresa) throws SistemaException {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "delete from clientes where codigo = ?";
+            String sql = "delete from empresa where codigo = ?";
             ps = conn.prepareStatement(sql);
 
             ps.execute();
