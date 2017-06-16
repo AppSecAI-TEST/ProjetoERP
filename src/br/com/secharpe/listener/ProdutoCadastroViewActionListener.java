@@ -5,6 +5,7 @@
  */
 package br.com.secharpe.listener;
 
+import br.com.secharpe.databank.ProdutoDAO;
 import br.com.secharpe.exception.SistemaException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,20 +31,30 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         String action = ae.getActionCommand();
+        if(action.equals(Vars.PROP_ERASE)){
+            Produtos cr = new Produtos();
+            try {
+                cr = cad.getProduto();
+                ProdutoDAO proddao = new ProdutoDAO();
+               // proddao.delete(cr);
+            } catch (SistemaException ex) {
+                MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
+            }
+        }
         if (action.equals(Vars.PROP_SAVE)) {
             Produtos cr = new Produtos();
             try {
                 cr = cad.getProduto();
-                if(cr != null){
+                ProdutoDAO proddao = new ProdutoDAO();
+                if (cr != null) {
                     System.out.println(cr.toString());
+                   // proddao.insert(cr); 
                 }
-                
-            } catch (NullPointerException ex) {
-                
+
             } catch (SistemaException ex) {
-               MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
+                MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
             }
-            
+
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cad.dispose();
         }

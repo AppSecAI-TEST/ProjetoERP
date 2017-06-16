@@ -4331,3 +4331,23 @@
 [Fri Jun 16 10:18:24 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Fri Jun 16 10:18:24 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Fri Jun 16 10:18:24 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:02 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 16 15:09:02 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:02 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 16 15:09:04 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:04 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:09:08 BRT 2017] [PRODUTOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:10:18 BRT 2017] [SOBRE.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:10:25 BRT 2017] [CLIENTESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:10:39 BRT 2017] [DMESSAGE.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:10:39 BRT 2017] [MESSAGECTRL.JAVA] [callMessage] [0] :: Mensagem :: Insira o Nome] [Título :: Ooops, um erro ocorreu!] [Ícone :: 8
+[Fri Jun 16 15:10:45 BRT 2017] [DMESSAGE.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:10:39 BRT 2017] [MESSAGECTRL.JAVA] [callMessage] [0] :: Mensagem :: Insira o CPF] [Título :: Ooops, um erro ocorreu!] [Ícone :: 8
+[Fri Jun 16 15:10:58 BRT 2017] [PRODUTOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 16 15:11:05 BRT 2017] [PRODUTOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
