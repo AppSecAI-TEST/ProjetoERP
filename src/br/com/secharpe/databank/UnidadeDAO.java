@@ -30,7 +30,7 @@ public class UnidadeDAO {
 
         try {
             conn = Connection.getConnection();
-            String sql = "delete from unidade where codigo = ?";
+            String sql = "delete from unidades where id = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, uni.getCodigo());
             ps.execute();
@@ -78,11 +78,10 @@ public class UnidadeDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into unidade (codigo,nome,sigla) values(?,?,?)";
+            String sql = "insert into unidades (nome,sigla) values(?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, un.getCodigo());
-            ps.setString(2, un.getNome());
-            ps.setString(3, un.getSigla());
+            ps.setString(1, un.getNome());
+            ps.setString(2, un.getSigla());
 
             ps.execute();
 
@@ -130,7 +129,7 @@ public class UnidadeDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,sigla from unidade";
+            String sql = "select id,nome,sigla from unidades";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();

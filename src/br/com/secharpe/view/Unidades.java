@@ -1,7 +1,10 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.databank.UnidadeDAO;
 import br.com.secharpe.listener.UnidadesViewActionListener;
+import java.util.List;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,6 +16,8 @@ public class Unidades extends javax.swing.JInternalFrame {
 
     UnidadesViewActionListener handlerUnidades = new UnidadesViewActionListener(this);
     private Painel painel;
+    private String[] columnNames = {"Nome", "Sigla"};
+    private DefaultTableModel model = new DefaultTableModel();
 
     /**
      * Creates new form Unidades
@@ -20,7 +25,14 @@ public class Unidades extends javax.swing.JInternalFrame {
     public Unidades(Painel painel) {
         new br.com.secharpe.util.Log().put("Unidades", "Abrindo janela");
         this.painel = painel;
-        init();
+        initComponents();
+        btNovo.addActionListener(handlerUnidades);
+        btFechar.addActionListener(handlerUnidades);
+        btRemover.addActionListener(handlerUnidades);
+        btEditar.addActionListener(handlerUnidades);
+        model.setColumnIdentifiers(columnNames);
+        jtUnidades.setModel(model);
+        
     }
 
     private void init() {
@@ -29,6 +41,8 @@ public class Unidades extends javax.swing.JInternalFrame {
         btFechar.addActionListener(handlerUnidades);
         btEditar.addActionListener(handlerUnidades);
         btRemover.addActionListener(handlerUnidades);
+         model.setColumnIdentifiers(columnNames);
+        jtUnidades.setModel(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -47,6 +61,23 @@ public class Unidades extends javax.swing.JInternalFrame {
         setTitle("Unidades");
         setMaximumSize(new java.awt.Dimension(421, 321));
         setMinimumSize(new java.awt.Dimension(421, 321));
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         jtUnidades.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -98,6 +129,10 @@ public class Unidades extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+       setTableValues();
+    }//GEN-LAST:event_formInternalFrameOpened
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
@@ -122,5 +157,13 @@ public class Unidades extends javax.swing.JInternalFrame {
             instance = new Unidades(painel);
         }
         return instance;
+    }
+    public void setTableValues() {
+        model.setRowCount(0);
+        UnidadeDAO undao = new UnidadeDAO();
+        List<br.com.secharpe.model.Unidades> listUnidade = undao.getAll();
+        for (br.com.secharpe.model.Unidades un : listUnidade) {
+            model.addRow(new Object[]{un.getNome(), un.getSigla()});
+        }
     }
 }

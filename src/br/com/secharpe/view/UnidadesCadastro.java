@@ -13,11 +13,19 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
     UnidadesActionListener handlerUnidades = new UnidadesActionListener(this);
 
     private Painel painel;
+    private Unidades un = null;
 
     /**
      * Creates new form Unidades
      */
+     public UnidadesCadastro(br.com.secharpe.view.Unidades un) {
+        init();
+        this.un = un;
+    }
     public UnidadesCadastro() {
+        init();        
+    }
+    private void init(){
         new br.com.secharpe.util.Log().put("UnidadesCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerUnidades);
@@ -145,5 +153,8 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
 
     public boolean validar() {
         return ((!tfNome.getText().equals("")) || (!tfSigla.getText().equals("")));
+    }
+    public br.com.secharpe.view.Unidades getUnidadeView(){
+        return this.un;
     }
 }

@@ -6,7 +6,6 @@
 package br.com.secharpe.databank;
 
 import br.com.secharpe.model.Estados;
-import br.com.secharpe.model.Paises;
 import br.com.secharpe.util.Log;
 import java.io.PrintWriter;
 import java.io.StringWriter;
