@@ -28,7 +28,7 @@ public class EstadosViewActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_NEW)) {
-            EstadosCadastro cidadesCadastro = new EstadosCadastro();
+            EstadosCadastro cidadesCadastro = new EstadosCadastro(estados);
             if (VerificaFrame.verificaFrame(estados.getPainel(), cidadesCadastro)) {
                 VerificaFrame.exibirFrame(estados.getPainel(), cidadesCadastro);
             }

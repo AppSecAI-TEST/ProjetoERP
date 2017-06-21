@@ -14,12 +14,22 @@ import br.com.secharpe.listener.EstadosActionListener;
 public class EstadosCadastro extends javax.swing.JInternalFrame {
 
     private Painel painel;
-    EstadosActionListener handlerCidades = new EstadosActionListener(this);
+    private EstadosActionListener handlerCidades = new EstadosActionListener(this);
+    private Estados est = null;
 
     /**
      * Creates new form CidadesCadastro
      */
+    public EstadosCadastro(br.com.secharpe.view.Estados est) {
+        init();
+        this.est = est;
+    }
+
     public EstadosCadastro() {
+        init();
+    }
+
+    private void init() {
         new br.com.secharpe.util.Log().put("EstadosCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerCidades);
@@ -135,5 +145,8 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
         estado.setNome(tfNome.getText());
         estado.setSigla(tfSigla.getText());
         return estado;
+    }
+    public br.com.secharpe.view.Estados getEstadoView(){
+        return this.est;
     }
 }

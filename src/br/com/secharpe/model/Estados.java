@@ -6,6 +6,9 @@ public class Estados {
     private String nome;
     private String sigla;
 
+    public Estados() {
+    }
+
     public int getCodigo() {
         return codigo;
     }

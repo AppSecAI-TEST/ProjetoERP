@@ -24,10 +24,16 @@ public class EstadosActionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
+        br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
         if (action.equals(Vars.PROP_SAVE)) {
             if (cadastro.getNome().isEmpty() && cadastro.getSigla().isEmpty()) {
                 System.out.println("Insira corretamente as informações!");
             } else {
+                br.com.secharpe.databank.EstadoDAO es = new br.com.secharpe.databank.EstadoDAO();
+                System.out.println(cadastro.getEstado().toString());
+                estado = cadastro.getEstado();
+                es.insert(estado);
+                cadastro.getEstadoView().setTableValues();
                 System.out.println(cadastro.getEstado().toString());
             }
         } else if (action.equals(Vars.PROP_CLOSE)) {

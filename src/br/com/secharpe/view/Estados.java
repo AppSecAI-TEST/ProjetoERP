@@ -5,7 +5,10 @@
  */
 package br.com.secharpe.view;
 
+import br.com.secharpe.databank.EstadoDAO;
 import br.com.secharpe.listener.EstadosViewActionListener;
+import java.util.List;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,8 +16,10 @@ import br.com.secharpe.listener.EstadosViewActionListener;
  */
 public class Estados extends javax.swing.JInternalFrame {
 
-    EstadosViewActionListener handlerEstados = new EstadosViewActionListener(this);
+    private EstadosViewActionListener handlerEstados = new EstadosViewActionListener(this);
     private Painel painel;
+    private String[] columnNames = {"Nome", "Sigla"};
+    private DefaultTableModel model = new DefaultTableModel();
 
     /**
      * Creates new form Cidades
@@ -27,6 +32,8 @@ public class Estados extends javax.swing.JInternalFrame {
         btFechar.addActionListener(handlerEstados);
         btRemover.addActionListener(handlerEstados);
         btEditar.addActionListener(handlerEstados);
+        model.setColumnIdentifiers(columnNames);
+        jtEstados.setModel(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -44,6 +51,23 @@ public class Estados extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setTitle("Estados");
         setToolTipText("");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         btNovo.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
 
@@ -110,6 +134,10 @@ public class Estados extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+        setTableValues();
+    }//GEN-LAST:event_formInternalFrameOpened
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
@@ -130,5 +158,14 @@ public class Estados extends javax.swing.JInternalFrame {
             instance = new Estados(painel);
         }
         return instance;
+    }
+
+    public void setTableValues() {
+        model.setRowCount(0);
+        EstadoDAO estado = new EstadoDAO();
+        List<br.com.secharpe.model.Estados> listEstados = estado.getAll();
+        for (br.com.secharpe.model.Estados est : listEstados) {
+            model.addRow(new Object[]{est.getNome(), est.getSigla()});
+        }
     }
 }

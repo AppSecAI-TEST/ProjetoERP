@@ -6,6 +6,7 @@
 package br.com.secharpe.databank;
 
 import br.com.secharpe.model.Estados;
+import br.com.secharpe.model.Paises;
 import br.com.secharpe.util.Log;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -76,11 +77,10 @@ public class EstadoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into estados (codigo,nome,sigla) values(?,?,?)";
+            String sql = "INSERT INTO estados (nome, sigla) VALUES (?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, estado.getCodigo());
-            ps.setString(2, estado.getNome());
-            ps.setString(3, estado.getSigla());
+            ps.setString(1, estado.getNome());
+            ps.setString(2, estado.getSigla());
 
             ps.execute();
 
@@ -128,7 +128,7 @@ public class EstadoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,sigla from estados";
+            String sql = "select id, nome, sigla from estados";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
@@ -137,13 +137,15 @@ public class EstadoDAO {
                 String nome = rs.getString(2);
                 String sigla = rs.getString(3);
                 
+                
 
                 Estados est = new Estados();
 
                
                 est.setNome(nome);
                 est.setSigla(sigla);
-               
+                est.setCodigo(codigo);
+                
 
                 
                 lista.add(est);
