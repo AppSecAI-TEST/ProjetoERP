@@ -4,6 +4,7 @@ import br.com.secharpe.dao.EstadoDAO;
 import br.com.secharpe.listener.EstadosViewActionListener;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -13,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Estados extends javax.swing.JInternalFrame {
 
-    private ArrayList<EstadosCadastro> childs;
+    private ArrayList<JInternalFrame> childs;
     private EstadosViewActionListener handlerEstados = new EstadosViewActionListener(this);
     private Painel painel;
     private String[] columnNames = {"Nome", "Sigla"};
@@ -158,7 +159,6 @@ public class Estados extends javax.swing.JInternalFrame {
     /**
      * Atualiza vamores da tabela
      */
-
     public void refreshTable() {
         model.setRowCount(0);
         EstadoDAO estado = new EstadoDAO();
@@ -168,14 +168,18 @@ public class Estados extends javax.swing.JInternalFrame {
         }
     }
 
-    public void addChild(EstadosCadastro esCad) {
+    public void addChild(JInternalFrame esCad) {
         childs.add(esCad);
     }
-    
+
     public void closeChilds() {
-        for (EstadosCadastro janela : childs) {
+        for (JInternalFrame janela : childs) {
             janela.dispose();
         }
+    }
+
+    public void childRemove(JInternalFrame cdCad) {
+        childs.remove(cdCad);
     }
 
     public JTable getTable() {

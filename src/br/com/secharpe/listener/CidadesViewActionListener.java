@@ -32,6 +32,7 @@ public class CidadesViewActionListener implements ActionListener {
             CidadesCadastro cidadesCadastro = new CidadesCadastro(cidades);
             if (VerificaFrame.verificaFrame(cidades.getPainel(), cidadesCadastro)) {
                 VerificaFrame.exibirFrame(cidades.getPainel(), cidadesCadastro);
+                cidades.addChild(cidadesCadastro);
             }
         } else if (action.equals(Vars.PROP_REMOVE)) {
             JTable tabela = cidades.getTable();

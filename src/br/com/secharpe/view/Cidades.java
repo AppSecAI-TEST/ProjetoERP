@@ -2,7 +2,9 @@ package br.com.secharpe.view;
 
 import br.com.secharpe.dao.CidadeDAO;
 import br.com.secharpe.listener.CidadesViewActionListener;
+import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -15,6 +17,7 @@ public class Cidades extends javax.swing.JInternalFrame {
 
     private CidadesViewActionListener handlerCidades = new CidadesViewActionListener(this);
     private Painel painel;
+    private ArrayList<JInternalFrame> childs;
     private final String[] columnNames = {"ID", "Nome", "Estado", "Sigla"};
     private DefaultTableModel model = new DefaultTableModel() {
         private static final long serialVersionUID = 1L;
@@ -33,6 +36,7 @@ public class Cidades extends javax.swing.JInternalFrame {
     public Cidades(Painel painel) {
         new br.com.secharpe.util.Log().put("Cidades", "Abrindo janela");
         this.painel = painel;
+        childs = new ArrayList<>();
         initComponents();
         btNovo.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);
@@ -63,6 +67,7 @@ public class Cidades extends javax.swing.JInternalFrame {
             public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
             }
             public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
             }
             public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
             }
@@ -82,6 +87,11 @@ public class Cidades extends javax.swing.JInternalFrame {
         btEditar.setText(br.com.secharpe.util.Propriedades.getProp("form.edit"));
 
         btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
 
         jtCidades.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -144,6 +154,14 @@ public class Cidades extends javax.swing.JInternalFrame {
         refreshTable();
     }//GEN-LAST:event_formInternalFrameOpened
 
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        closeChilds();
+    }//GEN-LAST:event_formInternalFrameClosing
+
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+        closeChilds();
+    }//GEN-LAST:event_btFecharActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
@@ -181,5 +199,20 @@ public class Cidades extends javax.swing.JInternalFrame {
 
     public JTable getTable() {
         return this.jtCidades;
+    }
+
+    public void addChild(JInternalFrame cdCad) {
+        childs.add(cdCad);
+    }
+
+    public void childRemove(JInternalFrame cdCad) {
+        childs.remove(cdCad);
+    }
+
+
+    public void closeChilds() {
+        for (JInternalFrame janela : childs) {
+            janela.dispose();
+        }
     }
 }
