@@ -7,16 +7,16 @@ import br.com.secharpe.util.Log;
 import br.com.secharpe.util.MessageCtrl;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class ProdutosCadastro extends javax.swing.JInternalFrame {
+    private static final long serialVersionUID = 1L;
 
-    ProdutoCadastroViewActionListener hadlerProdutos = new ProdutoCadastroViewActionListener(this);
-    Log logimp = new Log();
+    private final ProdutoCadastroViewActionListener hadlerProdutos = new ProdutoCadastroViewActionListener(this);
+    private final Log logimp = new Log();
 
     /**
      * Creates new form CadastroProduto
@@ -30,18 +30,18 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
     public Produtos getProduto() throws NullPointerException, SistemaException {
         if (pCodigo.getText().trim().equals("") || pCodigo.getText().trim().equals("0")) {
-                throw new SistemaException("Insira o Codigo");
-            } 
+            throw new SistemaException("Insira o Codigo");
+        }
         if (pDescricao.getText().trim().equals("")) {
-                throw new SistemaException("Insira a Descrição");
-            } 
+            throw new SistemaException("Insira a Descrição");
+        }
         if (pEstoqueAtual.getText().trim().equals("") || pEstoqueAtual.getText().trim().equals("0")) {
-                throw new SistemaException("Insira o Estoque Atual");
-            } 
+            throw new SistemaException("Insira o Estoque Atual");
+        }
         if (pEstoqueMinimo.getText().trim().equals("") || pEstoqueMinimo.getText().trim().equals("0")) {
-                throw new SistemaException("Insira o Estoque Minimo");
-            } 
-        
+            throw new SistemaException("Insira o Estoque Minimo");
+        }
+
         if (pCodigo.getText() != null || pCodigo.getText() != "0") {
             try {
                 Produtos p = new Produtos();
@@ -56,7 +56,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                 }
                 if (pPrecoCusto.getText() != null && !pPrecoCusto.getText().trim().equals("")) {
                     p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
-                    
+
                 }
                 if (pPrecoVenda.getText() != null && !pPrecoVenda.getText().trim().equals("")) {
                     p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
@@ -77,7 +77,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
                 logimp.put("ERRO", exceptionAsString);
                 logimp.put("ProdutosCadastro", "getProduto", exceptionAsString);
             } catch (NullPointerException x) {
-                
+
                 System.out.println("Null Pointer");
                 StringWriter sw = new StringWriter();
                 x.printStackTrace(new PrintWriter(sw));

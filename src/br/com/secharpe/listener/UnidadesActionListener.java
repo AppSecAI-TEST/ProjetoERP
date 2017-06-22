@@ -27,7 +27,7 @@ public class UnidadesActionListener implements ActionListener {
         br.com.secharpe.model.Unidades unidade = new br.com.secharpe.model.Unidades();
         if (action.equals(Vars.PROP_SAVE)) {
             if (cadastro.validar()) {
-                br.com.secharpe.databank.UnidadeDAO und = new br.com.secharpe.databank.UnidadeDAO();
+                br.com.secharpe.dao.UnidadeDAO und = new br.com.secharpe.dao.UnidadeDAO();
                 System.out.println(cadastro.getUnidade().toString());
                 unidade = cadastro.getUnidade();
                 und.insert(unidade);

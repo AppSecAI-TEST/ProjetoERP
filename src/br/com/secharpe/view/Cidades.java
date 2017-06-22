@@ -1,23 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.view;
 
 import br.com.secharpe.listener.CidadesViewActionListener;
 
 /**
- *
- * @author Usuario
+ * View para exibir todas as cidades
+ * @author luandr<stringigualanull@outlook.com>
  */
 public class Cidades extends javax.swing.JInternalFrame {
 
-    CidadesViewActionListener handlerCidades = new CidadesViewActionListener(this);
+    private CidadesViewActionListener handlerCidades = new CidadesViewActionListener(this);
     private Painel painel;
 
     /**
      * Creates new form Cidades
+     * @param painel Painel
      */
     public Cidades(Painel painel) {
         new br.com.secharpe.util.Log().put("Cidades", "Abrindo janela");

@@ -1,6 +1,6 @@
 package br.com.secharpe.listener;
 
-import br.com.secharpe.databank.UnidadeDAO;
+import br.com.secharpe.dao.UnidadeDAO;
 import br.com.secharpe.util.Vars;
 import br.com.secharpe.util.VerificaFrame;
 import br.com.secharpe.view.Painel;

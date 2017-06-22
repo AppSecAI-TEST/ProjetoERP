@@ -1,4 +1,4 @@
-package br.com.secharpe.databank;
+package br.com.secharpe.dao;
 
 import br.com.secharpe.exception.SistemaException;
 import br.com.secharpe.model.Cidades;

@@ -5,7 +5,7 @@
  */
 package br.com.secharpe.listener;
 
-import br.com.secharpe.databank.ClienteDAO;
+import br.com.secharpe.dao.ClienteDAO;
 import br.com.secharpe.exception.SistemaException;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

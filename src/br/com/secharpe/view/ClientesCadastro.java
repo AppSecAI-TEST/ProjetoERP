@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.view;
 
 import br.com.secharpe.exception.SistemaException;
@@ -10,54 +5,47 @@ import br.com.secharpe.listener.ClienteCadastroViewActionListener;
 import br.com.secharpe.model.Clientes;
 import br.com.secharpe.util.Log;
 import br.com.secharpe.util.MessageCtrl;
-import java.awt.Graphics;
-import java.awt.Image;
 import java.io.PrintWriter;
 import java.io.StringWriter;
-import javax.swing.ImageIcon;
 
 /**
- *
+ * View para adicionar novos clientes
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class ClientesCadastro extends javax.swing.JInternalFrame {
 
-    /**
-     * Creates new form Clientes
-     */
-    ClienteCadastroViewActionListener clienteAl = new ClienteCadastroViewActionListener(this);
-    Log logimp = new Log();
-    Painel painel;
+    private final ClienteCadastroViewActionListener clienteAl = new ClienteCadastroViewActionListener(this);
+    private final Log logimp = new Log();
+    private Painel painel;
 
     public ClientesCadastro() {
         new br.com.secharpe.util.Log().put("ClientesCadastro", "Abrindo janela");
-
         this.painel = painel;
-
         initComponents();
         btSalvarCliente.addActionListener(clienteAl);
         btSairCliente.addActionListener(clienteAl);
 
     }
 
+    /**
+     * @return Retorna cliente
+     */
     public Clientes getCliente() throws SistemaException {
         Clientes cl = new Clientes();
 
-        
-            if (cNome.getText().trim().equals("")) {
-                throw new SistemaException("Insira o Nome");
-            
-            } 
-            if (cCPF.getText().trim().equals("")){
-               throw new SistemaException("Insira o CPF");           
-           }
-            if (cCelular.getText().trim().equals("") && cTelefone.getText().trim().equals("")){
-               throw new SistemaException("Insira Telefone ou Celular");           
-           }
- 
-        
-       if (cNome.getText() != null) {
-          try {
+        if (cNome.getText().trim().equals("")) {
+            throw new SistemaException("Insira o Nome");
+
+        }
+        if (cCPF.getText().trim().equals("")) {
+            throw new SistemaException("Insira o CPF");
+        }
+        if (cCelular.getText().trim().equals("") && cTelefone.getText().trim().equals("")) {
+            throw new SistemaException("Insira Telefone ou Celular");
+        }
+
+        if (cNome.getText() != null) {
+            try {
                 br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
                 br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades();
                 cl.setNome(cNome.getText());
@@ -88,28 +76,28 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 cl.setCodigo(0);
                 cl.setComplemento(cComplemento.getText());
                 cl.setEmail(cEmail.getText());
-               cl.setBairro(cBairro.getText());
-               cl.setEndereco(cEndereço.getText());
-               logimp.put("Cadastro", "Cliente Cadastrado");
-               return cl;
-          } catch (NumberFormatException nfe) {
-               MessageCtrl.callMessage("A String digitado não corresponde a informação", "Ops, um erro ocorreu", 8);
+                cl.setBairro(cBairro.getText());
+                cl.setEndereco(cEndereço.getText());
+                logimp.put("Cadastro", "Cliente Cadastrado");
+                return cl;
+            } catch (NumberFormatException nfe) {
+                MessageCtrl.callMessage("A String digitado não corresponde a informação", "Ops, um erro ocorreu", 8);
                 StringWriter sw = new StringWriter();
-              nfe.printStackTrace(new PrintWriter(sw));
-               String exceptionAsString = sw.toString();
-               System.out.println();
-               logimp.put("ERRO", exceptionAsString);
+                nfe.printStackTrace(new PrintWriter(sw));
+                String exceptionAsString = sw.toString();
+                System.out.println();
+                logimp.put("ERRO", exceptionAsString);
                 logimp.put("ClientesCadastro", "getCliente", exceptionAsString);
 
-           } catch (NullPointerException nf) {
+            } catch (NullPointerException nf) {
                 System.out.println("ERRO Null Pointer");
-               StringWriter sw = new StringWriter();
-               nf.printStackTrace(new PrintWriter(sw));
-               String exceptionAsString = sw.toString();
+                StringWriter sw = new StringWriter();
+                nf.printStackTrace(new PrintWriter(sw));
+                String exceptionAsString = sw.toString();
                 System.out.println();
-               logimp.put("ERRO", exceptionAsString);
+                logimp.put("ERRO", exceptionAsString);
                 logimp.put("ClientesCadastro", "getCliente", exceptionAsString);
-           }
+            }
         }
         return null;
     }
@@ -361,7 +349,9 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     // End of variables declaration//GEN-END:variables
-
+    /**
+     * @return Retorna painel
+     */
     public Painel getPainel() {
         return this.painel;
     }

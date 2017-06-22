@@ -27,7 +27,7 @@ public class AnotacoesActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_SAVE)) {
-            if (cadastro.validar()) {
+            if (!(cadastro.getAnotacoes().getTitulo().trim().equals("") && cadastro.getAnotacoes().getDescricao().trim().equals("") && cadastro.getAnotacoes().getAnotacao().trim().equals(""))) {
                 System.out.println(cadastro.getAnotacoes().toString());
             } else {
                 System.out.println("Insira corretamente as informações!");

@@ -5214,3 +5214,292 @@
 [Wed Jun 21 11:05:27 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Wed Jun 21 11:05:27 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Wed Jun 21 11:05:30 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:18 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 21:23:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:20 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 21:23:33 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:33 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:34 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:34 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:34 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:34 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:34 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:34 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:23:41 BRT 2017] [CONNECTION.JAVA] [CONSTRUTOR] :: java.sql.SQLException: socket creation error
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbcDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbcDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at br.com.secharpe.dao.Connection.getConnection(Connection.java:26)
+	at br.com.secharpe.dao.EstadoDAO.getAll(EstadoDAO.java:129)
+	at br.com.secharpe.view.Estados.setTableValues(Estados.java:178)
+	at br.com.secharpe.view.Estados.formInternalFrameOpened(Estados.java:142)
+	at br.com.secharpe.view.Estados.access$100(Estados.java:13)
+	at br.com.secharpe.view.Estados$1.internalFrameOpened(Estados.java:67)
+	at javax.swing.JInternalFrame.fireInternalFrameEvent(JInternalFrame.java:1567)
+	at javax.swing.JInternalFrame.show(JInternalFrame.java:1743)
+	at java.awt.Component.show(Component.java:1671)
+	at java.awt.Component.setVisible(Component.java:1623)
+	at javax.swing.JComponent.setVisible(JComponent.java:2644)
+	at br.com.secharpe.util.VerificaFrame.exibirFrame(VerificaFrame.java:15)
+	at br.com.secharpe.principal.listener.EstadosMenuItem.actionPerformed(EstadosMenuItem.java:22)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Wed Jun 21 21:25:34 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 21:25:34 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:35 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 21:25:44 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:44 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:44 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:45 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:45 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:45 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:45 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:25:45 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:15 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:24 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:24 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:26 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:26 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:26 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:27 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:31 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:32 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:32 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:33 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:33 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:33 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:33 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:34 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:34 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:34 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:34 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:34 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:26:34 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:30 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 21:34:30 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:30 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 21:34:44 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 21:34:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 21:34:46 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:34:46 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:01 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 21:37:01 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:01 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 21:37:03 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:03 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:09 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:09 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:11 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:12 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:18 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:31 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:31 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 21:37:49 BRT 2017] [CONTROLEESTADOBANCO.JAVA] [insert] :: java.sql.SQLException: Violation of unique constraint $$: duplicate value(s) for column(s) $$: SYS_CT_60 in statement [INSERT INTO estados (nome, sigla) VALUES (?,?)]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.execute(Unknown Source)
+	at br.com.secharpe.dao.EstadoDAO.insert(EstadoDAO.java:79)
+	at br.com.secharpe.listener.EstadosActionListener.actionPerformed(EstadosActionListener.java:35)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Wed Jun 21 22:24:59 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 22:24:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:24:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 22:25:00 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:00 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:00 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:00 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:00 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:01 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:01 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:01 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:07 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:07 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:10 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:10 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:10 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:10 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:10 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:20 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:25:20 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:49:18 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 22:49:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:49:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 22:50:17 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 22:50:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:18 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 22:50:20 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:20 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:20 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:20 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:21 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:21 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:21 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:21 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:39 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:48 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:48 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:48 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:50 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:50:50 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:48 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 22:52:48 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:49 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 22:52:50 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:50 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:55 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:52:55 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:17 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 22:53:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 22:53:19 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:19 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:26 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:29 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:29 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:53:30 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:07 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 22:54:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 22:54:09 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:09 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:16 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:22 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 22:54:22 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:25 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 23:00:25 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:25 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 23:00:27 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:27 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:00:39 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:41 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Wed Jun 21 23:04:41 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:41 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Wed Jun 21 23:04:43 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:43 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:47 BRT 2017] [CLIENTESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:52 BRT 2017] [CLIENTESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:53 BRT 2017] [CLIENTESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:53 BRT 2017] [CLIENTESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:04:53 BRT 2017] [CLIENTESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:05:05 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:05:07 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:05:07 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Wed Jun 21 23:05:22 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela

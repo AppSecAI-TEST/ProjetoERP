@@ -1,6 +1,6 @@
 package br.com.secharpe.view;
 
-import br.com.secharpe.databank.UnidadeDAO;
+import br.com.secharpe.dao.UnidadeDAO;
 import br.com.secharpe.listener.UnidadesViewActionListener;
 import java.util.List;
 import javax.swing.JTable;
@@ -16,7 +16,7 @@ public class Unidades extends javax.swing.JInternalFrame {
 
     UnidadesViewActionListener handlerUnidades = new UnidadesViewActionListener(this);
     private Painel painel;
-    private String[] columnNames = {"Nome", "Sigla"};
+    private final String[] columnNames = {"Nome", "Sigla"};
     private DefaultTableModel model = new DefaultTableModel();
 
     /**
@@ -32,16 +32,19 @@ public class Unidades extends javax.swing.JInternalFrame {
         btEditar.addActionListener(handlerUnidades);
         model.setColumnIdentifiers(columnNames);
         jtUnidades.setModel(model);
-        
+
     }
 
+    /**
+     * Inicia componentes
+     */
     private void init() {
         initComponents();
         btNovo.addActionListener(handlerUnidades);
         btFechar.addActionListener(handlerUnidades);
         btEditar.addActionListener(handlerUnidades);
         btRemover.addActionListener(handlerUnidades);
-         model.setColumnIdentifiers(columnNames);
+        model.setColumnIdentifiers(columnNames);
         jtUnidades.setModel(model);
     }
 
@@ -130,7 +133,7 @@ public class Unidades extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-       setTableValues();
+        setTableValues();
     }//GEN-LAST:event_formInternalFrameOpened
 
 
@@ -142,22 +145,40 @@ public class Unidades extends javax.swing.JInternalFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jtUnidades;
     // End of variables declaration//GEN-END:variables
-
+    /**
+     * Método para retornar a tabela
+     *
+     * @return JTable tabela
+     */
     public JTable getTable() {
         return this.jtUnidades;
     }
 
+    /**
+     * Método para retornar o painel
+     *
+     * @return painel Painel
+     */
     public Painel getPainel() {
         return this.painel;
     }
     private static Unidades instance;
 
+    /**
+     * Método para retornar a instancia de view.Unidades
+     *
+     * @return instance de Unidades
+     */
     public static Unidades getInstance(Painel painel) {
         if (instance == null) {
             instance = new Unidades(painel);
         }
         return instance;
     }
+
+    /**
+     * Método para atualizar valores da tabela
+     */
     public void setTableValues() {
         model.setRowCount(0);
         UnidadeDAO undao = new UnidadeDAO();

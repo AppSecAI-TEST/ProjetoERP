@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.secharpe.databank;
+package br.com.secharpe.dao;
 
 import br.com.secharpe.model.Produtos;
 import java.sql.PreparedStatement;
