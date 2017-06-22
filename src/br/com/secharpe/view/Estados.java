@@ -127,7 +127,7 @@ public class Estados extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_formInternalFrameOpened
 
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
-        // TODO add your handling code here:
+        closeChilds();
     }//GEN-LAST:event_btFecharActionPerformed
 
     private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
@@ -168,16 +168,10 @@ public class Estados extends javax.swing.JInternalFrame {
         }
     }
 
-    /**
-     * @deprecated
-     */
     public void addChild(EstadosCadastro esCad) {
         childs.add(esCad);
     }
-
-    /**
-     * @deprecated
-     */
+    
     public void closeChilds() {
         for (EstadosCadastro janela : childs) {
             janela.dispose();
