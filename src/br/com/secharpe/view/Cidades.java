@@ -1,18 +1,33 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.dao.CidadeDAO;
 import br.com.secharpe.listener.CidadesViewActionListener;
+import java.util.List;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * View para exibir todas as cidades
+ *
  * @author luandr<stringigualanull@outlook.com>
  */
 public class Cidades extends javax.swing.JInternalFrame {
 
     private CidadesViewActionListener handlerCidades = new CidadesViewActionListener(this);
     private Painel painel;
+    private final String[] columnNames = {"ID", "Nome", "Estado", "Sigla"};
+    private DefaultTableModel model = new DefaultTableModel() {
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
+    };
 
     /**
      * Creates new form Cidades
+     *
      * @param painel Painel
      */
     public Cidades(Painel painel) {
@@ -23,6 +38,8 @@ public class Cidades extends javax.swing.JInternalFrame {
         btFechar.addActionListener(handlerCidades);
         btEditar.addActionListener(handlerCidades);
         btRemover.addActionListener(handlerCidades);
+        model.setColumnIdentifiers(columnNames);
+        jtCidades.setModel(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -34,12 +51,29 @@ public class Cidades extends javax.swing.JInternalFrame {
         btEditar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtUnidades = new javax.swing.JTable();
+        jtCidades = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Cidades");
         setToolTipText("");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         btNovo.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
 
@@ -49,7 +83,7 @@ public class Cidades extends javax.swing.JInternalFrame {
 
         btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
-        jtUnidades.setModel(new javax.swing.table.DefaultTableModel(
+        jtCidades.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -72,7 +106,7 @@ public class Cidades extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jtUnidades);
+        jScrollPane1.setViewportView(jtCidades);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -106,6 +140,10 @@ public class Cidades extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+        refreshTable();
+    }//GEN-LAST:event_formInternalFrameOpened
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
@@ -113,8 +151,21 @@ public class Cidades extends javax.swing.JInternalFrame {
     private javax.swing.JButton btNovo;
     private javax.swing.JButton btRemover;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jtUnidades;
+    private javax.swing.JTable jtCidades;
     // End of variables declaration//GEN-END:variables
+
+    /**
+     * Atualiza vamores da tabela
+     */
+    public void refreshTable() {
+        model.setRowCount(0);
+        CidadeDAO cidade = new CidadeDAO();
+        List<br.com.secharpe.model.Cidades> listCidades = cidade.getAll();
+        System.out.println(listCidades);
+        for (br.com.secharpe.model.Cidades est : listCidades) {
+            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getEstado().getNome(), est.getEstado().getSigla()});
+        }
+    }
 
     public Painel getPainel() {
         return this.painel;
@@ -126,5 +177,9 @@ public class Cidades extends javax.swing.JInternalFrame {
             instance = new Cidades(painel);
         }
         return instance;
+    }
+
+    public JTable getTable() {
+        return this.jtCidades;
     }
 }

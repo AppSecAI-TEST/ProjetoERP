@@ -28,7 +28,7 @@ public class EstadosViewActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_NEW)) {
-            EstadosCadastro estadosCadastro = new EstadosCadastro(estados, false);
+            EstadosCadastro estadosCadastro = new EstadosCadastro(estados);
             if (VerificaFrame.verificaFrame(estados.getPainel(), estadosCadastro)) {
                 VerificaFrame.exibirFrame(estados.getPainel(), estadosCadastro);
                 estados.addChild(estadosCadastro);
@@ -39,18 +39,6 @@ public class EstadosViewActionListener implements ActionListener {
             br.com.secharpe.dao.EstadoDAO estDAO = new br.com.secharpe.dao.EstadoDAO();
             estDAO.delete(sigla);
             estados.refreshTable();
-        } else if (action.equals(Vars.PROP_EDIT)) {
-            br.com.secharpe.dao.EstadoDAO estDAO = new br.com.secharpe.dao.EstadoDAO();
-            EstadosCadastro estadosCadastro = new EstadosCadastro(estados, true);
-            JTable tabela = estados.getTable();
-            String sigla = tabela.getValueAt(tabela.getSelectedRow(), 1).toString();
-            br.com.secharpe.model.Estados estado = estDAO.getEstado(sigla);
-            estadosCadastro.setValores(estado);
-            if (VerificaFrame.verificaFrame(estados.getPainel(), estadosCadastro)) {
-                VerificaFrame.exibirFrame(estados.getPainel(), estadosCadastro);
-                estados.addChild(estadosCadastro);
-                estadosCadastro.toFront();
-            }
         } else if (action.equals(Vars.PROP_CLOSE)) {
             estados.dispose();
         }

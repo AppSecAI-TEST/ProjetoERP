@@ -123,7 +123,7 @@ public class Estados extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-        //refreshTable();
+        refreshTable();
     }//GEN-LAST:event_formInternalFrameOpened
 
     private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
@@ -156,8 +156,9 @@ public class Estados extends javax.swing.JInternalFrame {
     }
 
     /**
-     * @deprecated
+     * Atualiza vamores da tabela
      */
+
     public void refreshTable() {
         model.setRowCount(0);
         EstadoDAO estado = new EstadoDAO();

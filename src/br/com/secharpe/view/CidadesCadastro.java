@@ -1,26 +1,49 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.dao.EstadoDAO;
 import br.com.secharpe.listener.CidadesActionListener;
 import br.com.secharpe.model.Cidades;
 import br.com.secharpe.model.Estados;
 import br.com.secharpe.util.Log;
+import java.util.List;
+import javax.swing.DefaultComboBoxModel;
 
 /**
  * View para criar novas cidades
+ *
  * @author luandr<stringigualanull@outlook.com>
  */
 public class CidadesCadastro extends javax.swing.JInternalFrame {
+
     private static final long serialVersionUID = 1L;
 
     private final Log log = new Log();
     private final CidadesActionListener handlerCidades = new CidadesActionListener(this);
     private Painel painel;
+    private DefaultComboBoxModel model;
+    private br.com.secharpe.view.Cidades cid = null;
 
-    public CidadesCadastro() {
+    public CidadesCadastro(br.com.secharpe.view.Cidades cid) {
         new br.com.secharpe.util.Log().put("CidadesCadastro", "Abrindo janela");
+        this.cid = cid;
         initComponents();
+        init();
+    }
+
+    private CidadesCadastro() {
+        init();
+    }
+
+    private void init() {
+        model = new DefaultComboBoxModel();
         btCadastrar.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);
+        EstadoDAO estado = new EstadoDAO();
+        List<br.com.secharpe.model.Estados> listEstados = estado.getAll();
+        for (br.com.secharpe.model.Estados est : listEstados) {
+            model.addElement(est.getSigla());
+        }
+        cbEstado.setModel(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -102,12 +125,10 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
 
     public Cidades getCidade() {
         Cidades cidade = new Cidades();
-        cidade.setCodigo(0);
         cidade.setNome(tfNome.getText());
         Estados estado = new Estados();
         estado.setCodigo(cbEstado.getSelectedIndex());//implementar futuramente com o banco de dados
-        estado.setNome("Nome"); //implementar futuramente com o banco de dados
-        estado.setSigla("Sigla"); //implementar futuramente com o banco de dados
+        estado.setSigla(cbEstado.getSelectedItem().toString()); //implementar futuramente com o banco de dados
         cidade.setEstado(estado); //implementar futuramente com o banco de dados
         log.put("Cadastro", "Cidade Cadastrada");
         return cidade;
@@ -128,5 +149,9 @@ public class CidadesCadastro extends javax.swing.JInternalFrame {
 
     public boolean validar() {
         return ((!tfNome.getText().equals("")) || (cbEstado.getSelectedIndex() != 0));
+    }
+
+    public br.com.secharpe.view.Cidades getCidadeView() {
+        return this.cid;
     }
 }

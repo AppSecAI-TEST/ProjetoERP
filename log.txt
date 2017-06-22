@@ -5503,3 +5503,1520 @@
 [Wed Jun 21 23:05:07 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Wed Jun 21 23:05:07 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Wed Jun 21 23:05:22 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:32 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 09:42:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:33 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 09:42:36 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:36 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:37 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:37 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:37 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:37 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:37 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:37 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:44 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:42:50 BRT 2017] [CONNECTION.JAVA] [CONSTRUTOR] :: java.sql.SQLException: socket creation error
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbcDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbcDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at br.com.secharpe.dao.Connection.getConnection(Connection.java:26)
+	at br.com.secharpe.dao.EstadoDAO.insert(EstadoDAO.java:73)
+	at br.com.secharpe.listener.EstadosActionListener.actionPerformed(EstadosActionListener.java:35)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 09:42:51 BRT 2017] [CONNECTION.JAVA] [CONSTRUTOR] :: java.sql.SQLException: socket creation error
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbcDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbcDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at br.com.secharpe.dao.Connection.getConnection(Connection.java:26)
+	at br.com.secharpe.dao.EstadoDAO.insert(EstadoDAO.java:73)
+	at br.com.secharpe.listener.EstadosActionListener.actionPerformed(EstadosActionListener.java:35)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 09:43:14 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:38 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 09:52:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 09:52:41 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:41 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:41 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:41 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:41 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:41 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:42 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:52:42 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:54 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 09:57:54 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:55 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 09:57:57 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:57 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:57 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:57 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:57 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:57 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:57 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:57:58 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:42 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 09:58:42 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:42 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 09:58:43 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 09:58:44 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:11 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:00:12 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:12 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:00:13 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:00:13 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:27 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:02:27 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:27 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:02:29 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:02:29 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:27 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:22:27 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:27 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:22:29 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:29 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:34 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:22:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:22:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:23:01 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: Column not found: CODIGO in statement [insert into cidades (codigo,nome,estado) values(?,?,?)]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.<init>(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.prepareStatement(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:81)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:34)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:22:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:22:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:22:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:23:02 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: Column not found: CODIGO in statement [insert into cidades (codigo,nome,estado) values(?,?,?)]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.<init>(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.prepareStatement(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:81)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:34)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:22:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:27:38 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:27:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:27:40 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:40 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:48 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:27:48 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:27:48 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:28:51 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:28:51 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:52 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:28:54 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:28:54 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:29:00 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:29:00 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:29:00 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:30:10 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:30:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:30:14 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:14 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:18 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:30:18 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:30:18 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:31:51 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:31:51 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:52 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:31:53 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:53 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:57 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:31:57 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:31:57 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:32:58 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:32:58 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:58 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:32:59 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:59 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:59 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:59 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:59 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:59 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:32:59 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:00 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:04 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:04 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:33:04 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:33:06 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: Column not found: RIO in statement [select id from estados where nome = Rio de Janeiro]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.<init>(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.prepareStatement(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:83)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:33:04 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:33:37 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:33:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:33:39 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:39 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:43 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:33:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:33:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:33:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:35:54 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:35:54 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:54 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:35:55 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:35:55 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:01 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:01 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:36:01 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:36:01 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:36:39 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:36:39 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:40 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:36:41 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:41 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:41 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:41 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:42 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:42 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:42 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:42 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:46 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:36:46 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:36:46 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:39:34 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:39:34 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:34 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:39:35 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:35 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:35 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:35 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:35 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:36 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:36 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:36 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:40 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:39:40 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:39:40 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:39:42 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: ResultSet was set to forward only
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.first(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:87)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:39:40 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:41:13 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:41:13 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:14 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:41:15 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:15 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:15 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:15 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:15 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:15 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:16 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:16 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:20 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:41:20 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:41:20 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:41:20 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:45:01 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:45:01 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:01 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:45:03 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:45:03 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:09 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:09 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:09 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:18 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:91)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:50:09 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:29 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:29 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:29 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:32 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:91)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:50:29 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:51 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:50:51 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:51 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:50:53 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:53 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:59 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:50:59 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:59 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:51:01 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:91)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:50:59 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:59 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:50:59 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:51:16 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:91)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:50:59 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:03 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:52:03 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:03 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:52:04 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:05 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:08 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:08 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:08 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:10 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:86)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:52:08 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:47 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:52:48 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:48 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:52:49 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:49 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:53 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:52:53 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:53 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:54 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:87)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:52:53 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:53 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:53 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:52:55 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:87)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:52:53 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:54:41 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:54:41 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:54:41 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:54:42 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:87)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:54:41 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:56:31 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:56:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:56:33 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:33 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:33 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:33 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:34 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:34 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:34 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:34 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:37 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:56:37 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:56:37 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:56:38 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:87)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:56:37 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:57:15 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:57:16 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:16 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:57:17 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:18 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:22 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:22 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:57:22 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:57:57 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:57:57 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:58 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:57:59 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:59 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:59 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:59 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:59 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:57:59 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:58:00 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:58:00 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:58:02 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:58:02 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:58:02 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:59:37 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 10:59:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 10:59:39 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:39 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:39 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:40 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:40 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:40 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:40 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:40 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:44 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 10:59:44 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:59:44 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 10:59:46 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: No data is available
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.checkAvailable(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getColumnInType(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getInt(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:88)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 10:59:44 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:01:00 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:01:01 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:01 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:01:03 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:03 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:03 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:03 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:03 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:03 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:04 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:04 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:09 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:09 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:10 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:09 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:01:09 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:01:15 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: This function is not supported
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.Util.notSupported(Unknown Source)
+	at org.hsqldb.jdbc.jdbcResultSet.getArray(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:88)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 11:01:09 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:01:22 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:22 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:25 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:25 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:25 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:26 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:28 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:28 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:29 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:29 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:29 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:31 BRT 2017] [ESTADOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:37 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:01:37 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:01:37 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:03:10 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:03:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:03:12 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:12 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:12 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:12 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:12 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:13 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:13 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:13 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:20 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:03:20 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:21 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:03:22 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:23 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:27 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:03:27 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:03:27 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:06:35 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:06:36 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:36 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:06:38 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:38 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:38 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:38 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:39 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:39 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:39 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:39 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:43 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:06:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:06:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:08:19 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:08:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:20 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:08:21 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:21 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:21 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:21 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:21 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:21 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:22 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:22 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:25 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:08:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:08:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:09:58 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:09:58 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:09:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:10:01 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:01 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:08 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:10:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:10:10 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:10 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:14 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:10:14 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:10:14 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:13:09 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:13:09 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:13:12 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:12 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:12 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:12 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:13 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:13 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:13 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:13 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:17 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:13:17 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:13:17 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:14:28 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:14:28 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:28 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:14:30 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:30 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:34 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:14:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:14:34 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:14:52 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:14:52 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:53 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:14:54 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:54 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:54 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:54 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:54 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:55 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:55 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:55 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:58 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:14:58 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:14:58 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:17:34 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:17:34 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:34 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:17:36 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:36 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:36 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:36 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:36 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:36 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:37 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:37 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:40 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:17:40 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:17:40 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:20:31 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:20:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:20:34 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:34 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:39 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:20:39 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:20:39 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:22:18 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 11:22:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:19 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 11:22:20 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:21 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:25 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 11:22:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:22:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:22:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:22:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 11:22:25 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 15:45:09 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 15:45:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:45:10 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 15:49:02 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:02 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:02 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:02 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:03 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:03 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:03 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:49:03 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:13 BRT 2017] [CONNECTION.JAVA] [CONSTRUTOR] :: java.sql.SQLException: socket creation error
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbcDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbcDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at br.com.secharpe.dao.Connection.getConnection(Connection.java:26)
+	at br.com.secharpe.dao.CidadeDAO.getAll(CidadeDAO.java:181)
+	at br.com.secharpe.view.Cidades.refreshTable(Cidades.java:163)
+	at br.com.secharpe.view.Cidades.formInternalFrameOpened(Cidades.java:144)
+	at br.com.secharpe.view.Cidades.access$000(Cidades.java:14)
+	at br.com.secharpe.view.Cidades$2.internalFrameOpened(Cidades.java:74)
+	at javax.swing.JInternalFrame.fireInternalFrameEvent(JInternalFrame.java:1567)
+	at javax.swing.JInternalFrame.show(JInternalFrame.java:1743)
+	at java.awt.Component.show(Component.java:1671)
+	at java.awt.Component.setVisible(Component.java:1623)
+	at javax.swing.JComponent.setVisible(JComponent.java:2644)
+	at br.com.secharpe.util.VerificaFrame.exibirFrame(VerificaFrame.java:15)
+	at br.com.secharpe.principal.listener.CidadesMenuItem.actionPerformed(CidadesMenuItem.java:22)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.AbstractButton.doClick(AbstractButton.java:376)
+	at javax.swing.plaf.basic.BasicMenuItemUI.doClick(BasicMenuItemUI.java:833)
+	at javax.swing.plaf.basic.BasicMenuItemUI$Handler.mouseReleased(BasicMenuItemUI.java:877)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 15:50:36 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 15:50:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 15:50:39 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:39 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:40 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:40 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:40 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:40 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:40 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:50:40 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:51:57 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 15:51:57 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 15:51:57 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 15:51:57 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:28:53 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:30:02 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:30:03 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:04 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 16:30:07 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:07 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:07 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:08 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:08 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:08 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:08 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:30:08 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:07 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:31:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 16:31:10 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:10 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:10 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:10 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:10 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:10 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:11 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:11 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:49 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:31:49 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:49 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 16:31:52 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:52 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:52 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:52 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:52 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:53 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:53 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:31:53 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:30 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:36:31 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:31 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 16:36:33 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:33 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:33 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:33 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:33 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:34 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:34 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:36:34 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:39:43 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:39:43 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:39:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:39:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:39:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:39:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:39:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:39:55 BRT 2017] [CONTROLECIDADEBANCO.JAVA] [insert] :: java.sql.SQLException: Violation of unique constraint $$: duplicate value(s) for column(s) $$: SYS_CT_56 in statement [insert into cidades (nome, id_estado) values(?,?)]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.execute(Unknown Source)
+	at br.com.secharpe.dao.CidadeDAO.insert(CidadeDAO.java:87)
+	at br.com.secharpe.listener.CidadesActionListener.actionPerformed(CidadesActionListener.java:38)
+	at javax.swing.AbstractButton.fireActionPerformed(AbstractButton.java:2022)
+	at javax.swing.AbstractButton$Handler.actionPerformed(AbstractButton.java:2348)
+	at javax.swing.DefaultButtonModel.fireActionPerformed(DefaultButtonModel.java:402)
+	at javax.swing.DefaultButtonModel.setPressed(DefaultButtonModel.java:259)
+	at javax.swing.plaf.basic.BasicButtonListener.mouseReleased(BasicButtonListener.java:252)
+	at java.awt.Component.processMouseEvent(Component.java:6533)
+	at javax.swing.JComponent.processMouseEvent(JComponent.java:3324)
+	at java.awt.Component.processEvent(Component.java:6298)
+	at java.awt.Container.processEvent(Container.java:2236)
+	at java.awt.Component.dispatchEventImpl(Component.java:4889)
+	at java.awt.Container.dispatchEventImpl(Container.java:2294)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.LightweightDispatcher.retargetMouseEvent(Container.java:4888)
+	at java.awt.LightweightDispatcher.processMouseEvent(Container.java:4525)
+	at java.awt.LightweightDispatcher.dispatchEvent(Container.java:4466)
+	at java.awt.Container.dispatchEventImpl(Container.java:2280)
+	at java.awt.Window.dispatchEventImpl(Window.java:2746)
+	at java.awt.Component.dispatchEvent(Component.java:4711)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:758)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+	at java.awt.EventQueue$4.run(EventQueue.java:731)
+	at java.awt.EventQueue$4.run(EventQueue.java:729)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:728)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Thu Jun 22 16:39:43 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Thu Jun 22 16:40:55 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:40:55 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:56 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Thu Jun 22 16:40:57 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:40:57 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:43:47 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Thu Jun 22 16:43:48 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Thu Jun 22 16:43:48 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo

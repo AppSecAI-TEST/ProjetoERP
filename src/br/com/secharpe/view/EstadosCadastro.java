@@ -11,15 +11,13 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
     private Painel painel;
     private EstadosActionListener handlerCidades = new EstadosActionListener(this);
     private Estados est = null;
-    private boolean edit;
 
     /**
      * Creates new form CidadesCadastro
      */
-    public EstadosCadastro(br.com.secharpe.view.Estados est, boolean edit) {
+    public EstadosCadastro(br.com.secharpe.view.Estados est) {
         init();
         this.est = est;
-        this.edit = edit;
     }
 
     public EstadosCadastro() {
@@ -133,7 +131,6 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
 
     public br.com.secharpe.model.Estados getEstado() {
         br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
-        estado.setCodigo(0); //implementar futuramente com o banco de dados
         estado.setNome(tfNome.getText());
         estado.setSigla(tfSigla.getText());
         return estado;

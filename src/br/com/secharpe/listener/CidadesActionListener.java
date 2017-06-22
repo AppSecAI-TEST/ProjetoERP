@@ -1,9 +1,12 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.exception.SistemaException;
 import br.com.secharpe.model.Estados;
 import br.com.secharpe.util.Vars;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -27,6 +30,16 @@ public class CidadesActionListener implements ActionListener {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_SAVE)) {
             if (cadastro.validar()) {
+                br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades();
+                br.com.secharpe.dao.CidadeDAO es = new br.com.secharpe.dao.CidadeDAO();
+                System.out.println(cadastro.getCidade().toString());
+                cidade = cadastro.getCidade();
+                try {
+                    es.insert(cidade);
+                } catch (SistemaException ex) {
+                    System.out.println("ERRO");
+                }
+                cadastro.getCidadeView().refreshTable();
                 System.out.println(cadastro.getCidade().toString());
             } else {
                 System.out.println("Insira corretamente as informações!");

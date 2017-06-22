@@ -8,6 +8,7 @@ import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 
 public class CidadesViewActionListener implements ActionListener {
 
@@ -28,14 +29,16 @@ public class CidadesViewActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_NEW)) {
-            CidadesCadastro cidadesCadastro = new CidadesCadastro();
+            CidadesCadastro cidadesCadastro = new CidadesCadastro(cidades);
             if (VerificaFrame.verificaFrame(cidades.getPainel(), cidadesCadastro)) {
                 VerificaFrame.exibirFrame(cidades.getPainel(), cidadesCadastro);
             }
         } else if (action.equals(Vars.PROP_REMOVE)) {
-            JOptionPane.showMessageDialog(null, "W.I.P.");
-        } else if (action.equals(Vars.PROP_EDIT)) {
-            JOptionPane.showMessageDialog(null, "W.I.P.");
+            JTable tabela = cidades.getTable();
+            String nome = tabela.getValueAt(tabela.getSelectedRow(), 0).toString();
+            br.com.secharpe.dao.CidadeDAO cidDAO = new br.com.secharpe.dao.CidadeDAO();
+            cidDAO.delete(nome);
+            cidades.refreshTable();
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cidades.dispose();
         }
