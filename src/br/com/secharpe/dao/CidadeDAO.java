@@ -180,9 +180,10 @@ public class CidadeDAO {
             conn = Connection.getConnection();
             String sql = "SELECT c.id, c.nome, e.id, e.nome, e.sigla FROM cidades as c INNER JOIN estados as e ON (c.id_estado= e.id)";
             ps = conn.prepareStatement(sql);
-
+            
             ResultSet rs = ps.executeQuery();
-            do {
+           
+            while (rs.next()){
                 Cidades c = new Cidades();
                 c.setCodigo(rs.getInt(1));
                 c.setNome(rs.getString(2));
@@ -193,7 +194,7 @@ public class CidadeDAO {
                 c.setEstado(e);
 
                 lista.add(c);
-            } while (rs.next());
+            }
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
