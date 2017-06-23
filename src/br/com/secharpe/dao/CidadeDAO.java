@@ -13,7 +13,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -77,14 +76,15 @@ public class CidadeDAO {
     public void insert(Cidades cidade) throws SistemaException {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
+        int estadoID = getEstadoID(cidade.getEstado().getSigla());
+
         try {
             conn = Connection.getConnection();
 
             String sql = "insert into cidades (nome, id_estado) values(?,?)";
             ps = conn.prepareStatement(sql);
             ps.setString(1, cidade.getNome());
-            ps.setInt(2, getEstadoID(cidade.getEstado().getSigla()));
-            System.out.println(cidade.getEstado().getNome() + "2");
+            ps.setInt(2, estadoID);
             ps.execute();
             conn.commit();
 
@@ -137,10 +137,8 @@ public class CidadeDAO {
 
             ResultSet rs = ps.executeQuery();
             System.out.println(rs.next());
-            while (rs.next()) {
-                id = rs.getInt("id");
-                System.out.println("asd");
-            }
+
+            id = rs.getInt("id");
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
@@ -184,9 +182,6 @@ public class CidadeDAO {
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
-            ResultSetMetaData metadata = rs.getMetaData();
-            int numberOfColumns = metadata.getColumnCount();
-            System.out.println(rs.next() + " >>> " + numberOfColumns);
             do {
                 Cidades c = new Cidades();
                 c.setCodigo(rs.getInt(1));

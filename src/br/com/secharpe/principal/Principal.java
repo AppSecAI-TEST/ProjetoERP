@@ -11,6 +11,7 @@ public class Principal {
         login.setVisible(true);
         CidadeDAO cidade = new CidadeDAO();
         System.out.println(cidade.getAll());
-    }
+        cidade.getEstadoID("SC");
+   }
     
 }
