@@ -18,7 +18,7 @@ public class Cidades extends javax.swing.JInternalFrame {
     private CidadesViewActionListener handlerCidades = new CidadesViewActionListener(this);
     private Painel painel;
     private ArrayList<JInternalFrame> childs;
-    private final String[] columnNames = {"ID", "Nome", "Estado", "Sigla"};
+    private final String[] columnNames = {"ID", "Nome", "ID_Estado", "Estado", "Sigla"};
     private DefaultTableModel model = new DefaultTableModel() {
         private static final long serialVersionUID = 1L;
 
@@ -181,7 +181,7 @@ public class Cidades extends javax.swing.JInternalFrame {
         List<br.com.secharpe.model.Cidades> listCidades = cidade.getAll();
         System.out.println(listCidades);
         for (br.com.secharpe.model.Cidades est : listCidades) {
-            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getEstado().getNome(), est.getEstado().getSigla()});
+            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getEstado().getCodigo(), est.getEstado().getNome(), est.getEstado().getSigla()});
         }
     }
 
@@ -208,7 +208,6 @@ public class Cidades extends javax.swing.JInternalFrame {
     public void childRemove(JInternalFrame cdCad) {
         childs.remove(cdCad);
     }
-
 
     public void closeChilds() {
         for (JInternalFrame janela : childs) {

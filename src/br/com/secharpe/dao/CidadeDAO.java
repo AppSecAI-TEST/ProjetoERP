@@ -13,6 +13,7 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.ResultSetMetaData;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -179,23 +180,25 @@ public class CidadeDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "SELECT c.id, c.nome, e.id as id_estado, e.nome, e.sigla FROM cidades as c INNER JOIN estados as e ON (c.id_estado= e.id)";
+            String sql = "SELECT c.id, c.nome, e.id, e.nome, e.sigla FROM cidades as c INNER JOIN estados as e ON (c.id_estado= e.id)";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
-            System.out.println(rs.next());
-            while (rs.next()) {
+            ResultSetMetaData metadata = rs.getMetaData();
+            int numberOfColumns = metadata.getColumnCount();
+            System.out.println(rs.next() + " >>> " + numberOfColumns);
+            do {
                 Cidades c = new Cidades();
                 c.setCodigo(rs.getInt(1));
                 c.setNome(rs.getString(2));
                 Estados e = new Estados();
                 e.setCodigo(rs.getInt(3));
-                e.setNome(rs.getString(3));
-                e.setSigla(rs.getString(4));
+                e.setNome(rs.getString(4));
+                e.setSigla(rs.getString(5));
                 c.setEstado(e);
 
                 lista.add(c);
-            }
+            } while (rs.next());
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
