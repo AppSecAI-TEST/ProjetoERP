@@ -8127,3 +8127,164 @@
 [Fri Jun 23 13:56:29 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Fri Jun 23 13:56:29 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Fri Jun 23 13:56:29 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:34 UTC 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 19:44:35 UTC 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:35 UTC 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 19:44:35 UTC 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 19:44:36 UTC 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:36 UTC 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 19:44:53 UTC 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 19:44:54 UTC 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:54 UTC 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 19:44:56 UTC 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 19:44:56 UTC 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:29 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:23:31 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:31 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:23:33 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:33 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:33 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:33 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:34 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:34 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:34 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:23:34 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:31:52 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:31:53 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:31:53 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:32:06 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:06 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:06 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:06 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:07 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:07 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:07 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:32:07 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:21 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:41:22 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:23 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:41:25 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: No data is available
+[Sat Jun 24 17:41:25 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: No data is available
+[Sat Jun 24 17:41:25 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:41:25 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:38 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:43:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:39 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:43:40 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:40 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:40 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:40 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:41 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: Unexpected token INNER, requires FROM in statement [select nome_empresarial,nome_fantasia,cnpj,logradouro,bairro,complemento,site, email, telefone, cidades.nomefrom empresa inner join cidades on cidade=cidades.id]
+[Sat Jun 24 17:43:41 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Unexpected token INNER, requires FROM in statement [select nome_empresarial,nome_fantasia,cnpj,logradouro,bairro,complemento,site, email, telefone, cidades.nomefrom empresa inner join cidades on cidade=cidades.id]
+[Sat Jun 24 17:43:41 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:41 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:41 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:43:41 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:14 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:44:14 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:14 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:44:16 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:16 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:16 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:16 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:16 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: No data is available
+[Sat Jun 24 17:44:16 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: No data is available
+[Sat Jun 24 17:44:17 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:17 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:17 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:44:17 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:45:59 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:45:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:45:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:46:02 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:02 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:02 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:02 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:03 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: Wrong data type: type: BIGINT (-5) expected: INTEGER value: 88823444666000
+[Sat Jun 24 17:46:03 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Wrong data type: type: BIGINT (-5) expected: INTEGER value: 88823444666000
+[Sat Jun 24 17:46:03 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:03 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:03 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:46:03 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:14 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:48:14 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:14 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:48:16 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:16 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:16 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:16 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:16 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: Wrong data type: type: VARCHAR (12) expected: INTEGER value: Balneário Rincão
+[Sat Jun 24 17:48:17 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Wrong data type: type: VARCHAR (12) expected: INTEGER value: Balneário Rincão
+[Sat Jun 24 17:48:17 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:17 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:17 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:48:17 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:45 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:49:45 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:45 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:49:47 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: Wrong data type: type: VARCHAR (12) expected: INTEGER value: Balneário Rincão
+[Sat Jun 24 17:49:47 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Wrong data type: type: VARCHAR (12) expected: INTEGER value: Balneário Rincão
+[Sat Jun 24 17:49:47 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:49:47 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:23 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:50:24 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:24 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:50:26 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [EMPRESADAO.JAVA] [getEmpresa] [0] :: Wrong data type: type: VARCHAR (12) expected: INTEGER value: Balneário Rincão
+[Sat Jun 24 17:50:26 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Wrong data type: type: VARCHAR (12) expected: INTEGER value: Balneário Rincão
+[Sat Jun 24 17:50:26 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:50:26 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:51:32 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:51:33 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:51:33 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:51:35 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:51:35 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:51:35 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:51:35 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:34 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:52:35 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:35 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:52:36 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:36 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:36 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:37 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:37 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 3 retornada com sucesso!
+[Sat Jun 24 17:52:37 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:37 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:37 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:52:37 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:11 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Sat Jun 24 17:56:12 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:12 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Sat Jun 24 17:56:15 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 3 retornada com sucesso!
+[Sat Jun 24 17:56:15 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Sat Jun 24 17:56:15 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela

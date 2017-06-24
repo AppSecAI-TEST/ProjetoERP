@@ -57,6 +57,7 @@ public final class Log {
         } catch (java.io.IOException ex) {
             System.err.println(ex.getMessage());
         } finally {
+        	System.out.println(content);
             try {
                 buffer.close();
             } catch (java.io.IOException ex) {
