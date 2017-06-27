@@ -36,7 +36,7 @@ public class CidadesViewActionListener implements ActionListener {
             }
         } else if (action.equals(Vars.PROP_REMOVE)) {
             JTable tabela = cidades.getTable();
-            String nome = tabela.getValueAt(tabela.getSelectedRow(), 0).toString();
+            int nome = (int) tabela.getValueAt(tabela.getSelectedRow(), 0);
             br.com.secharpe.dao.CidadeDAO cidDAO = new br.com.secharpe.dao.CidadeDAO();
             cidDAO.delete(nome);
             cidades.refreshTable();

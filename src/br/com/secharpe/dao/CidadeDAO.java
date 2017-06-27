@@ -25,14 +25,15 @@ public class CidadeDAO {
 
     Log log = new Log();
 
-    public void delete(String nome) {
+    public void delete(int nome) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "delete from cidades where nome= ?";
+            String sql = "delete from cidades where ID = ?";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, nome);
+            ps.setInt(1, nome);
+            
             ps.execute();
 
             conn.commit();

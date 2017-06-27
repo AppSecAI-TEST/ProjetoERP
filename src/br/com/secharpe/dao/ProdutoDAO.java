@@ -23,14 +23,14 @@ public class ProdutoDAO {
 
     Log log = new Log();
 
-    public void delete(Produtos produto) {
+    public void delete(int id) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "delete from produtos where codigo = ?";
+            String sql = "delete from produtos where id = ?";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, produto.getCodigo());
+            ps.setInt(1, id);
             ps.execute();
 
             conn.commit();
@@ -76,7 +76,7 @@ public class ProdutoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro) values(?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (id,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro) values(?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, produto.getCodigo());
             ps.setString(2, produto.getNome());
