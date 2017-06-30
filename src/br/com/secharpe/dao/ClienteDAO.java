@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.dao;
 
 import br.com.secharpe.model.Clientes;
@@ -19,7 +14,7 @@ import java.util.List;
  */
 public class ClienteDAO {
 
-    Log log = new Log();
+    private Log log = new Log();
 
     public void delete(Clientes cliente) {
         java.sql.Connection conn = null;

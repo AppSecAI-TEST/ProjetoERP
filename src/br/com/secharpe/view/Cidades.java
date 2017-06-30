@@ -44,6 +44,7 @@ public class Cidades extends javax.swing.JInternalFrame {
         btRemover.addActionListener(handlerCidades);
         model.setColumnIdentifiers(columnNames);
         jtCidades.setModel(model);
+        jtCidades.setAutoCreateRowSorter(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -180,9 +181,9 @@ public class Cidades extends javax.swing.JInternalFrame {
         CidadeDAO cidade = new CidadeDAO();
         List<br.com.secharpe.model.Cidades> listCidades = cidade.getAll();
         System.out.println(listCidades);
-        for (br.com.secharpe.model.Cidades est : listCidades) {
+        listCidades.forEach((est) -> {
             model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getEstado().getCodigo(), est.getEstado().getNome(), est.getEstado().getSigla()});
-        }
+        });
     }
 
     public Painel getPainel() {
@@ -211,7 +212,9 @@ public class Cidades extends javax.swing.JInternalFrame {
 
     public void closeChilds() {
         for (JInternalFrame janela : childs) {
-            janela.dispose();
+            if (janela != null) {
+                janela.dispose();
+            }
         }
     }
 }

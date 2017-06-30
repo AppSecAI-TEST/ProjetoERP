@@ -1,7 +1,9 @@
 package br.com.secharpe.dao;
 
-import br.com.secharpe.model.Estados;
+import br.com.secharpe.model.Anotacoes;
+import br.com.secharpe.model.Unidades;
 import br.com.secharpe.util.Log;
+
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.sql.PreparedStatement;
@@ -12,20 +14,21 @@ import java.util.List;
 
 /**
  *
- * @author LuizAlexandre17 <luizalexandre17@unesc.net>
+ * @author luandr <stringigualanull@outlook.com>
  */
-public class EstadoDAO {
+public class AnotacoesDAO {
 
     private Log log = new Log();
 
-    public void delete(String sigla) {
+    public void delete(int id) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
+
         try {
             conn = Connection.getConnection();
-            String sql = "delete from estados where sigla = ?";
+            String sql = "delete from anotacoes where id = ?";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, sigla);
+            ps.setInt(1, id);
             ps.execute();
 
             conn.commit();
@@ -34,7 +37,7 @@ public class EstadoDAO {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "delete", exceptionAsString);
+            log.put("AnotacoesBanco", "delete", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -44,7 +47,7 @@ public class EstadoDAO {
                     sw = new StringWriter();
                     e.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "delete", exceptionAsString);
+                    log.put("AnotacoesBanco", "delete", exceptionAsString);
                 }
             }
 
@@ -66,15 +69,16 @@ public class EstadoDAO {
         }
     }
 
-    public void insert(Estados estado) {
+    public void insert(Anotacoes an) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "INSERT INTO estados (nome, sigla) VALUES (?,?)";
+            String sql = "insert into anotacoes (titulo, descricao, anotacao, data_registro) values(?,?,?,NOW())";
             ps = conn.prepareStatement(sql);
-            ps.setString(1, estado.getNome());
-            ps.setString(2, estado.getSigla());
+            ps.setString(1, an.getTitulo());
+            ps.setString(2, an.getDescricao());
+            ps.setString(3, an.getAnotacao());
 
             ps.execute();
 
@@ -85,7 +89,7 @@ public class EstadoDAO {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "insert", exceptionAsString);
+            log.put("AnotacoesBanco", "insert", exceptionAsString);
 
             if (conn != null) {
                 try {
@@ -94,7 +98,7 @@ public class EstadoDAO {
                     System.out.println("ERRO: " + ex.getMessage());
                     ex.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "insert", exceptionAsString);
+                    log.put("AnotacoesBanco", "insert", exceptionAsString);
                 }
             }
 
@@ -116,35 +120,33 @@ public class EstadoDAO {
         }
     }
 
-    public List<Estados> getAll() {
-        List<Estados> lista = new ArrayList<Estados>();
+    public List<Anotacoes> getAll() {
+        ArrayList<Anotacoes> lista = new ArrayList<Anotacoes>();
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select id, nome, sigla from estados";
+            String sql = "select id, titulo, descricao, anotacao, data_registro from anotacoes";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Integer codigo = rs.getInt(1);
-                String nome = rs.getString(2);
-                String sigla = rs.getString(3);
+                Anotacoes anot = new Anotacoes();
+                
+                anot.setCodigo(rs.getInt(1));
+                anot.setTitulo(rs.getString(2));
+                anot.setDescricao(rs.getString(3));
+                anot.setAnotacao(rs.getString(4));
+                anot.setDataRegistro(rs.getDate(5));
 
-                Estados est = new Estados();
-
-                est.setNome(nome);
-                est.setSigla(sigla);
-                est.setCodigo(codigo);
-
-                lista.add(est);
+                lista.add(anot);
             }
         } catch (SQLException e) {
             System.out.println("ERRO: " + e.getMessage());
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "getAll", exceptionAsString);
+            log.put("AnotacoesBanco", "getAll", exceptionAsString);
         } finally {
             if (ps != null) {
                 try {
@@ -154,7 +156,7 @@ public class EstadoDAO {
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
+                    log.put("AnotacoesBanco", "getAll", exceptionAsString);
                 }
             }
             if (conn != null) {
@@ -165,57 +167,11 @@ public class EstadoDAO {
                     StringWriter sw = new StringWriter();
                     ex.printStackTrace(new PrintWriter(sw));
                     String exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
+                    log.put("AnotacoesBanco", "getAll", exceptionAsString);
                 }
             }
         }
         return lista;
     }
 
-    public Estados getEstado(String sigla) {
-        Estados est = new Estados();
-        java.sql.Connection conn = null;
-        PreparedStatement ps = null;
-        try {
-            conn = Connection.getConnection();
-            String sql = "select nome, sigla from estados where sigla=?";
-            ps = conn.prepareStatement(sql);
-            ps.setString(1, sigla);
-            ResultSet rs = ps.executeQuery();
-            while (rs.next()) {
-                est.setNome(rs.getString("nome"));
-                est.setSigla(rs.getString("sigla"));
-            }
-        } catch (SQLException e) {
-            System.out.println("ERRO: " + e.getMessage());
-            StringWriter sw = new StringWriter();
-            e.printStackTrace(new PrintWriter(sw));
-            String exceptionAsString = sw.toString();
-            log.put("ControleEstadoBanco", "getAll", exceptionAsString);
-        } finally {
-            if (ps != null) {
-                try {
-                    ps.close();
-                } catch (SQLException ex) {
-                    System.out.println("ERRO: " + ex.getMessage());
-                    StringWriter sw = new StringWriter();
-                    ex.printStackTrace(new PrintWriter(sw));
-                    String exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
-                }
-            }
-            if (conn != null) {
-                try {
-                    conn.close();
-                } catch (SQLException ex) {
-                    System.out.println("ERRO: " + ex.getMessage());
-                    StringWriter sw = new StringWriter();
-                    ex.printStackTrace(new PrintWriter(sw));
-                    String exceptionAsString = sw.toString();
-                    log.put("ControleEstadoBanco", "getAll", exceptionAsString);
-                }
-            }
-        }
-        return est;
-    }
 }

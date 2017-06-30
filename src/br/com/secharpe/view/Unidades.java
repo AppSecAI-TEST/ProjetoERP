@@ -2,7 +2,9 @@ package br.com.secharpe.view;
 
 import br.com.secharpe.dao.UnidadeDAO;
 import br.com.secharpe.listener.UnidadesViewActionListener;
+import java.util.ArrayList;
 import java.util.List;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
@@ -16,6 +18,7 @@ public class Unidades extends javax.swing.JInternalFrame {
 
     UnidadesViewActionListener handlerUnidades = new UnidadesViewActionListener(this);
     private Painel painel;
+    private ArrayList<JInternalFrame> childs;
     private final String[] columnNames = {"Nome", "Sigla"};
     private DefaultTableModel model = new DefaultTableModel();
 
@@ -26,24 +29,11 @@ public class Unidades extends javax.swing.JInternalFrame {
         new br.com.secharpe.util.Log().put("Unidades", "Abrindo janela");
         this.painel = painel;
         initComponents();
+        childs = new ArrayList<>();
         btNovo.addActionListener(handlerUnidades);
         btFechar.addActionListener(handlerUnidades);
         btRemover.addActionListener(handlerUnidades);
         btEditar.addActionListener(handlerUnidades);
-        model.setColumnIdentifiers(columnNames);
-        jtUnidades.setModel(model);
-
-    }
-
-    /**
-     * Inicia componentes
-     */
-    private void init() {
-        initComponents();
-        btNovo.addActionListener(handlerUnidades);
-        btFechar.addActionListener(handlerUnidades);
-        btEditar.addActionListener(handlerUnidades);
-        btRemover.addActionListener(handlerUnidades);
         model.setColumnIdentifiers(columnNames);
         jtUnidades.setModel(model);
     }
@@ -70,6 +60,7 @@ public class Unidades extends javax.swing.JInternalFrame {
             public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
             }
             public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameClosing(evt);
             }
             public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
             }
@@ -99,6 +90,11 @@ public class Unidades extends javax.swing.JInternalFrame {
         btEditar.setText(br.com.secharpe.util.Propriedades.getProp("form.edit"));
 
         btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
+        btFechar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btFecharActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -133,8 +129,16 @@ public class Unidades extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-        setTableValues();
+        refreshTable();
     }//GEN-LAST:event_formInternalFrameOpened
+
+    private void formInternalFrameClosing(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameClosing
+        closeChilds();
+    }//GEN-LAST:event_formInternalFrameClosing
+
+    private void btFecharActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btFecharActionPerformed
+        closeChilds();
+    }//GEN-LAST:event_btFecharActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -179,12 +183,26 @@ public class Unidades extends javax.swing.JInternalFrame {
     /**
      * Método para atualizar valores da tabela
      */
-    public void setTableValues() {
+    public void refreshTable() {
         model.setRowCount(0);
         UnidadeDAO undao = new UnidadeDAO();
         List<br.com.secharpe.model.Unidades> listUnidade = undao.getAll();
         for (br.com.secharpe.model.Unidades un : listUnidade) {
             model.addRow(new Object[]{un.getNome(), un.getSigla()});
+        }
+    }
+
+    public void childAdd(JInternalFrame cdCad) {
+        childs.add(cdCad);
+    }
+
+    public void childRemove(JInternalFrame cdCad) {
+        childs.remove(cdCad);
+    }
+
+    public void closeChilds() {
+        for (JInternalFrame janela : childs) {
+            janela.dispose();
         }
     }
 }

@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 
 /**
  *
- * @author Darabas
+ * @author luandr <stringigualanull@outlook.com>
  */
 public class UnidadesActionListener implements ActionListener {
 
@@ -26,24 +26,22 @@ public class UnidadesActionListener implements ActionListener {
         String action = e.getActionCommand();
         br.com.secharpe.model.Unidades unidade = new br.com.secharpe.model.Unidades();
         if (action.equals(Vars.PROP_SAVE)) {
-            if (cadastro.validar()) {
+            if ((!cadastro.getNome().equals("")) || (!cadastro.getSigla().equals(""))) {
                 br.com.secharpe.dao.UnidadeDAO und = new br.com.secharpe.dao.UnidadeDAO();
                 System.out.println(cadastro.getUnidade().toString());
                 unidade = cadastro.getUnidade();
                 und.insert(unidade);
-                cadastro.getUnidadeView().setTableValues();
+                cadastro.getUnidadeView().refreshTable();
                 System.out.println(cadastro.getUnidade().toString());
+//                br.com.secharpe.view.Unidades cad = cadastro.getUnidadeView();
+                cadastro.dispose();
+//                cad.requestFocus();
             } else {
                 System.out.println("Insira corretamente as informações!");
             }
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cadastro.dispose();
         }
-        //view.getTable().getSelectionModel().addListSelectionListener(new ListSelectionListener() {
-        //  public void valueChanged(ListSelectionEvent event) {
-        //    JOptionPane.showMessageDialog(null, view.getTable().getSelectedRow());
-        //}
-        //});
     }
 
 }

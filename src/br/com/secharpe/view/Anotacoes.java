@@ -1,15 +1,32 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.dao.AnotacoesDAO;
 import br.com.secharpe.listener.AnotacoesViewActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JInternalFrame;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * View para exibir todas as anotações
+ *
  * @author luandr<stringigualanull@outlook.com>
  */
 public class Anotacoes extends javax.swing.JInternalFrame {
 
     private final AnotacoesViewActionListener handlerAnotacoes = new AnotacoesViewActionListener(this);
     private Painel painel;
+    private ArrayList<JInternalFrame> childs;
+    private final String[] columnNames = {"ID", "Título", "Descrição"};
+    private DefaultTableModel model = new DefaultTableModel() {
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
+    };
 
     public Anotacoes(Painel painel) {
         new br.com.secharpe.util.Log().put("Anotacoes", "Abrindo janela");
@@ -20,7 +37,8 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         btNovo.addActionListener(handlerAnotacoes);
         btRemover.addActionListener(handlerAnotacoes);
         btVer.addActionListener(handlerAnotacoes);
-
+        jtAnotacoes.setModel(model);
+        jtAnotacoes.setAutoCreateRowSorter(true);
     }
 
     @SuppressWarnings("unchecked")
@@ -38,23 +56,32 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Anotações");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         jtAnotacoes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null}
             },
             new String [] {
-                "Título", "Descrição"
+                "Título 1dsa"
             }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jtAnotacoes);
 
         btVer.setText(br.com.secharpe.util.Propriedades.getProp("form.view"));
@@ -105,6 +132,10 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+        refreshTable();
+    }//GEN-LAST:event_formInternalFrameOpened
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
     private javax.swing.JButton btFechar;
@@ -121,4 +152,32 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         return this.painel;
     }
 
+    public void refreshTable() {
+        model.setRowCount(0);
+        AnotacoesDAO anotacoes = new AnotacoesDAO();
+        List<br.com.secharpe.model.Anotacoes> listAnotacoes = anotacoes.getAll();
+        System.out.println(listAnotacoes);
+        listAnotacoes.forEach((br.com.secharpe.model.Anotacoes ano) -> {
+            model.addRow(new Object[]{ano.getCodigo(), ano.getTitulo(), ano.getDescricao()});
+            //System.out.println(ano.getAnotacao());
+        });
+    }
+
+    public JTable getTable() {
+        return this.jtAnotacoes;
+    }
+
+    public void addChild(JInternalFrame cdAno) {
+        childs.add(cdAno);
+    }
+
+    public void childRemove(JInternalFrame cdAno) {
+        childs.remove(cdAno);
+    }
+
+    public void closeChilds() {
+        for (JInternalFrame janela : childs) {
+            janela.dispose();
+        }
+    }
 }

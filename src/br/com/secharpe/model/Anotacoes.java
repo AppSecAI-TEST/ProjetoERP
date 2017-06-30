@@ -1,11 +1,14 @@
 package br.com.secharpe.model;
 
+import java.sql.Date;
+
 public class Anotacoes {
 
     private int codigo;
     private String titulo;
     private String descricao;
     private String anotacao;
+    private Date dataRegistro;
 
     public int getCodigo() {
         return codigo;
@@ -39,9 +42,18 @@ public class Anotacoes {
         this.anotacao = anotacao;
     }
 
+    public Date getDataRegistro() {
+        return dataRegistro;
+    }
+
+    public void setDataRegistro(Date dataRegistro) {
+        this.dataRegistro = dataRegistro;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Anotacoes:\n" + "Código: " + codigo + "\nNome: " + titulo + "\nDescricao: " + descricao + "\nAnotacao: " + anotacao;
     }
-
 }

@@ -23,6 +23,7 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
         this.un = un;
     }
     public UnidadesCadastro() {
+        System.out.println("AAAAAAAAAAAAAPASSOU");
         init();        
     }
     private void init(){
@@ -132,13 +133,6 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
 
     private static UnidadesCadastro instance;
 
-    public static UnidadesCadastro getInstance(Painel painel) {
-        if (instance == null) {
-            instance = new UnidadesCadastro();
-        }
-        return instance;
-    }
-
     public void sendInfo() {
         btCadastrar.doClick();
     }
@@ -150,11 +144,18 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
         unidade.setSigla(tfSigla.getText());
         return unidade;
     }
-
-    public boolean validar() {
-        return ((!tfNome.getText().equals("")) || (!tfSigla.getText().equals("")));
-    }
+    
     public br.com.secharpe.view.Unidades getUnidadeView(){
         return this.un;
     }
+
+    public Object getNome() {
+        return this.tfNome.getText();
+    }
+
+    public Object getSigla() {
+        return this.tfSigla.getText();
+    }
+
+    
 }

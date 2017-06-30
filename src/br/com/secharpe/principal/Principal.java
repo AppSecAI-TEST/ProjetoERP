@@ -1,17 +1,31 @@
 package br.com.secharpe.principal;
 
-import br.com.secharpe.dao.EmpresaDAO;
-import br.com.secharpe.exception.SistemaException;
-import br.com.secharpe.model.Cidades;
-import br.com.secharpe.model.Empresa;
-
-import java.util.List;
+//import br.com.secharpe.dao.AnotacoesDAO;
+//import br.com.secharpe.dao.EmpresaDAO;
+//import br.com.secharpe.exception.SistemaException;
+//import br.com.secharpe.model.Cidades;
+//import br.com.secharpe.model.Anotacoes;
+//import java.util.ArrayList;
+//import java.util.List;
 
 public class Principal {
+
     public static void main(String[] args) {
         new br.com.secharpe.util.Log().put("Principal", "main", "Iniciando programa");
         br.com.secharpe.view.Login login = new br.com.secharpe.view.Login();
         login.setVisible(true);
+//        AnotacoesDAO a = new AnotacoesDAO();
+//        a.delete(8);
+//        Anotacoes ano = new Anotacoes();
+//        ano.setTitulo("Tainha");
+//        ano.setDescricao("Comprar tainha");
+//        ano.setAnotacao("Comprar tainha para festa de confraternização da empresa");
+//        
+//        a.insert(ano);
+//        List<Anotacoes> lista = a.getAll();
+//        for (Anotacoes an : lista) {
+//            System.out.println(an.getTitulo() + " " + an.getAnotacao());
+//        }
 //        EmpresaDAO empresa = new EmpresaDAO();
 //        Empresa emp = new Empresa();
 //        emp.setNomeEmpresarial("Amazon Inc.");
@@ -36,6 +50,6 @@ public class Principal {
 ////        System.out.println(cidade.getAll());
 ////        cidade.getEstadoID("SC");
 //        System.exit(0);
-   }
-    
+    }
+
 }

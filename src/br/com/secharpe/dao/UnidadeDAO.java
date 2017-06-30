@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.dao;
 
 import br.com.secharpe.model.Unidades;
@@ -22,7 +17,7 @@ import java.util.List;
  */
 public class UnidadeDAO {
 
-    Log log = new Log();
+    private Log log = new Log();
 
     public void delete(Unidades uni) {
         java.sql.Connection conn = null;

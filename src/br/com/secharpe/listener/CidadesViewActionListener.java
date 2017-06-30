@@ -7,7 +7,6 @@ import br.com.secharpe.view.CidadesCadastro;
 import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import javax.swing.JOptionPane;
 import javax.swing.JTable;
 
 public class CidadesViewActionListener implements ActionListener {
@@ -29,11 +28,13 @@ public class CidadesViewActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_NEW)) {
-            CidadesCadastro cidadesCadastro = new CidadesCadastro(cidades);
-            if (VerificaFrame.verificaFrame(cidades.getPainel(), cidadesCadastro)) {
-                VerificaFrame.exibirFrame(cidades.getPainel(), cidadesCadastro);
-                cidades.addChild(cidadesCadastro);
-            }
+            CidadesCadastro cidadeCadastro = new CidadesCadastro(cidades);
+            cidades.getPainel().getDesktopPane().add(cidadeCadastro);
+            cidadeCadastro.setVisible(true);
+            cidadeCadastro.toFront();
+            cidadeCadastro.setLocation((cidades.getPainel().getWidth() - cidadeCadastro.getWidth()) / 2, (cidades.getPainel().getHeight() - cidadeCadastro.getHeight()) / 2);
+            cidades.addChild(cidadeCadastro);
+
         } else if (action.equals(Vars.PROP_REMOVE)) {
             JTable tabela = cidades.getTable();
             int nome = (int) tabela.getValueAt(tabela.getSelectedRow(), 0);

@@ -8288,3 +8288,484 @@
 [Sat Jun 24 17:56:15 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Sat Jun 24 17:56:15 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Sat Jun 24 17:56:15 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:51 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 10:00:52 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:52 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 10:00:53 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 10:00:54 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:00:54 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:01:15 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:01:15 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Fri Jun 30 10:01:15 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Fri Jun 30 10:01:15 BRT 2017] [CADASTRO.JAVA] [CONSTRUTOR] :: Cidade Cadastrada
+[Fri Jun 30 10:05:04 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 10:05:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 10:05:12 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 10:05:12 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:12 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:05:34 BRT 2017] [ANOTACOESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 10:54:10 BRT 2017] [ANOTACOESBANCO.JAVA] [insert] :: java.sql.SQLException: Attempt to insert null into a non-nullable column: column: ANOTACAO table: ANOTACOES in statement [insert into anotacoes (titulo, descricao, anotacao, data_registro) values(?,?,?,NOW())]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.execute(Unknown Source)
+	at br.com.secharpe.dao.AnotacoesDAO.insert(AnotacoesDAO.java:83)
+	at br.com.secharpe.principal.Principal.main(Principal.java:23)
+
+[Fri Jun 30 10:55:32 BRT 2017] [ANOTACOESBANCO.JAVA] [insert] :: java.sql.SQLException: Attempt to insert null into a non-nullable column: column: ANOTACAO table: ANOTACOES in statement [insert into anotacoes (titulo, descricao, anotacao, data_registro) values(?,?,?,NOW())]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.execute(Unknown Source)
+	at br.com.secharpe.dao.AnotacoesDAO.insert(AnotacoesDAO.java:83)
+	at br.com.secharpe.principal.Principal.main(Principal.java:23)
+
+[Fri Jun 30 10:56:01 BRT 2017] [ANOTACOESBANCO.JAVA] [insert] :: java.sql.SQLException: Attempt to insert null into a non-nullable column: column: ANOTACAO table: ANOTACOES in statement [insert into anotacoes (titulo, descricao, anotacao, data_registro) values(?,?,?,NOW())]
+	at org.hsqldb.jdbc.Util.throwError(Unknown Source)
+	at org.hsqldb.jdbc.jdbcPreparedStatement.execute(Unknown Source)
+	at br.com.secharpe.dao.AnotacoesDAO.insert(AnotacoesDAO.java:83)
+	at br.com.secharpe.principal.Principal.main(Principal.java:23)
+
+[Fri Jun 30 11:02:00 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:02:00 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:00 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:02:02 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:02:03 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:03 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:57 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:02:57 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:02:57 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:02:59 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:00 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:00 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:00 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:00 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:03:00 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:01 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:01 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:03:01 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:26 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:05:26 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:26 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:05:32 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:32 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:32 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:32 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:32 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:05:32 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:33 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:33 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:05:33 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:48 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:06:48 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:49 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:06:50 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:50 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:50 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:50 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:51 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:06:51 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:51 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:51 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:06:51 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:46 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:08:46 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:46 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:08:48 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:08:48 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:48 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:08:56 BRT 2017] [ANOTACOESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:35 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:09:36 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:36 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:09:37 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:09:38 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:09:38 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:38 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:12:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:12:40 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:40 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:40 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:40 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:40 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:12:40 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:40 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:41 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:41 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:12:46 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:09 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:14:09 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:09 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:14:15 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:14:15 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:15 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:14:27 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:24 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:17:25 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:25 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:17:26 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:26 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:26 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:26 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:27 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:17:27 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:27 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:27 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:27 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:31 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:17:32 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:04 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:18:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:18:06 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:06 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:06 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:06 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:07 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:18:07 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:07 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:07 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:07 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:18:12 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:20 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:19:21 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:21 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:19:22 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:22 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:22 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:22 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:23 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:19:23 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:23 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:23 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:23 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:26 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:44 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:19:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:19:45 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:19:46 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:46 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:19:53 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:16 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:20:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:20:19 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:20:19 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:19 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:23 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:50 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:20:51 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:51 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:20:53 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:53 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:53 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:54 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:54 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:20:54 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:54 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:54 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:54 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:20:59 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:32 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:21:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:21:33 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:33 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:33 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:33 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:34 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:21:34 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:34 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:34 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:21:34 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:22:21 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:44 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:24:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:24:46 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:24:46 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:46 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:24:51 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:17 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:25:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:25:19 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:25:19 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:19 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:31 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:55 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:25:55 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:55 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:25:56 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:25:57 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:25:57 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:26:02 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:11 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:27:11 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:12 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:27:13 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:27:13 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:13 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:27:25 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:25 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:28:26 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:26 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:28:28 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:28:28 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:28 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:31 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:32 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:40 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:28:41 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:41 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:28:42 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:42 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:42 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:42 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:43 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:28:43 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:43 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:43 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:43 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:45 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:28:46 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:53 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:34:53 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:54 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:34:55 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:55 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:34:56 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:34:56 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:24 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:36:24 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:24 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:36:27 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:36:27 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:27 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:59 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:36:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:36:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:37:00 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:00 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:00 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:00 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:00 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:01 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:37:01 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:01 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:01 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:01 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:08 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:37:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:08 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:37:09 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:37:09 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:37:09 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:04 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:38:04 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:04 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:38:06 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:06 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:07 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:07 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:07 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:38:07 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:07 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:07 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:07 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:38:11 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:17 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:39:17 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:18 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:39:19 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:19 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:19 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:19 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:19 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:39:20 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:20 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:20 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:20 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:25 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:25 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:29 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:48 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:39:49 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:49 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:39:50 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:39:50 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:50 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:39:54 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:40:00 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:40:01 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:40:01 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:40:01 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:40:01 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:40:01 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:04 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:41:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:41:08 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:41:08 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:08 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:19 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:41:22 BRT 2017] [UNIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:44 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:42:45 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:45 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:42:47 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:42:47 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:47 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:51 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:42:53 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:43 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:43:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:43:45 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:45 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:45 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:45 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:46 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:43:46 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:46 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:46 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:46 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:43:49 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:44:00 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:44:58 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Fri Jun 30 11:44:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:44:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Fri Jun 30 11:45:01 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:01 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:01 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:01 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:01 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Fri Jun 30 11:45:02 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:02 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:02 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:02 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:05 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:10 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:11 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:21 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:21 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:21 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Fri Jun 30 11:45:21 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
