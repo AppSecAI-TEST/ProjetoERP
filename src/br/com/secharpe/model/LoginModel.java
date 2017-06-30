@@ -33,5 +33,5 @@ public class LoginModel {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
+
 }

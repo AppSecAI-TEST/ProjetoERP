@@ -132,7 +132,8 @@ public class AnotacoesCadastro extends javax.swing.JInternalFrame {
     }
 
     private static AnotacoesCadastro instance;
-      /**
+
+    /**
      * @return instance de AnotacoesCadastro
      */
     public static AnotacoesCadastro getInstance(Painel painel) {
@@ -144,7 +145,7 @@ public class AnotacoesCadastro extends javax.swing.JInternalFrame {
 
     /**
      * @return boolean validação
-     * @deprecated 
+     * @deprecated
      */
     public boolean validar() {
         return (!tfTitulo.getText().equals("")) || (!tfDescricao.getText().equals("")) || (!taAnotacao.getText().equals(""));

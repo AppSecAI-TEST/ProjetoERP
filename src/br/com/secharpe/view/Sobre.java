@@ -2,6 +2,7 @@ package br.com.secharpe.view;
 
 /**
  * View para exibir informações sobre o projeto
+ *
  * @author luandr<stringigualanull@outlook.com>
  */
 public class Sobre extends javax.swing.JFrame {

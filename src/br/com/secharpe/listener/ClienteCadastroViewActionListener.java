@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.listener;
 
 import br.com.secharpe.dao.ClienteDAO;
@@ -13,8 +8,6 @@ import br.com.secharpe.model.Clientes;
 import br.com.secharpe.util.MessageCtrl;
 import br.com.secharpe.util.Vars;
 import br.com.secharpe.view.ClientesCadastro;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class ClienteCadastroViewActionListener implements ActionListener {
 

@@ -10,6 +10,7 @@ import java.io.IOException;
  * @author luandr<stringigualanull@outlook.com>
  */
 public class Login extends javax.swing.JFrame {
+
     private static final long serialVersionUID = 1L;
 
     private LoginActionListener handlerLogin = new LoginActionListener(this);

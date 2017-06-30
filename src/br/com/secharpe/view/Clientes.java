@@ -8,6 +8,7 @@ import br.com.secharpe.listener.ClienteViewActionListener;
  * @author Your Name <your.name at your.org>
  */
 public class Clientes extends javax.swing.JInternalFrame {
+
     private static final long serialVersionUID = 1L;
 
     private final ClienteViewActionListener handlerClientes = new ClienteViewActionListener(this);

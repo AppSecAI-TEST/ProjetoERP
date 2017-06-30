@@ -12,8 +12,8 @@ import javax.swing.ImageIcon;
  */
 public class UnidadesCadastro extends javax.swing.JInternalFrame {
 
-    UnidadesKeyListener keyUnidades = new UnidadesKeyListener(this);
-    UnidadesActionListener handlerUnidades = new UnidadesActionListener(this);
+    private UnidadesKeyListener keyUnidades = new UnidadesKeyListener(this);
+    private UnidadesActionListener handlerUnidades = new UnidadesActionListener(this);
 
     private Painel painel;
     private Unidades un = null;
@@ -27,7 +27,6 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
     }
 
     public UnidadesCadastro() {
-        System.out.println("AAAAAAAAAAAAAPASSOU");
         init();
     }
 

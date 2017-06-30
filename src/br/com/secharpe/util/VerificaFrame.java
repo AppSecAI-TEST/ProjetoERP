@@ -15,7 +15,7 @@ public abstract class VerificaFrame {
         frame.setVisible(true);
         frame.toFront();
         centralizar(painel, frame);
-        
+
     }
 
     /**

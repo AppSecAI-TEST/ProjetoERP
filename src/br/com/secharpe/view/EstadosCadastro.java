@@ -7,7 +7,7 @@ import br.com.secharpe.listener.EstadosActionListener;
  * @author luandr<stringigualanull@outlook.com>
  */
 public class EstadosCadastro extends javax.swing.JInternalFrame {
-    
+
     private Painel painel;
     private EstadosActionListener handlerCidades = new EstadosActionListener(this);
     private Estados est = null;
@@ -19,18 +19,18 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
         init();
         this.est = est;
     }
-    
+
     public EstadosCadastro() {
         init();
     }
-    
+
     private void init() {
         new br.com.secharpe.util.Log().put("EstadosCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);
     }
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -132,35 +132,35 @@ public class EstadosCadastro extends javax.swing.JInternalFrame {
     public String getNome() {
         return this.tfNome.getText();
     }
-    
+
     public String getSigla() {
         return tfSigla.getText();
     }
-    
+
     public Painel getPainel() {
         return painel;
     }
-    
+
     private static EstadosCadastro instance;
-    
+
     public static EstadosCadastro getInstance(Painel painel) {
         if (instance == null) {
             instance = new EstadosCadastro();
         }
         return instance;
     }
-    
+
     public br.com.secharpe.model.Estados getEstado() {
         br.com.secharpe.model.Estados estado = new br.com.secharpe.model.Estados();
         estado.setNome(tfNome.getText());
         estado.setSigla(tfSigla.getText());
         return estado;
     }
-    
+
     public br.com.secharpe.view.Estados getEstadoView() {
         return this.est;
     }
-    
+
     public void setValores(br.com.secharpe.model.Estados es) {
         tfNome.setText(es.getNome());
         tfSigla.setText(es.getSigla());

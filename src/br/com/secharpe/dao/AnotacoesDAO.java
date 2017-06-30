@@ -1,7 +1,6 @@
 package br.com.secharpe.dao;
 
 import br.com.secharpe.model.Anotacoes;
-import br.com.secharpe.model.Unidades;
 import br.com.secharpe.util.Log;
 
 import java.io.PrintWriter;

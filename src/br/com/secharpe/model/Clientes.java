@@ -4,11 +4,11 @@ package br.com.secharpe.model;
  *
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
-
 public class Clientes {
+
     //Informação Sistema
     private int codigo;
-    
+
     //Informações do Cliente
     private String nome;
     private String email;
@@ -16,7 +16,7 @@ public class Clientes {
     private int rg;
     private int telefone;
     private int celular;
-    
+
     //Informações Endereço
     private Estados estado;
     private Cidades cidade;
@@ -98,13 +98,13 @@ public class Clientes {
     }
 
     public void setTelefone(int telefone) {
-        try {this.telefone = telefone;
-        } catch(NumberFormatException nfe) {
+        try {
+            this.telefone = telefone;
+        } catch (NumberFormatException nfe) {
             System.out.println("ERRO");
             nfe.getMessage();
         }
-        }
-    
+    }
 
     public void setCelular(int celular) {
         this.celular = celular;
@@ -134,11 +134,9 @@ public class Clientes {
         this.complemento = complemento;
     }
 
-    
     @Override
     public String toString() {
         return "Clientes:\n" + "Codigo Interno:" + codigo + "\nNome: " + nome + "\nEmail: " + email + "\nCPF: " + cpf + "\nRG: " + rg + "\nTelefone: " + telefone + "\nCelular: " + celular + "\nEstado: " + estado.getNome() + "\nCidade:" + cidade.getNome() + "\nBairro: " + bairro + "\nEndereço: " + endereco + "\nNumero: " + numero + "\nComplemento: " + complemento;
     }
-    
-    
+
 }

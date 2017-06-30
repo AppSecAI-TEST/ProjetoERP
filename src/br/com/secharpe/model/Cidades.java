@@ -5,7 +5,7 @@ public class Cidades {
     private int codigo;
     private String nome;
     private Estados estado;
-    
+
     public int getCodigo() {
         return codigo;
     }
@@ -25,7 +25,7 @@ public class Cidades {
     public void setNome(String nome) {
         this.nome = nome;
     }
-    
+
     public void setEstado(Estados estado) {
         this.estado = estado;
     }

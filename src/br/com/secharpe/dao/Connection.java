@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package br.com.secharpe.dao;
 
 import java.io.PrintWriter;
@@ -16,8 +11,6 @@ import br.com.secharpe.util.Log;
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class Connection {
-
-    
 
     public static java.sql.Connection getConnection() {
         java.sql.Connection conn = null;

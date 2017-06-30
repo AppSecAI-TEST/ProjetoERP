@@ -100,7 +100,7 @@ public class ProdutoDAO {
                 try {
                     conn.rollback();
                 } catch (SQLException ex) {
-                    System.out.println("ERRO: " + ex.getMessage()); 
+                    System.out.println("ERRO: " + ex.getMessage());
                     ex.printStackTrace(new PrintWriter(sw));
                     exceptionAsString = sw.toString();
                     log.put("ControleProdutoBanco", "update", exceptionAsString);

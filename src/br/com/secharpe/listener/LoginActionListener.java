@@ -9,7 +9,6 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.util.zip.DataFormatException;
 
 public class LoginActionListener implements ActionListener {
 
@@ -42,7 +41,7 @@ public class LoginActionListener implements ActionListener {
                             log.put("LoginActionListener", "Entrar", exceptionAsString);
                         }
                     }
-                    
+
                     login.dispose();
                     /* Set the Nimbus look and feel */
                     //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -18,7 +18,6 @@ public class EmpresaDAO {
 
     private Log log = new Log();
 
-    
     public void update(Empresa empresa) throws SistemaException {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
@@ -38,7 +37,6 @@ public class EmpresaDAO {
             ps.setString(10, empresa.getEmail());
             ps.setLong(11, empresa.getTelefone());
 
-            
             ps.execute();
             conn.commit();
         } catch (SQLException e) {
@@ -55,14 +53,14 @@ public class EmpresaDAO {
                 try {
                     ps.close();
                 } catch (SQLException ex) {
-                	log.put("EmpresaDAO", "update", 1, ex.getMessage());
+                    log.put("EmpresaDAO", "update", 1, ex.getMessage());
                 }
             }
             if (conn != null) {
                 try {
                     conn.close();
                 } catch (SQLException ex) {
-                	log.put("EmpresaDAO", "update", 2, ex.getMessage());
+                    log.put("EmpresaDAO", "update", 2, ex.getMessage());
                 }
             }
         }
@@ -91,9 +89,9 @@ public class EmpresaDAO {
             empresa.setTelefone(rs.getLong(9));
             Cidades cidade = new Cidades();
             CidadeDAO cd = new CidadeDAO();
-            cidade=cd.getCidade(rs.getInt(10));
+            cidade = cd.getCidade(rs.getInt(10));
             empresa.setCidade(cidade);
-            
+
         } catch (SQLException e) {
             log.put("EmpresaDAO", "getEmpresa", 0, e.getMessage());
             throw new SistemaException(e.getMessage());

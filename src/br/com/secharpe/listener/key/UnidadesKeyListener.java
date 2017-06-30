@@ -4,10 +4,10 @@ import br.com.secharpe.view.UnidadesCadastro;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public class UnidadesKeyListener implements KeyListener{
+public class UnidadesKeyListener implements KeyListener {
 
     private final UnidadesCadastro cadastro;
-    
+
     public UnidadesKeyListener(UnidadesCadastro cadastro) {
         this.cadastro = cadastro;
     }
@@ -18,7 +18,7 @@ public class UnidadesKeyListener implements KeyListener{
 
     @Override
     public void keyPressed(KeyEvent e) {
-        if(e.getKeyCode() == KeyEvent.VK_ENTER){
+        if (e.getKeyCode() == KeyEvent.VK_ENTER) {
             cadastro.sendInfo();
         }
     }
@@ -26,5 +26,5 @@ public class UnidadesKeyListener implements KeyListener{
     @Override
     public void keyReleased(KeyEvent e) {
     }
-    
+
 }

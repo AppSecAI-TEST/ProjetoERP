@@ -25,14 +25,15 @@ public class EmpresaViewActionListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_SAVECOMPANY)) {
-                empresa.editarCampo(false);
-                System.out.println(empresa.getEmpresa().toString());
+            empresa.editarCampo(false);
+            System.out.println(empresa.getEmpresa().toString());
         } else if (action.equals(Vars.PROP_EDIT)) {
             empresa.editarCampo(true);
         } else if (action.equals(Vars.PROP_ERASE)) {
             empresa.clean();
         } else if (action.equals(Vars.PROP_CLOSE)) {
-            empresa.dispose();}
+            empresa.dispose();
+        }
     }
 
 }

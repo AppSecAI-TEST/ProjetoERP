@@ -9,7 +9,6 @@ import java.io.IOException;
  *
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
-
 public class Util {
 
     public void escrever(String username) throws IOException {

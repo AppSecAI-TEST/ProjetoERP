@@ -1,7 +1,6 @@
 package br.com.secharpe.listener;
 
 import br.com.secharpe.util.Vars;
-import br.com.secharpe.util.VerificaFrame;
 import br.com.secharpe.view.Cidades;
 import br.com.secharpe.view.CidadesCadastro;
 import br.com.secharpe.view.Painel;

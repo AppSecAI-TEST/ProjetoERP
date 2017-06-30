@@ -134,7 +134,7 @@ public class UnidadeDAO {
                 String sigla = rs.getString(3);
 
                 Unidades unid = new Unidades();
-                
+
                 unid.setCodigo(codigo);
                 unid.setNome(nome);
                 unid.setSigla(sigla);

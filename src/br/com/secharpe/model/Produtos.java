@@ -1,12 +1,11 @@
 package br.com.secharpe.model;
 
-
 /**
  *
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
-
 public class Produtos {
+
     private int Codigo;
     private int CodigoInterno;
     private String Nome;
@@ -19,12 +18,12 @@ public class Produtos {
     private String Fabricante;
     private String Unidade;
     private int Lucro;
-    
-    public int getLucro(){
+
+    public int getLucro() {
         return Lucro;
     }
-    
-    public void setLucro(int lucro){
+
+    public void setLucro(int lucro) {
         this.Lucro = lucro;
     }
 
@@ -121,6 +120,4 @@ public class Produtos {
         return "Produtos:\n" + "Codigo: " + Codigo + "\nCodigoInterno=" + CodigoInterno + ", Nome=" + Nome + ", Descri\u00e7\u00e3o=" + Descrição + ", EstoqueAtual=" + EstoqueAtual + ", EstoqueMin=" + EstoqueMin + ", Pre\u00e7oCusto=" + PreçoCusto + ", Pre\u00e7oFinal=" + PreçoFinal + ", Tipo=" + Tipo + ", Fabricante=" + Fabricante + ", Unidade=" + Unidade + '}';
     }
 
-    
-    
 }

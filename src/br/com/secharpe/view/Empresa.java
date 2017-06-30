@@ -1,9 +1,5 @@
 package br.com.secharpe.view;
 
-import java.awt.event.ActionEvent;
-
-import javax.swing.event.InternalFrameEvent;
-
 import br.com.secharpe.exception.SistemaException;
 import br.com.secharpe.listener.EmpresaViewActionListener;
 import br.com.secharpe.util.Log;
@@ -37,11 +33,11 @@ public class Empresa extends javax.swing.JInternalFrame {
         br.com.secharpe.model.Empresa emp = new br.com.secharpe.model.Empresa();
         br.com.secharpe.dao.EmpresaDAO empresaDAO = new br.com.secharpe.dao.EmpresaDAO();
         try {
-			emp = empresaDAO.getAll();
-		} catch (SistemaException e) {
-			e.printStackTrace();
-			new br.com.secharpe.util.Log().put("Empresa",e.getMessage());
-		}
+            emp = empresaDAO.getAll();
+        } catch (SistemaException e) {
+            e.printStackTrace();
+            new br.com.secharpe.util.Log().put("Empresa", e.getMessage());
+        }
         tfBairro.setText(emp.getBairro());
         tfComplemento.setText(emp.getComplemento());
         tfEmail.setText(emp.getEmail());
@@ -49,13 +45,11 @@ public class Empresa extends javax.swing.JInternalFrame {
         tfFantasia.setText(emp.getNomeFantasia());
         tfLogradouro.setText(emp.getLogradouro());
         tfSite.setText(emp.getSite());
-        ftTelefone.setText(""+emp.getTelefone());
-        ftCNPJ.setText(""+emp.getCNPJ());
-        ftNumero.setText(""+emp.getNumero());
-        
-    }   
-    
-        
+        ftTelefone.setText("" + emp.getTelefone());
+        ftCNPJ.setText("" + emp.getCNPJ());
+        ftNumero.setText("" + emp.getNumero());
+
+    }
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents

@@ -40,7 +40,7 @@ public class EstadosActionListener implements ActionListener {
             cadastro.dispose();
         }
     }
-        //view.getTable().getSelectionModel().addListSelectionListener(new ListSelectionListener() {
+    //view.getTable().getSelectionModel().addListSelectionListener(new ListSelectionListener() {
     //  public void valueChanged(ListSelectionEvent event) {
     //    JOptionPane.showMessageDialog(null, view.getTable().getSelectedRow());
     //}

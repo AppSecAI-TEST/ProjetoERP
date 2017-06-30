@@ -49,8 +49,6 @@ public class Anotacoes {
     public void setDataRegistro(Date dataRegistro) {
         this.dataRegistro = dataRegistro;
     }
-    
-    
 
     @Override
     public String toString() {

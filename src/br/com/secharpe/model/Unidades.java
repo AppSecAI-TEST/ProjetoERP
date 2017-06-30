@@ -5,9 +5,11 @@ public class Unidades {
     private int codigo;
     private String nome;
     private String sigla;
-public Unidades (){
-    
-}
+
+    public Unidades() {
+
+    }
+
     public int getCodigo() {
         return codigo;
     }
