@@ -10,9 +10,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 /**
+ * Classe para acesso ao banco da Empresa
  *
- * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class EmpresaDAO {
 

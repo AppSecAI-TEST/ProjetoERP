@@ -11,9 +11,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
+/** Classe para acesso ao banco de Anotações
+ * 
  * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class AnotacoesDAO {
 
@@ -131,7 +132,7 @@ public class AnotacoesDAO {
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
                 Anotacoes anot = new Anotacoes();
-                
+
                 anot.setCodigo(rs.getInt(1));
                 anot.setTitulo(rs.getString(2));
                 anot.setDescricao(rs.getString(3));

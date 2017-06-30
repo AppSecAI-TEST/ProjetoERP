@@ -13,8 +13,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Classe para acesso ao banco de Cidades
  *
- * @author LuizAlexandre17 <luizalexandre17@unesc.net>
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class CidadeDAO {
 

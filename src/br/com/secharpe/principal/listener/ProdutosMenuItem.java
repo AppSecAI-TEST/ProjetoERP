@@ -5,9 +5,10 @@
  */
 package br.com.secharpe.principal.listener;
 
-/**
+/* Classe para action listener do item de menu Produto
  *
- * @author LuizAlexandre17 <luizalexandre17@unesc.net>
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 import br.com.secharpe.util.VerificaFrame;
 import br.com.secharpe.view.Produtos;
@@ -20,14 +21,22 @@ public class ProdutosMenuItem implements ActionListener {
     private Produtos produto;
     private Painel painel;
 
+    /**
+     *
+     * @param painel painel principal
+     */
     public ProdutosMenuItem(Painel painel) {
         this.painel = painel;
         this.produto = new Produtos(painel);
     }
 
     @Override
+    /**
+     *
+     * @param e evento
+     */
     public void actionPerformed(ActionEvent ae) {
-         if(VerificaFrame.verificaFrame(painel, produto)){
+        if (VerificaFrame.verificaFrame(painel, produto)) {
             VerificaFrame.exibirFrame(painel, produto);
         }
     }

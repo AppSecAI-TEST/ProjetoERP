@@ -10,6 +10,11 @@ import java.io.StringWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+/* Classe para action listener de Login
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class LoginActionListener implements ActionListener {
 
     br.com.secharpe.util.Util log = new br.com.secharpe.util.Util();

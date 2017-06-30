@@ -5,9 +5,10 @@ import br.com.secharpe.util.Vars;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
+/* Classe para action listener de Cidades 
  *
- * @author Darabas
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class CidadesActionListener implements ActionListener {
 

@@ -1,5 +1,10 @@
 package br.com.secharpe.model;
 
+/* Classe de Cidades
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class Cidades {
 
     private int codigo;

@@ -9,7 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Classe para acesso ao banco de Clientes
  *
+ * @author luandr <stringigualanull@outlook.com>
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class ClienteDAO {

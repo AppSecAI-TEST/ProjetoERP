@@ -8,6 +8,11 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTable;
 
+/* Classe para action listener de Cidades 
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class CidadesViewActionListener implements ActionListener {
 
     private Painel painel;

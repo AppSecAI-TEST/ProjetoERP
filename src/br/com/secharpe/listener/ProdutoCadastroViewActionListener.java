@@ -9,8 +9,9 @@ import br.com.secharpe.util.MessageCtrl;
 import br.com.secharpe.util.Vars;
 import br.com.secharpe.view.ProdutosCadastro;
 
-/**
+/* Classe para action listener de Produtos
  *
+ * @author luandr <stringigualanull@outlook.com>
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class ProdutoCadastroViewActionListener implements ActionListener {

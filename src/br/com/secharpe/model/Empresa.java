@@ -1,5 +1,10 @@
 package br.com.secharpe.model;
 
+/* Classe de Empresa
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class Empresa {
 
     private int codigo;

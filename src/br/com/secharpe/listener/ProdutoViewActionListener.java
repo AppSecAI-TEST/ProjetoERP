@@ -9,9 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 
-/**
+/* Classe para action listener de Produtos
  *
- * @author LuizAlexandre17 <luizalexandre17@unesc.net>
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class ProdutoViewActionListener implements ActionListener {
 

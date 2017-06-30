@@ -9,6 +9,11 @@ import br.com.secharpe.util.MessageCtrl;
 import br.com.secharpe.util.Vars;
 import br.com.secharpe.view.ClientesCadastro;
 
+/* Classe para action listener de Cidades Cadastro
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class ClienteCadastroViewActionListener implements ActionListener {
 
     private ClientesCadastro cad;

@@ -1,8 +1,9 @@
 package br.com.secharpe.model;
 
-/**
+/* Classe de Login
  *
- * @author comp8
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class LoginModel {
 

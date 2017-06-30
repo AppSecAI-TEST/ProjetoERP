@@ -18,7 +18,7 @@ public class Unidades extends javax.swing.JInternalFrame {
 
     private UnidadesViewActionListener handlerUnidades = new UnidadesViewActionListener(this);
     private Painel painel;
-    private ArrayList<JInternalFrame> childs;
+    private final ArrayList<JInternalFrame> childs;
     private final String[] columnNames = {"ID", "Nome", "Sigla"};
     private DefaultTableModel model = new DefaultTableModel() {
         private static final long serialVersionUID = 1L;

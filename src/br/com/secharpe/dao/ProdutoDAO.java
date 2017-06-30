@@ -10,8 +10,9 @@ import br.com.secharpe.util.Log;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
-/**
+/* Classe para acesso ao banco de Produtos
  *
+ * @author luandr <stringigualanull@outlook.com>
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class ProdutoDAO {

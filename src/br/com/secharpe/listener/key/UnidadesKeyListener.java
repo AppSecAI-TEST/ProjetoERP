@@ -4,6 +4,11 @@ import br.com.secharpe.view.UnidadesCadastro;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+/* Classe para action listener de tecla pressionada
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class UnidadesKeyListener implements KeyListener {
 
     private final UnidadesCadastro cadastro;

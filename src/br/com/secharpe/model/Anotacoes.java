@@ -2,6 +2,11 @@ package br.com.secharpe.model;
 
 import java.sql.Date;
 
+/* Classe de Anotações
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class Anotacoes {
 
     private int codigo;

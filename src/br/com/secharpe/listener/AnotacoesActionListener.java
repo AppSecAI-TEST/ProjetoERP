@@ -6,9 +6,10 @@ import java.awt.event.ActionListener;
 import br.com.secharpe.view.AnotacoesCadastro;
 import br.com.secharpe.view.Anotacoes;
 
-/**
+/* Classe para action listener de  Anotações
  *
- * @author Darabas
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class AnotacoesActionListener implements ActionListener {
 

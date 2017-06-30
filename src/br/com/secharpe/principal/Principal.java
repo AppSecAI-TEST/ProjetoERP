@@ -1,5 +1,9 @@
 package br.com.secharpe.principal;
-
+/* Classe Principal
+ *
+ * @author luandr <stringigualanull@outlook.com>
+ * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
+ */
 public class Principal {
 
     public static void main(String[] args) {

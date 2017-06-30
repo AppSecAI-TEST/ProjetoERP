@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import br.com.secharpe.util.Log;
 
 /**
+ * Classe para acesso ao banco de dados
  *
+ * @author luandr <stringigualanull@outlook.com>
  * @author LuizAlexandre17 <luizalexandreluz@unesc.net>
  */
 public class Connection {
