@@ -2,6 +2,9 @@ package br.com.secharpe.view;
 
 import br.com.secharpe.listener.UnidadesActionListener;
 import br.com.secharpe.listener.key.UnidadesKeyListener;
+import java.net.MalformedURLException;
+import java.net.URL;
+import javax.swing.ImageIcon;
 
 /**
  *
@@ -18,15 +21,24 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
     /**
      * Creates new form Unidades
      */
-     public UnidadesCadastro(br.com.secharpe.view.Unidades un) {
+    public UnidadesCadastro(br.com.secharpe.view.Unidades un) {
         init();
         this.un = un;
     }
+
     public UnidadesCadastro() {
         System.out.println("AAAAAAAAAAAAAPASSOU");
-        init();        
+        init();
     }
-    private void init(){
+
+    private void init() {
+        try {
+            URL url = new URL("../image/icons/ic_account_balance.png");
+            ImageIcon icon = new ImageIcon(url);
+            setFrameIcon(icon);
+        } catch (MalformedURLException ex) {
+            //whatever you want to put here
+        }
         new br.com.secharpe.util.Log().put("UnidadesCadastro", "Abrindo janela");
         initComponents();
         btCadastrar.addActionListener(handlerUnidades);
@@ -144,8 +156,8 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
         unidade.setSigla(tfSigla.getText());
         return unidade;
     }
-    
-    public br.com.secharpe.view.Unidades getUnidadeView(){
+
+    public br.com.secharpe.view.Unidades getUnidadeView() {
         return this.un;
     }
 
@@ -157,5 +169,4 @@ public class UnidadesCadastro extends javax.swing.JInternalFrame {
         return this.tfSigla.getText();
     }
 
-    
 }

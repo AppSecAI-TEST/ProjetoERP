@@ -1,12 +1,9 @@
 package br.com.secharpe.listener;
 
 import br.com.secharpe.exception.SistemaException;
-import br.com.secharpe.model.Estados;
 import br.com.secharpe.util.Vars;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *

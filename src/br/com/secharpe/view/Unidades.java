@@ -19,8 +19,15 @@ public class Unidades extends javax.swing.JInternalFrame {
     UnidadesViewActionListener handlerUnidades = new UnidadesViewActionListener(this);
     private Painel painel;
     private ArrayList<JInternalFrame> childs;
-    private final String[] columnNames = {"Nome", "Sigla"};
-    private DefaultTableModel model = new DefaultTableModel();
+    private final String[] columnNames = {"ID", "Nome", "Sigla"};
+    private DefaultTableModel model = new DefaultTableModel() {
+        private static final long serialVersionUID = 1L;
+
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
+    };
 
     /**
      * Creates new form Unidades
@@ -35,7 +42,9 @@ public class Unidades extends javax.swing.JInternalFrame {
         btRemover.addActionListener(handlerUnidades);
         btEditar.addActionListener(handlerUnidades);
         model.setColumnIdentifiers(columnNames);
+        jtUnidades.setSelectionMode(0);
         jtUnidades.setModel(model);
+
     }
 
     @SuppressWarnings("unchecked")
@@ -188,7 +197,7 @@ public class Unidades extends javax.swing.JInternalFrame {
         UnidadeDAO undao = new UnidadeDAO();
         List<br.com.secharpe.model.Unidades> listUnidade = undao.getAll();
         for (br.com.secharpe.model.Unidades un : listUnidade) {
-            model.addRow(new Object[]{un.getNome(), un.getSigla()});
+            model.addRow(new Object[]{un.getCodigo(), un.getNome(), un.getSigla()});
         }
     }
 

@@ -19,7 +19,7 @@ public class UnidadeDAO {
 
     private Log log = new Log();
 
-    public void delete(Unidades uni) {
+    public void delete(int id) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
 
@@ -27,7 +27,7 @@ public class UnidadeDAO {
             conn = Connection.getConnection();
             String sql = "delete from unidades where id = ?";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, uni.getCodigo());
+            ps.setInt(1, id);
             ps.execute();
 
             conn.commit();
