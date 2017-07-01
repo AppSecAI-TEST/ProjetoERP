@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class CidadesMenuItem implements ActionListener {
 
-    private Cidades cidades;
-    private Painel painel;
+    private final Cidades cidades;
+    private final Painel painel;
 
     /**
      *

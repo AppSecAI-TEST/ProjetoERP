@@ -68,8 +68,8 @@ public class ClienteDAO {
 
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getEmail());
-            ps.setInt(3, cliente.getCpf());
-            ps.setInt(4, cliente.getRg());
+            ps.setInt(3, cliente.getCPF());
+            ps.setInt(4, cliente.getRG());
             ps.setInt(5, cliente.getTelefone());
             ps.setInt(6, cliente.getCelular());
             ps.setString(7, cliente.getEstado().toString());
@@ -121,8 +121,8 @@ public class ClienteDAO {
             ps = conn.prepareStatement(sql);
             ps.setString(1, cliente.getNome());
             ps.setString(2, cliente.getEmail());
-            ps.setInt(3, cliente.getCpf());
-            ps.setInt(4, cliente.getRg());
+            ps.setInt(3, cliente.getCPF());
+            ps.setInt(4, cliente.getRG());
             ps.setInt(5, cliente.getTelefone());
             ps.setInt(6, cliente.getCelular());
             ps.setString(7, cliente.getEstado().toString());
@@ -193,8 +193,8 @@ public class ClienteDAO {
                 c.setCodigo(codigo);
                 c.setNome(nome);
                 c.setEmail(email);
-                c.setRg(rg);
-                c.setCpf(cpf);
+                c.setRG(rg);
+                c.setCPF(cpf);
                 c.setTelefone(telefone);
                 c.setCelular(celular);
                 //c.setEstado()
@@ -254,8 +254,8 @@ public class ClienteDAO {
                 c.setCodigo(codigo);
                 c.setNome(nome);
                 c.setEmail(email);
-                c.setRg(rg);
-                c.setCpf(cpf);
+                c.setRG(rg);
+                c.setCPF(cpf);
                 c.setTelefone(telefone);
                 c.setCelular(celular);
                 //c.setEstado()

@@ -1,6 +1,7 @@
 package br.com.secharpe.dao;
 
 import br.com.secharpe.model.Produtos;
+import br.com.secharpe.model.Unidades;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -72,7 +73,7 @@ public class ProdutoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (id,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro) values(?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (id,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade) values(?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, produto.getCodigo());
             ps.setString(2, produto.getNome());
@@ -83,8 +84,7 @@ public class ProdutoDAO {
             ps.setFloat(7, produto.getPreçoFinal());
             ps.setString(8, produto.getTipo());
             ps.setString(9, produto.getFabricante());
-            ps.setString(10, produto.getUnidade());
-            ps.setInt(11, produto.getLucro());
+            ps.setInt(10, produto.getUnidade().getCodigo());
 
             ps.execute();
 
@@ -189,38 +189,26 @@ public class ProdutoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro from produtos";
+            String sql = "select id, nome, descricao, estoque, estoque_min, preco_custo, preco_final, tipo, fabricante, id_unidade from produtos";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Integer codigo = rs.getInt(1);
-                String nome = rs.getString(2);
-                String descricao = rs.getString(3);
-                Integer estoqueat = rs.getInt(4);
-                Integer estoquemin = rs.getInt(5);
-                Float precocusto = rs.getFloat(6);
-                Float precofinal = rs.getFloat(7);
-                String tipo = rs.getString(8);
-                String fabr = rs.getString(9);
-                String un = rs.getString(10);
-                Integer lucro = rs.getInt(11);
 
                 Produtos p = new Produtos();
 
-                p.setCodigo(codigo);
-                p.setNome(nome);
-                p.setDescrição(descricao);
-                p.setEstoqueAtual(estoqueat);
-                p.setEstoqueMin(estoquemin);
-                p.setPreçoCusto(precocusto);
-                p.setPreçoFinal(precofinal); //Futuramente aplicar lucro + preço Custo
-                p.setFabricante(fabr);
-                p.setUnidade(un);
-                p.setTipo(tipo);
-                p.setLucro(lucro);
+                p.setCodigo(rs.getInt(1));
+                p.setNome(rs.getString(2));
+                p.setDescricao(rs.getString(3));
+                p.setEstoque(rs.getInt(4));
+                p.setEstoqueMin(rs.getInt(5));
+                p.setCusto(rs.getFloat(6));
+                p.setValorVenda(rs.getFloat(7));
+                p.setTipo(rs.getString(8));
+                p.setFabricante(rs.getString(9));
+                UnidadeDAO u = new UnidadeDAO();
+                p.setUnidade(u.getUnidade(rs.getInt(10)));
 
-                p.setCodigo(codigo);
                 lista.add(p);
             }
         } catch (SQLException e) {
@@ -228,7 +216,7 @@ public class ProdutoDAO {
             StringWriter sw = new StringWriter();
             e.printStackTrace(new PrintWriter(sw));
             String exceptionAsString = sw.toString();
-            log.put("ControleProdutoBanco", "getAll", exceptionAsString);
+            log.put("ControleProdutoBanco", "ge tAll", exceptionAsString);
         } finally {
             if (ps != null) {
                 try {
@@ -261,36 +249,26 @@ public class ProdutoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select from produtos codigo,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade,lucro where codigo = ?";
+            String sql = "select nome, descricao, estoque, estoque_min, preco_custo, preco_final, tipo, fabricante, id_unidade from produtos where id= ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();
             if (rs.next()) {
 
-                String nome = rs.getString(2);
-                String descricao = rs.getString(3);
-                Integer estoqueat = rs.getInt(4);
-                Integer estoquemin = rs.getInt(5);
-                Float precocusto = rs.getFloat(6);
-                Float precofinal = rs.getFloat(7);
-                String tipo = rs.getString(8);
-                String fabr = rs.getString(9);
-                String un = rs.getString(10);
-                Integer lucro = rs.getInt(11);
-
                 Produtos p = new Produtos();
-
                 p.setCodigo(codigo);
-                p.setNome(nome);
-                p.setDescrição(descricao);
-                p.setEstoqueAtual(estoqueat);
-                p.setEstoqueMin(estoquemin);
-                p.setPreçoCusto(precocusto);
-                p.setPreçoFinal(precofinal); //Futuramente aplicar lucro + preço Custo
-                p.setFabricante(fabr);
-                p.setUnidade(un);
-                p.setTipo(tipo);
-                p.setLucro(lucro);
+                p.setNome(rs.getString(1));
+                p.setDescricao(rs.getString(2));
+                p.setEstoque(rs.getInt(3));
+                p.setEstoqueMin(rs.getInt(4));
+                p.setCusto(rs.getFloat(5));
+                p.setValorVenda(rs.getFloat(6));
+                p.setTipo(rs.getString(7));
+                p.setFabricante(rs.getString(8));
+
+                UnidadeDAO u = new UnidadeDAO();
+
+                p.setUnidade(u.getUnidade(rs.getInt(9)));
 
                 return p;
             }

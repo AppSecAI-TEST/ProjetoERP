@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class UnidadesMenuItem implements ActionListener {
 
-    private Unidades unidades;
-    private Painel painel;
+    private final Unidades unidades;
+    private final Painel painel;
 
     /**
      *

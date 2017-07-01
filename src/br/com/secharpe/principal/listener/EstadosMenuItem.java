@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class EstadosMenuItem implements ActionListener {
 
-    private Estados estados;
-    private Painel painel;
+    private final Estados estados;
+    private final Painel painel;
 
     /**
      *

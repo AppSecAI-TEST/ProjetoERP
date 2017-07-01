@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
  */
 public class SairMenuItem implements ActionListener {
 
-    private Painel painel;
+    private final Painel painel;
 
     /**
      *

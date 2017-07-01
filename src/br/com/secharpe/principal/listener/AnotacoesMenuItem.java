@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class AnotacoesMenuItem implements ActionListener {
 
-    private Anotacoes anotacoes;
-    private Painel painel;
+    private final Anotacoes anotacoes;
+    private final Painel painel;
 
     /**
      *

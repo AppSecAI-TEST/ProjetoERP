@@ -7,118 +7,215 @@ package br.com.secharpe.model;
  */
 public class Produtos {
 
-    private int Codigo;
-    private int CodigoInterno;
-    private String Nome;
-    private String Descrição;
-    private int EstoqueAtual;
-    private int EstoqueMin;
-    private float PreçoCusto;
-    private float PreçoFinal;
-    private String Tipo;
-    private String Fabricante;
-    private String Unidade;
-    private int Lucro;
+    private int codigo;
+    private String nome;
+    private String descricao;
+    private int estoque;
+    private int estoqueMin;
+    private float custo;
+    private float valorVenda;
+    private String tipo;
+    private String fabricante;
+    private Unidades unidade;
 
-    public int getLucro() {
-        return Lucro;
-    }
-
-    public void setLucro(int lucro) {
-        this.Lucro = lucro;
-    }
-
-    public String getTipo() {
-        return Tipo;
-    }
-
-    public void setTipo(String Tipo) {
-        this.Tipo = Tipo;
-    }
-
-    public String getFabricante() {
-        return Fabricante;
-    }
-
-    public void setFabricante(String Fabricante) {
-        this.Fabricante = Fabricante;
-    }
-
-    public String getUnidade() {
-        return Unidade;
-    }
-
-    public void setUnidade(String Unidade) {
-        this.Unidade = Unidade;
-    }
-
-    public void setCodigo(int Codigo) {
-        this.Codigo = Codigo;
-    }
-
-    public void setCodigoInterno(int CodigoInterno) {
-        this.CodigoInterno = CodigoInterno;
-    }
-
-    public void setNome(String Nome) {
-        this.Nome = Nome;
-    }
-
-    public void setDescrição(String Descrição) {
-        this.Descrição = Descrição;
-    }
-
-    public void setEstoqueAtual(int EstoqueAtual) {
-        this.EstoqueAtual = EstoqueAtual;
-    }
-
-    public void setEstoqueMin(int EstoqueMin) {
-        this.EstoqueMin = EstoqueMin;
-    }
-
-    public void setPreçoCusto(float PreçoCusto) {
-        this.PreçoCusto = PreçoCusto;
-    }
-
-    public void setPreçoFinal(float PreçoFinal) {
-        this.PreçoFinal = PreçoFinal;
-    }
-
+    /**
+     *
+     * @return código
+     */
     public int getCodigo() {
-        return Codigo;
+        return codigo;
     }
 
-    public int getCodigoInterno() {
-        return CodigoInterno;
-    }
-
+    /**
+     *
+     * @return nome
+     */
     public String getNome() {
-        return Nome;
+        return nome;
     }
 
+    /**
+     *
+     * @return descrição
+     */
     public String getDescrição() {
-        return Descrição;
+        return descricao;
     }
 
+    /**
+     *
+     * @return estoque
+     */
     public int getEstoqueAtual() {
-        return EstoqueAtual;
+        return estoque;
     }
 
+    /**
+     *
+     * @return estoque mínimo
+     */
     public int getEstoqueMin() {
-        return EstoqueMin;
+        return estoqueMin;
     }
 
+    /**
+     *
+     * @return valor de custo
+     */
     public float getPreçoCusto() {
-        return PreçoCusto;
+        return custo;
     }
 
+    /**
+     *
+     * @return valor de venda
+     */
     public float getPreçoFinal() {
-        return PreçoFinal;
+        return valorVenda;
+    }
+
+    /**
+     *
+     * @return tipo
+     */
+    public String getTipo() {
+        return tipo;
+    }
+
+    /**
+     *
+     * @return fabricante
+     */
+    public String getFabricante() {
+        return fabricante;
+    }
+
+    /**
+     *
+     * @return descrição
+     */
+    public String getDescricao() {
+        return descricao;
+    }
+
+    /**
+     *
+     * @return quantidade em estoque
+     */
+    public int getEstoque() {
+        return estoque;
+    }
+
+    /**
+     *
+     * @return valor de custo
+     */
+    public float getCusto() {
+        return custo;
+    }
+
+    /**
+     *
+     * @return valor de venda
+     */
+    public float getValorVenda() {
+        return valorVenda;
+    }
+
+    /**
+     *
+     * @return unidade de medida
+     */
+    public Unidades getUnidade() {
+        return unidade;
+    }
+
+    /**
+     *
+     * @param codigo codigo do produto
+     */
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    /**
+     *
+     * @param nome nome do produto
+     */
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    /**
+     *
+     * @param descricao descrição do produto
+     */
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
+    }
+
+    /**
+     *
+     * @param estoque quantidade em estoque do produto
+     */
+    public void setEstoque(int estoque) {
+        this.estoque = estoque;
+    }
+
+    /**
+     *
+     * @param estoqueMin estoque mínimo do produto
+     */
+    public void setEstoqueMin(int estoqueMin) {
+        this.estoqueMin = estoqueMin;
+    }
+
+    /**
+     *
+     * @param custo custo do produto
+     */
+    public void setCusto(float custo) {
+        this.custo = custo;
+    }
+
+    /**
+     *
+     * @param valorVenda valor de venda do produto
+     */
+    public void setValorVenda(float valorVenda) {
+        this.valorVenda = valorVenda;
+    }
+
+    /**
+     *
+     * @param tipo tipo do produto
+     */
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    /**
+     *
+     * @param fabricante fabricante do produto
+     */
+    public void setFabricante(String fabricante) {
+        this.fabricante = fabricante;
+    }
+
+    /**
+     *
+     * @param unidade unidade de medida
+     */
+    public void setUnidade(Unidades unidade) {
+        this.unidade = unidade;
     }
 
     @Override
+    /**
+     * Converte objeto em String
+     */
     public String toString() {
-        return "Produtos:\n" + "Codigo: " + Codigo + "\nCodigoInterno=" + CodigoInterno + ", Nome=" + Nome + ", Descri\u00e7\u00e3o=" + Descrição + ", EstoqueAtual=" + EstoqueAtual + ", EstoqueMin=" + EstoqueMin + ", Pre\u00e7oCusto=" + PreçoCusto + ", Pre\u00e7oFinal=" + PreçoFinal + ", Tipo=" + Tipo + ", Fabricante=" + Fabricante + ", Unidade=" + Unidade + '}';
+        return "Produtos:\n" + "Codigo: " + codigo + ", Nome=" + nome + ", Descri\u00e7\u00e3o=" + descricao + ", EstoqueAtual=" + estoque + ", EstoqueMin=" + estoqueMin + ", Pre\u00e7oCusto=" + custo + ", Pre\u00e7oFinal=" + valorVenda + ", Tipo=" + tipo + ", Fabricante=" + fabricante + ", Unidade=" + unidade + '}';
     }
 
 }

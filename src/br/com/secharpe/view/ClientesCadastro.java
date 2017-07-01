@@ -50,10 +50,10 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
                 br.com.secharpe.model.Cidades cidade = new br.com.secharpe.model.Cidades();
                 cl.setNome(cNome.getText());
                 if (cCPF.getText() != null && !cCPF.getText().trim().equals("")) {
-                    cl.setCpf(Integer.parseInt((cCPF.getText())));
+                    cl.setCPF(Integer.parseInt((cCPF.getText())));
                 }
                 if (cRG.getText() != null && !cRG.getText().trim().equals("")) {
-                    cl.setRg(Integer.parseInt(cRG.getText()));
+                    cl.setRG(Integer.parseInt(cRG.getText()));
                 }
                 if (cCelular.getText() != null && !cCelular.getText().trim().equals("")) {
                     cl.setCelular(Integer.parseInt(cCelular.getText()));

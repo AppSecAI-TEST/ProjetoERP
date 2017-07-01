@@ -125,20 +125,16 @@ public class UnidadeDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select id,nome,sigla from unidades";
+            String sql = "select id, nome, sigla from unidades";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Integer codigo = rs.getInt(1);
-                String nome = rs.getString(2);
-                String sigla = rs.getString(3);
-
                 Unidades unid = new Unidades();
 
-                unid.setCodigo(codigo);
-                unid.setNome(nome);
-                unid.setSigla(sigla);
+                unid.setCodigo(rs.getInt(1));
+                unid.setNome(rs.getString(2));
+                unid.setSigla(rs.getString(3));
 
                 lista.add(unid);
             }
@@ -173,6 +169,58 @@ public class UnidadeDAO {
             }
         }
         return lista;
+    }
+
+    Unidades getUnidade(int codigo) {
+
+        Unidades unidade = new Unidades();
+        java.sql.Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Connection.getConnection();
+            String sql = "select nome, sigla from unidades where id = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, codigo);
+
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+
+                unidade.setCodigo(codigo);
+                unidade.setNome(rs.getString(1));
+                unidade.setSigla(rs.getString(2));
+
+            }
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+            StringWriter sw = new StringWriter();
+            e.printStackTrace(new PrintWriter(sw));
+            String exceptionAsString = sw.toString();
+            log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                    StringWriter sw = new StringWriter();
+                    ex.printStackTrace(new PrintWriter(sw));
+                    String exceptionAsString = sw.toString();
+                    log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                    StringWriter sw = new StringWriter();
+                    ex.printStackTrace(new PrintWriter(sw));
+                    String exceptionAsString = sw.toString();
+                    log.put("ControleUnidadeBanco", "getAll", exceptionAsString);
+                }
+            }
+        }
+        return unidade;
     }
 
 }

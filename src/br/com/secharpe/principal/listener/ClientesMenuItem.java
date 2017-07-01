@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class ClientesMenuItem implements ActionListener {
 
-    private Clientes clientes;
-    private Painel painel;
+    private final Clientes clientes;
+    private final Painel painel;
 
     /**
      *

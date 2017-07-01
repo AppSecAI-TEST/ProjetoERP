@@ -18,8 +18,8 @@ import java.awt.event.ActionListener;
 
 public class ProdutosMenuItem implements ActionListener {
 
-    private Produtos produto;
-    private Painel painel;
+    private final Produtos produto;
+    private final Painel painel;
 
     /**
      *

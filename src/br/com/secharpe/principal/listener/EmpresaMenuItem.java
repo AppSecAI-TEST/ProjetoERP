@@ -13,8 +13,8 @@ import java.awt.event.ActionListener;
  */
 public class EmpresaMenuItem implements ActionListener {
 
-    private Empresa empresa;
-    private Painel painel;
+    private final Empresa empresa;
+    private final Painel painel;
 
     /**
      *

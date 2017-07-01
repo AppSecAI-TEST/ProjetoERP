@@ -44,30 +44,31 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
         if (pCodigo.getText() != null || pCodigo.getText() != "0") {
             try {
-                Produtos p = new Produtos();
-                p.setCodigo(Integer.parseInt(pCodigo.getText()));
-                p.setNome(pNome.getText());
-                p.setDescrição(pDescricao.getText());
-                if (pEstoqueAtual.getText() != null && !pEstoqueAtual.getText().trim().equals("")) {
-                    p.setEstoqueAtual(Integer.parseInt(pEstoqueAtual.getText()));
-                }
-                if (pEstoqueMinimo.getText() != null && !pEstoqueMinimo.getText().trim().equals("")) {
-                    p.setEstoqueMin(Integer.parseInt(pEstoqueMinimo.getText()));
-                }
-                if (pPrecoCusto.getText() != null && !pPrecoCusto.getText().trim().equals("")) {
-                    p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
-
-                }
-                if (pPrecoVenda.getText() != null && !pPrecoVenda.getText().trim().equals("")) {
-                    p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
-                }
-
-                p.setFabricante(pFabricante.getSelectedItem().toString());
-
-                p.setTipo(pTipo.getSelectedItem().toString());
-                p.setUnidade(pUnidade.getSelectedItem().toString());
-                logimp.put("Cadastro", "Produto Cadastrado");
-                return p;
+                //TEM QUE VER COM CALMA ISSO AQUI E POR AS VARIAVEIS CORRETA COMENTEI PARA PODER FAZER O COMMIT <3
+//                Produtos p = new Produtos();
+//                p.setCodigo(Integer.parseInt(pCodigo.getText()));
+//                p.setNome(pNome.getText());
+//                p.setDescrição(pDescricao.getText());
+//                if (pEstoqueAtual.getText() != null && !pEstoqueAtual.getText().trim().equals("")) {
+//                    p.setEstoqueAtual(Integer.parseInt(pEstoqueAtual.getText()));
+//                }
+//                if (pEstoqueMinimo.getText() != null && !pEstoqueMinimo.getText().trim().equals("")) {
+//                    p.setEstoqueMin(Integer.parseInt(pEstoqueMinimo.getText()));
+//                }
+//                if (pPrecoCusto.getText() != null && !pPrecoCusto.getText().trim().equals("")) {
+//                    p.setPreçoCusto(Float.parseFloat(pPrecoCusto.getText()));
+//
+//                }
+//                if (pPrecoVenda.getText() != null && !pPrecoVenda.getText().trim().equals("")) {
+//                    p.setPreçoFinal(Float.parseFloat(pPrecoVenda.getText()));
+//                }
+//
+//                p.setFabricante(pFabricante.getSelectedItem().toString());
+//
+//                p.setTipo(pTipo.getSelectedItem().toString());
+//                p.setUnidade(pUnidade.getSelectedItem().toString());
+//                logimp.put("Cadastro", "Produto Cadastrado");
+//                return p;
             } catch (NumberFormatException nfe) {
                 MessageCtrl.callMessage("A String digitado não corresponde a informação", "Ops, um erro ocorreu", 8);
                 System.out.println("A String digitado não corresponde a informação");

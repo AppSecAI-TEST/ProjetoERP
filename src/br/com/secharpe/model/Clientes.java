@@ -7,18 +7,13 @@ package br.com.secharpe.model;
  */
 public class Clientes {
 
-    //Informação Sistema
     private int codigo;
-
-    //Informações do Cliente
     private String nome;
     private String email;
-    private int cpf;
-    private int rg;
+    private int CPF;
+    private int RG;
     private int telefone;
     private int celular;
-
-    //Informações Endereço
     private Estados estado;
     private Cidades cidade;
     private String bairro;
@@ -26,78 +21,154 @@ public class Clientes {
     private int numero;
     private String complemento;
 
+    /**
+     *
+     * @return código
+     */
     public int getCodigo() {
         return codigo;
     }
 
+    /**
+     *
+     * @return nome
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     *
+     * @return e-mail
+     */
     public String getEmail() {
         return email;
     }
 
-    public int getCpf() {
-        return cpf;
+    /**
+     *
+     * @return CPF
+     */
+    public int getCPF() {
+        return CPF;
     }
 
-    public int getRg() {
-        return rg;
+    /**
+     *
+     * @return RG
+     */
+    public int getRG() {
+        return RG;
     }
 
+    /**
+     *
+     * @return telefone
+     */
     public int getTelefone() {
         return telefone;
     }
 
+    /**
+     *
+     * @return celular
+     */
     public int getCelular() {
         return celular;
     }
 
+    /**
+     *
+     * @return estado
+     */
     public Estados getEstado() {
         return estado;
     }
 
+    /**
+     *
+     * @return cidade
+     */
     public Cidades getCidade() {
         return cidade;
     }
 
+    /**
+     *
+     * @return bairro
+     */
     public String getBairro() {
         return bairro;
     }
 
+    /**
+     *
+     * @return endereco
+     */
     public String getEndereco() {
         return endereco;
     }
 
+    /**
+     *
+     * @return número
+     */
     public int getNumero() {
         return numero;
     }
 
+    /**
+     *
+     * @return complemento
+     */
     public String getComplemento() {
         return complemento;
     }
 
+    /**
+     *
+     * @param codigo código do cliente
+     */
     public void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 
+    /**
+     *
+     * @param nome nome do cliente
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     *
+     * @param email email do cliente
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
+    /**
+     *
+     * @param cpf CPF do cliente
+     */
+    public void setCPF(int cpf) {
+        this.CPF = cpf;
     }
 
-    public void setRg(int rg) {
-        this.rg = rg;
+    /**
+     *
+     * @param rg RG do cliente
+     */
+    public void setRG(int rg) {
+        this.RG = rg;
     }
 
+    /**
+     *
+     * @param telefone telefone do cliente
+     */
     public void setTelefone(int telefone) {
         try {
             this.telefone = telefone;
@@ -107,37 +178,69 @@ public class Clientes {
         }
     }
 
+    /**
+     *
+     * @param celular celular do cliente
+     */
     public void setCelular(int celular) {
         this.celular = celular;
     }
 
+    /**
+     *
+     * @param estado estado de residencia do cliente
+     */
     public void setEstado(Estados estado) {
         this.estado = estado;
     }
 
+    /**
+     *
+     * @param cidade cidade de residencia do cliente
+     */
     public void setCidade(Cidades cidade) {
         this.cidade = cidade;
     }
 
+    /**
+     *
+     * @param bairro bairro de residência do cliente
+     */
     public void setBairro(String bairro) {
         this.bairro = bairro;
     }
 
+    /**
+     *
+     * @param endereco endereço do cliente
+     */
     public void setEndereco(String endereco) {
         this.endereco = endereco;
     }
+
+    /**
+     *
+     * @param numero número da residência do cliente
+     */
 
     public void setNumero(int numero) {
         this.numero = numero;
     }
 
+    /**
+     *
+     * @param complemento complemento da residência do cliente
+     */
     public void setComplemento(String complemento) {
         this.complemento = complemento;
     }
 
     @Override
+    /**
+     * Converte objeto em String
+     */
     public String toString() {
-        return "Clientes:\n" + "Codigo Interno:" + codigo + "\nNome: " + nome + "\nEmail: " + email + "\nCPF: " + cpf + "\nRG: " + rg + "\nTelefone: " + telefone + "\nCelular: " + celular + "\nEstado: " + estado.getNome() + "\nCidade:" + cidade.getNome() + "\nBairro: " + bairro + "\nEndereço: " + endereco + "\nNumero: " + numero + "\nComplemento: " + complemento;
+        return "Clientes:\n" + "Codigo Interno:" + codigo + "\nNome: " + nome + "\nEmail: " + email + "\nCPF: " + CPF + "\nRG: " + RG + "\nTelefone: " + telefone + "\nCelular: " + celular + "\nEstado: " + estado.getNome() + "\nCidade:" + cidade.getNome() + "\nBairro: " + bairro + "\nEndereço: " + endereco + "\nNumero: " + numero + "\nComplemento: " + complemento;
     }
 
 }
