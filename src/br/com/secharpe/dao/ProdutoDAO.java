@@ -73,18 +73,18 @@ public class ProdutoDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (id,nome,descricao,estoqueatual,estoquemin,precocusto,precofinal,tipo,fabricante,unidade) values(?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (id,nome,descricao,estoque,estoque_min,tipo,fabricante,id_unidade,preco_custo,preco_final) values(?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, produto.getCodigo());
             ps.setString(2, produto.getNome());
             ps.setString(3, produto.getDescrição());
             ps.setInt(4, produto.getEstoqueAtual());
             ps.setInt(5, produto.getEstoqueMin());
-            ps.setFloat(6, produto.getPreçoCusto());
-            ps.setFloat(7, produto.getPreçoFinal());
-            ps.setString(8, produto.getTipo());
-            ps.setString(9, produto.getFabricante());
-            ps.setInt(10, produto.getUnidade().getCodigo());
+            ps.setFloat(9, produto.getPreçoCusto());
+            ps.setFloat(10, produto.getPreçoFinal());
+            ps.setString(6, produto.getTipo());
+            ps.setString(7, produto.getFabricante());
+            ps.setInt(8, produto.getUnidade().getCodigo());
 
             ps.execute();
 

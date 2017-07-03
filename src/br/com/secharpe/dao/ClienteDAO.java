@@ -63,7 +63,7 @@ public class ClienteDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,estado,cidade,bairro,endereço,numero,complemento) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereco,numero,complemento) values(?,?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
 
             ps.setString(1, cliente.getNome());
@@ -72,8 +72,7 @@ public class ClienteDAO {
             ps.setInt(4, cliente.getRG());
             ps.setInt(5, cliente.getTelefone());
             ps.setInt(6, cliente.getCelular());
-            ps.setString(7, cliente.getEstado().toString());
-            ps.setString(8, cliente.getCidade().toString());
+            ps.setInt(7, cliente.getCidade().getCodigo());
             ps.setString(9, cliente.getBairro());
             ps.setString(10, cliente.getEndereco());
             ps.setInt(11, cliente.getNumero());
@@ -170,7 +169,7 @@ public class ClienteDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,email,cpf,rg,telefone,celular,estado,cidade,bairro,endereço,numero,complemento from produtos";
+            String sql = "select codigo,nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereço,numero,complemento from produtos";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
@@ -184,11 +183,11 @@ public class ClienteDAO {
                 Integer telefone = rs.getInt(6);
                 Integer celular = rs.getInt(7);
                 //Estado estado = 
-                String cidade = rs.getString(9);
-                String bairro = rs.getString(10);
-                String endereço = rs.getString(11);
-                Integer numero = rs.getInt(12);
-                String Complemento = rs.getString(13);
+                Integer cidade = rs.getInt(8);
+                String bairro = rs.getString(9);
+                String endereço = rs.getString(10);
+                Integer numero = rs.getInt(11);
+                String Complemento = rs.getString(12);
 
                 c.setCodigo(codigo);
                 c.setNome(nome);
