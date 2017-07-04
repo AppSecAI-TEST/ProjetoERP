@@ -7,6 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.sql.Date;
 import br.com.secharpe.util.Log;
 import java.io.PrintWriter;
 import java.io.StringWriter;
@@ -19,6 +20,7 @@ import java.io.StringWriter;
 public class ProdutoDAO {
 
     private Log log = new Log();
+    
 
     public void delete(int id) {
         java.sql.Connection conn = null;
@@ -71,9 +73,13 @@ public class ProdutoDAO {
     public void insert(Produtos produto) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
+        Date data = new java.sql.Date(new java.util.Date().getTime());
+        String User = new br.com.secharpe.util.Util().lerArquivo();
+
+
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (id,nome,descricao,estoque,estoque_min,tipo,fabricante,id_unidade,preco_custo,preco_final) values(?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (id,nome,descricao,estoque,estoque_min,tipo,fabricante,id_unidade,preco_custo,preco_final,data_registro,add_by) values(?,?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, produto.getCodigo());
             ps.setString(2, produto.getNome());
@@ -85,6 +91,8 @@ public class ProdutoDAO {
             ps.setString(6, produto.getTipo());
             ps.setString(7, produto.getFabricante());
             ps.setInt(8, produto.getUnidade().getCodigo());
+            ps.setDate(11, data);
+            ps.setString(12, User);
 
             ps.execute();
 

@@ -2,6 +2,7 @@ package br.com.secharpe.dao;
 
 import br.com.secharpe.model.Clientes;
 import br.com.secharpe.util.Log;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -61,9 +62,10 @@ public class ClienteDAO {
     public void insert(Clientes cliente) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
+        Date data = new java.sql.Date(new java.util.Date().getTime());
         try {
             conn = Connection.getConnection();
-            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereco,numero,complemento) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereco,numero,complemento,data_cadastro) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
 
             ps.setString(1, cliente.getNome());
@@ -77,6 +79,7 @@ public class ClienteDAO {
             ps.setString(10, cliente.getEndereco());
             ps.setInt(11, cliente.getNumero());
             ps.setString(12, cliente.getComplemento());
+            ps.setDate(13, data);
 
             ps.execute();
 
