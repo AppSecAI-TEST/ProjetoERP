@@ -20,6 +20,7 @@ public class Painel extends javax.swing.JFrame {
     private final br.com.secharpe.principal.listener.ClientesMenuItem handlerClientesMenuItem = new br.com.secharpe.principal.listener.ClientesMenuItem(this);
     private final br.com.secharpe.principal.listener.ProdutosMenuItem handlerProdutosMenuItem = new br.com.secharpe.principal.listener.ProdutosMenuItem(this);
     private final br.com.secharpe.principal.listener.SobreMenuItem handlerSobre = new br.com.secharpe.principal.listener.SobreMenuItem();
+    private final br.com.secharpe.principal.listener.ConfigMenuItem handlerCfg = new br.com.secharpe.principal.listener.ConfigMenuItem();
 
     /**
      * @return JDesktopPane
@@ -41,6 +42,7 @@ public class Painel extends javax.swing.JFrame {
         clientesMenuItem.addActionListener(handlerClientesMenuItem);
         produtosMenuItem.addActionListener(handlerProdutosMenuItem);
         infoMenu.addActionListener(handlerSobre);
+        langMenu.addActionListener(handlerCfg);
     }
 
     @SuppressWarnings("unchecked")
@@ -50,6 +52,7 @@ public class Painel extends javax.swing.JFrame {
         desktopPane = new javax.swing.JDesktopPane();
         menuBar = new javax.swing.JMenuBar();
         arquivoMenu = new javax.swing.JMenu();
+        langMenu = new javax.swing.JMenuItem();
         sairMenuItem = new javax.swing.JMenuItem();
         cadastroMenu = new javax.swing.JMenu();
         clientesMenuItem = new javax.swing.JMenuItem();
@@ -68,6 +71,9 @@ public class Painel extends javax.swing.JFrame {
 
         arquivoMenu.setMnemonic('f');
         arquivoMenu.setText("Arquivo");
+
+        langMenu.setText("Linguagem");
+        arquivoMenu.add(langMenu);
 
         sairMenuItem.setMnemonic('o');
         sairMenuItem.setText("Sair");
@@ -116,7 +122,7 @@ public class Painel extends javax.swing.JFrame {
         sobreMenu.setMnemonic('h');
         sobreMenu.setText("Sobre");
 
-        infoMenu.setText("Info");
+        infoMenu.setText("Informação");
         sobreMenu.add(infoMenu);
 
         menuBar.add(sobreMenu);
@@ -148,6 +154,7 @@ public class Painel extends javax.swing.JFrame {
     private javax.swing.JMenuItem empresaMenuItem;
     private javax.swing.JMenuItem estadosMenuItem;
     private javax.swing.JMenuItem infoMenu;
+    private javax.swing.JMenuItem langMenu;
     private javax.swing.JMenuBar menuBar;
     private javax.swing.JMenuItem produtosMenuItem;
     private javax.swing.JMenuItem sairMenuItem;

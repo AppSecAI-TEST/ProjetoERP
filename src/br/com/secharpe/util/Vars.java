@@ -8,8 +8,15 @@ import java.io.File;
  */
 public final class Vars {
 
+    //LANG
+    public static final String[] LANG_LIST = {"br", "us", "es", "config"};
+    public static String LANG_DEFAULT = br.com.secharpe.util.Propriedades.getLang();
+
+    //PROP
+    public static String PROP_PATH = "src" + File.separator + "br" + File.separator + "com" + File.separator + "secharpe" + File.separator + "util" + File.separator + "lang" + File.separator;
+    public static String PROP_FILE = PROP_PATH + Vars.LANG_DEFAULT + ".properties";
+
     //GLOBALS
-    public final static String PROP_FILE = "src" + File.separator + "br" + File.separator + "com" + File.separator + "secharpe" + File.separator + "util" + File.separator + "config.properties";
     public static final String PROP_NEW = br.com.secharpe.util.Propriedades.getProp("form.new");
     public static final String PROP_REMOVE = br.com.secharpe.util.Propriedades.getProp("form.remove");
     public static final String PROP_EDIT = br.com.secharpe.util.Propriedades.getProp("form.edit");

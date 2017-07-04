@@ -210,3 +210,136 @@
 [Sun Jul 02 16:25:58 BRT 2017] [CIDADESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Sun Jul 02 16:26:17 BRT 2017] [ANOTACOESCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
 [Sun Jul 02 16:26:31 BRT 2017] [PRODUTOSCADASTRO.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:42:31 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:42:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:42:32 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:42:46 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:42:46 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:42:46 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:42:46 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:42:48 BRT 2017] [CONNECTION.JAVA] [CONSTRUTOR] :: java.sql.SQLException: socket creation error
+	at org.hsqldb.jdbc.Util.sqlException(Unknown Source)
+	at org.hsqldb.jdbc.jdbcConnection.<init>(Unknown Source)
+	at org.hsqldb.jdbcDriver.getConnection(Unknown Source)
+	at org.hsqldb.jdbcDriver.connect(Unknown Source)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at br.com.secharpe.dao.Connection.getConnection(Connection.java:21)
+	at br.com.secharpe.dao.EmpresaDAO.getAll(EmpresaDAO.java:77)
+	at br.com.secharpe.view.Empresa.<init>(Empresa.java:36)
+	at br.com.secharpe.principal.listener.EmpresaMenuItem.<init>(EmpresaMenuItem.java:25)
+	at br.com.secharpe.view.Painel.<init>(Painel.java:18)
+	at br.com.secharpe.listener.LoginActionListener$1.run(LoginActionListener.java:77)
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311)
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756)
+	at java.awt.EventQueue.access$500(EventQueue.java:97)
+	at java.awt.EventQueue$3.run(EventQueue.java:709)
+	at java.awt.EventQueue$3.run(EventQueue.java:703)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:80)
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93)
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82)
+
+[Tue Jul 04 19:43:04 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:43:04 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:05 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:43:06 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:07 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:07 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:07 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:07 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:43:08 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:08 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:08 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:08 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:25 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:43:25 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:26 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:43:27 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:28 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:28 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:28 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:28 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:43:28 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:28 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:29 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:43:29 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:43 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:45:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:44 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:45:45 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:45 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:46 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:46 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:46 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:45:46 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:46 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:47 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:45:47 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:37 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:47:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:37 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:47:39 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:39 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:39 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:39 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:39 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:47:40 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:40 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:40 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:47:40 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:00 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:49:00 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:00 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:49:05 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:49:05 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:05 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:38 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:49:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:38 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:49:42 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:42 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:42 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:42 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:42 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:49:42 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:43 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:43 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:49:43 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:12 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:50:13 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:13 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:50:14 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:14 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:14 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:14 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:14 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:50:14 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:15 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:15 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:50:15 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:51:59 BRT 2017] [PRINCIPAL.JAVA] [main] :: Iniciando programa
+[Tue Jul 04 19:51:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:51:59 BRT 2017] [LOGIN.JAVA] [CONSTRUTOR] [0] :: if][captura nome de usuario no arquivo
+[Tue Jul 04 19:54:17 BRT 2017] [UNIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:17 BRT 2017] [CIDADES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:17 BRT 2017] [ESTADOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:17 BRT 2017] [EMPRESA.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:17 BRT 2017] [CIDADEDAO.JAVA] [CONSTRUTOR] :: Cidade com código 1 retornada com sucesso!
+[Tue Jul 04 19:54:17 BRT 2017] [ANOTACOES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:17 BRT 2017] [CLIENTES.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:18 BRT 2017] [PRODUTOS.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:18 BRT 2017] [PAINEL.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:23 BRT 2017] [DMESSAGE.JAVA] [CONSTRUTOR] :: Abrindo janela
+[Tue Jul 04 19:54:23 BRT 2017] [MESSAGECTRL.JAVA] [callMessage] [0] :: Mensagem :: Restart to apply language changes] [Título :: Success!!] [Ícone :: 1

@@ -10,6 +10,11 @@
             <Property name="text" type="java.lang.String" value="Arquivo"/>
           </Properties>
           <SubComponents>
+            <MenuItem class="javax.swing.JMenuItem" name="langMenu">
+              <Properties>
+                <Property name="text" type="java.lang.String" value="Linguagem"/>
+              </Properties>
+            </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="sairMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="111"/>
@@ -87,7 +92,7 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="infoMenu">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Info"/>
+                <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xe3;o"/>
               </Properties>
             </MenuItem>
           </SubComponents>

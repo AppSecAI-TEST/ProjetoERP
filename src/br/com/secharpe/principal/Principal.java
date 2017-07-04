@@ -16,7 +16,6 @@ public class Principal {
         new br.com.secharpe.util.Log().put("Principal", "main", "Iniciando programa");
         br.com.secharpe.view.Login login = new br.com.secharpe.view.Login();
         login.setVisible(true);
-
     }
 
 }

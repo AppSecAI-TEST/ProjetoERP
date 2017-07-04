@@ -1,8 +1,10 @@
 package br.com.secharpe.util;
 
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.Properties;
@@ -68,4 +70,31 @@ public final class Propriedades {
         return null;
     }
 
+    public static String getLang() {
+        String str = "";
+        for (String name : Vars.LANG_LIST) {
+            BufferedReader in = null;
+            try {
+                in = new BufferedReader(new FileReader("lang.cfg"));
+                StringBuffer buf = new StringBuffer();
+                while (in.ready()) {
+                    str = in.readLine();
+                    buf.append(str);
+                }
+                return buf.toString();
+            } catch (IOException e) {
+                //erro.erro
+                return null;
+            } finally {
+                if (in != null) {
+                    try {
+                        in.close();
+                    } catch (IOException ex) {
+                        //erro.erro
+                    }
+                }
+            }
+        }
+        return str;
+    }
 }
