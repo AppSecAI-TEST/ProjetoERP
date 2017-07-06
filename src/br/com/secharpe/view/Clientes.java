@@ -1,6 +1,12 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.dao.ClienteDAO;
 import br.com.secharpe.listener.ClienteViewActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JInternalFrame;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  * View para exibir todos os clientes
@@ -13,6 +19,14 @@ public class Clientes extends javax.swing.JInternalFrame {
 
     private final ClienteViewActionListener handlerClientes = new ClienteViewActionListener(this);
     private Painel painel;
+    private ArrayList<JInternalFrame> childs;
+    private String[] columnNames = {"Codigo","Nome","CPF","RG","Estado","Cidade","Bairro","Telefone","Celular","Email"};
+    private DefaultTableModel model = new DefaultTableModel() {
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
+    };
 
     /**
      * @param painel Painel
@@ -23,6 +37,7 @@ public class Clientes extends javax.swing.JInternalFrame {
         initComponents();
         btSalvar.addActionListener(handlerClientes);
         btFechar.addActionListener(handlerClientes);
+         jtClientes.setModel(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -39,6 +54,23 @@ public class Clientes extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Clientes");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         btSalvar.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
 
@@ -110,6 +142,10 @@ public class Clientes extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+        refreshTable();
+    }//GEN-LAST:event_formInternalFrameOpened
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
@@ -125,4 +161,32 @@ public class Clientes extends javax.swing.JInternalFrame {
     public Painel getPainel() {
         return this.painel;
     }
+    public void refreshTable() {
+        model.setRowCount(0);
+        ClienteDAO estado = new ClienteDAO();
+        List<br.com.secharpe.model.Clientes> listClientes = estado.getAll();
+        for (br.com.secharpe.model.Clientes est : listClientes) {
+            model.addRow(new Object[]{est.getCodigo(),est.getNome(),est.getCPF(),est.getRG(),est.getEstado(),est.getCidade(),est.getBairro(),est.getTelefone(),est.getCelular(),est.getEmail()});
+        }
+    }
+
+    public void addChild(JInternalFrame esCad) {
+        childs.add(esCad);
+    }
+
+    public void closeChilds() {
+        for (JInternalFrame janela : childs) {
+            janela.dispose();
+        }
+    }
+
+    public void childRemove(JInternalFrame cdCad) {
+        childs.remove(cdCad);
+    }
+
+    public JTable getTable() {
+        return this.jtClientes;
+    }
 }
+
+

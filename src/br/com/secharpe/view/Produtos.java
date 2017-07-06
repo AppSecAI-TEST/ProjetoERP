@@ -1,6 +1,12 @@
 package br.com.secharpe.view;
 
+import br.com.secharpe.dao.ProdutoDAO;
 import br.com.secharpe.listener.ProdutoViewActionListener;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JInternalFrame;
+import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -12,6 +18,14 @@ public class Produtos extends javax.swing.JInternalFrame {
 
     private final ProdutoViewActionListener handlerProdutos = new ProdutoViewActionListener(this);
     private Painel painel;
+    private ArrayList<JInternalFrame> childs;
+    private String[] columnNames = {"Codigo","Nome","Descrição","Preço Custo","Preço Final","Fabricante","Unidade","Tipo","Estoque Min","Estoque Atual"};
+    private DefaultTableModel model = new DefaultTableModel() {
+        @Override
+        public boolean isCellEditable(int row, int column) {
+            return false;
+        }
+    };
 
     /**
      * Creates new form Produtos
@@ -26,6 +40,8 @@ public class Produtos extends javax.swing.JInternalFrame {
         btEditar.addActionListener(handlerProdutos);
         btFechar.addActionListener(handlerProdutos);
         btRemover.addActionListener(handlerProdutos);
+        jtProdutos.setModel(model);
+        
     }
 
     @SuppressWarnings("unchecked")
@@ -37,11 +53,28 @@ public class Produtos extends javax.swing.JInternalFrame {
         btEditar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jtUnidades = new javax.swing.JTable();
+        jtProdutos = new javax.swing.JTable();
 
         setClosable(true);
         setIconifiable(true);
         setTitle("Produtos");
+        addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+                formInternalFrameOpened(evt);
+            }
+        });
 
         btNovo.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
 
@@ -51,7 +84,7 @@ public class Produtos extends javax.swing.JInternalFrame {
 
         btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
-        jtUnidades.setModel(new javax.swing.table.DefaultTableModel(
+        jtProdutos.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -74,13 +107,13 @@ public class Produtos extends javax.swing.JInternalFrame {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(jtUnidades);
-        if (jtUnidades.getColumnModel().getColumnCount() > 0) {
-            jtUnidades.getColumnModel().getColumn(0).setPreferredWidth(20);
-            jtUnidades.getColumnModel().getColumn(3).setPreferredWidth(55);
-            jtUnidades.getColumnModel().getColumn(4).setPreferredWidth(50);
-            jtUnidades.getColumnModel().getColumn(8).setPreferredWidth(35);
-            jtUnidades.getColumnModel().getColumn(9).setPreferredWidth(35);
+        jScrollPane1.setViewportView(jtProdutos);
+        if (jtProdutos.getColumnModel().getColumnCount() > 0) {
+            jtProdutos.getColumnModel().getColumn(0).setPreferredWidth(20);
+            jtProdutos.getColumnModel().getColumn(3).setPreferredWidth(55);
+            jtProdutos.getColumnModel().getColumn(4).setPreferredWidth(50);
+            jtProdutos.getColumnModel().getColumn(8).setPreferredWidth(35);
+            jtProdutos.getColumnModel().getColumn(9).setPreferredWidth(35);
         }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -115,6 +148,10 @@ public class Produtos extends javax.swing.JInternalFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
+       refreshTable();
+    }//GEN-LAST:event_formInternalFrameOpened
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btEditar;
@@ -122,7 +159,7 @@ public class Produtos extends javax.swing.JInternalFrame {
     private javax.swing.JButton btNovo;
     private javax.swing.JButton btRemover;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jtUnidades;
+    private javax.swing.JTable jtProdutos;
     // End of variables declaration//GEN-END:variables
     /**
      * @return painel Painel
@@ -130,4 +167,33 @@ public class Produtos extends javax.swing.JInternalFrame {
     public Painel getPainel() {
         return this.painel;
     }
+    
+    public void refreshTable() {
+        model.setRowCount(0);
+        ProdutoDAO estado = new ProdutoDAO();
+        List<br.com.secharpe.model.Produtos> listProdutos = estado.getAll();
+        for (br.com.secharpe.model.Produtos est : listProdutos) {
+            model.addRow(new Object[]{est.getCodigo(),est.getNome(),est.getDescrição(),est.getPreçoCusto(),est.getPreçoFinal(),est.getFabricante(),est.getUnidade(),est.getEstoqueMin(),est.getEstoqueAtual()});
+        }
+    }
+
+    public void addChild(JInternalFrame esCad) {
+        childs.add(esCad);
+    }
+
+    public void closeChilds() {
+        for (JInternalFrame janela : childs) {
+            janela.dispose();
+        }
+    }
+
+    public void childRemove(JInternalFrame cdCad) {
+        childs.remove(cdCad);
+    }
+
+    public JTable getTable() {
+        return this.jtProdutos;
+    }
 }
+
+
