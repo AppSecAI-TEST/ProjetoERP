@@ -2,6 +2,7 @@ package br.com.secharpe.view;
 
 import br.com.secharpe.model.Anotacoes;
 import br.com.secharpe.listener.AnotacoesActionListener;
+import br.com.secharpe.util.MessageCtrl;
 
 /**
  *
@@ -11,16 +12,31 @@ public class AnotacoesCadastro extends javax.swing.JInternalFrame {
 
     private Painel painel;
     private final AnotacoesActionListener handlerCidades = new AnotacoesActionListener(this);
+    private br.com.secharpe.view.Anotacoes est = null;
 
     /**
      * Creates new form CidadesCadastro
      */
-    public AnotacoesCadastro() {
+    public AnotacoesCadastro(br.com.secharpe.view.Anotacoes est) {
         new br.com.secharpe.util.Log().put("AnotacoesCadastro", "Abrindo janela");
+        this.est = est;
         initComponents();
         btCadastrar.addActionListener(handlerCidades);
         btFechar.addActionListener(handlerCidades);
     }
+
+    public AnotacoesCadastro(br.com.secharpe.view.Anotacoes anotacoes, br.com.secharpe.model.Anotacoes ano) {
+        if (ano != null) {
+            taAnotacao.setText(ano.getAnotacao());
+            tfDescricao.setText(ano.getDescricao());
+            tfTitulo.setText(ano.getTitulo());
+        } else {
+            MessageCtrl.callMessage("Ooops!", "Não há resultados!", 2);
+            this.dispose();
+        }
+    }
+
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -134,20 +150,14 @@ public class AnotacoesCadastro extends javax.swing.JInternalFrame {
     private static AnotacoesCadastro instance;
 
     /**
-     * @return instance de AnotacoesCadastro
-     */
-    public static AnotacoesCadastro getInstance(Painel painel) {
-        if (instance == null) {
-            instance = new AnotacoesCadastro();
-        }
-        return instance;
-    }
-
-    /**
      * @return boolean validação
      * @deprecated
      */
     public boolean validar() {
         return (!tfTitulo.getText().equals("")) || (!tfDescricao.getText().equals("")) || (!taAnotacao.getText().equals(""));
+    }
+
+    public br.com.secharpe.view.Anotacoes getCadastroView() {
+        return est;
     }
 }

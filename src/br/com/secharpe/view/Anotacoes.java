@@ -14,33 +14,33 @@ import javax.swing.table.DefaultTableModel;
  * @author luandr<stringigualanull@outlook.com>
  */
 public class Anotacoes extends javax.swing.JInternalFrame {
-
+    
     private final AnotacoesViewActionListener handlerAnotacoes = new AnotacoesViewActionListener(this);
     private Painel painel;
     private ArrayList<JInternalFrame> childs;
     private final String[] columnNames = {"ID", "Título", "Descrição"};
     private DefaultTableModel model = new DefaultTableModel() {
         private static final long serialVersionUID = 1L;
-
+        
         @Override
         public boolean isCellEditable(int row, int column) {
             return false;
         }
     };
-
+    
     public Anotacoes(Painel painel) {
         new br.com.secharpe.util.Log().put("Anotacoes", "Abrindo janela");
         this.painel = painel;
         initComponents();
-        btEditar.addActionListener(handlerAnotacoes);
         btFechar.addActionListener(handlerAnotacoes);
         btNovo.addActionListener(handlerAnotacoes);
         btRemover.addActionListener(handlerAnotacoes);
         btVer.addActionListener(handlerAnotacoes);
+        model.setColumnIdentifiers(columnNames);
         jtAnotacoes.setModel(model);
         jtAnotacoes.setAutoCreateRowSorter(true);
     }
-
+    
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -50,7 +50,6 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         btVer = new javax.swing.JButton();
         btNovo = new javax.swing.JButton();
         btRemover = new javax.swing.JButton();
-        btEditar = new javax.swing.JButton();
         btFechar = new javax.swing.JButton();
 
         setClosable(true);
@@ -76,10 +75,10 @@ public class Anotacoes extends javax.swing.JInternalFrame {
 
         jtAnotacoes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null}
+                {}
             },
             new String [] {
-                "Título 1dsa"
+
             }
         ));
         jScrollPane1.setViewportView(jtAnotacoes);
@@ -89,8 +88,6 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         btNovo.setText(br.com.secharpe.util.Propriedades.getProp("form.new"));
 
         btRemover.setText(br.com.secharpe.util.Propriedades.getProp("form.remove"));
-
-        btEditar.setText(br.com.secharpe.util.Propriedades.getProp("form.edit"));
 
         btFechar.setText(br.com.secharpe.util.Propriedades.getProp("form.close"));
 
@@ -107,14 +104,9 @@ public class Anotacoes extends javax.swing.JInternalFrame {
                 .addGap(18, 18, 18)
                 .addComponent(btRemover, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(btEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
                 .addComponent(btFechar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(52, 52, 52))
+                .addGap(160, 160, 160))
         );
-
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {btEditar, btFechar});
-
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
@@ -123,10 +115,9 @@ public class Anotacoes extends javax.swing.JInternalFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btNovo)
                     .addComponent(btRemover)
-                    .addComponent(btEditar)
                     .addComponent(btFechar)
                     .addComponent(btVer))
-                .addGap(0, 18, Short.MAX_VALUE))
+                .addGap(0, 22, Short.MAX_VALUE))
         );
 
         pack();
@@ -137,7 +128,6 @@ public class Anotacoes extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_formInternalFrameOpened
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btEditar;
     private javax.swing.JButton btFechar;
     private javax.swing.JButton btNovo;
     private javax.swing.JButton btRemover;
@@ -151,7 +141,7 @@ public class Anotacoes extends javax.swing.JInternalFrame {
     public Painel getPainel() {
         return this.painel;
     }
-
+    
     public void refreshTable() {
         model.setRowCount(0);
         AnotacoesDAO anotacoes = new AnotacoesDAO();
@@ -159,22 +149,21 @@ public class Anotacoes extends javax.swing.JInternalFrame {
         System.out.println(listAnotacoes);
         listAnotacoes.forEach((br.com.secharpe.model.Anotacoes ano) -> {
             model.addRow(new Object[]{ano.getCodigo(), ano.getTitulo(), ano.getDescricao()});
-            //System.out.println(ano.getAnotacao());
         });
     }
-
+    
     public JTable getTable() {
         return this.jtAnotacoes;
     }
-
+    
     public void addChild(JInternalFrame cdAno) {
         childs.add(cdAno);
     }
-
+    
     public void childRemove(JInternalFrame cdAno) {
         childs.remove(cdAno);
     }
-
+    
     public void closeChilds() {
         for (JInternalFrame janela : childs) {
             janela.dispose();

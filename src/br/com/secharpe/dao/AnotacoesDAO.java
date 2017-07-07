@@ -174,4 +174,56 @@ public class AnotacoesDAO {
         return lista;
     }
 
+    public br.com.secharpe.model.Anotacoes getAnotacao(int id) {
+        Anotacoes anot = new Anotacoes();
+        java.sql.Connection conn = null;
+        PreparedStatement ps = null;
+        try {
+            conn = Connection.getConnection();
+            String sql = "select id, titulo, descricao, anotacao, data_registro from anotacoes where id=?";
+            ps = conn.prepareStatement(sql);
+            ps.setInt(1, id);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+
+                anot.setCodigo(rs.getInt(1));
+                anot.setTitulo(rs.getString(2));
+                anot.setDescricao(rs.getString(3));
+                anot.setAnotacao(rs.getString(4));
+                anot.setDataRegistro(rs.getDate(5));
+                return anot;
+            }
+        } catch (SQLException e) {
+            System.out.println("ERRO: " + e.getMessage());
+            StringWriter sw = new StringWriter();
+            e.printStackTrace(new PrintWriter(sw));
+            String exceptionAsString = sw.toString();
+            log.put("AnotacoesBanco", "getAll", exceptionAsString);
+        } finally {
+            if (ps != null) {
+                try {
+                    ps.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                    StringWriter sw = new StringWriter();
+                    ex.printStackTrace(new PrintWriter(sw));
+                    String exceptionAsString = sw.toString();
+                    log.put("AnotacoesBanco", "getAll", exceptionAsString);
+                }
+            }
+            if (conn != null) {
+                try {
+                    conn.close();
+                } catch (SQLException ex) {
+                    System.out.println("ERRO: " + ex.getMessage());
+                    StringWriter sw = new StringWriter();
+                    ex.printStackTrace(new PrintWriter(sw));
+                    String exceptionAsString = sw.toString();
+                    log.put("AnotacoesBanco", "getAll", exceptionAsString);
+                }
+            }
+        }
+        return null;
+    }
+
 }

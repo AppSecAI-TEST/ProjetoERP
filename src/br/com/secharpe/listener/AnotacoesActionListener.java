@@ -1,5 +1,7 @@
 package br.com.secharpe.listener;
 
+import br.com.secharpe.dao.AnotacoesDAO;
+import br.com.secharpe.util.MessageCtrl;
 import br.com.secharpe.util.Vars;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -29,9 +31,12 @@ public class AnotacoesActionListener implements ActionListener {
         String action = e.getActionCommand();
         if (action.equals(Vars.PROP_SAVE)) {
             if (!(cadastro.getAnotacoes().getTitulo().trim().equals("") && cadastro.getAnotacoes().getDescricao().trim().equals("") && cadastro.getAnotacoes().getAnotacao().trim().equals(""))) {
-                System.out.println(cadastro.getAnotacoes().toString());
+                AnotacoesDAO ano = new AnotacoesDAO();
+                ano.insert(cadastro.getAnotacoes());
+                cadastro.getCadastroView().refreshTable();
+                cadastro.dispose();
             } else {
-                System.out.println("Insira corretamente as informações!");
+                MessageCtrl.callMessage("Oops!", "Insira corretamente as informações", 2);
             }
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cadastro.dispose();
