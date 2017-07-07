@@ -8,6 +8,7 @@ import br.com.secharpe.view.Painel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
+import javax.swing.JTable;
 
 /* Classe para action listener de Cidades Cadastro
  *
@@ -32,9 +33,14 @@ public class ClienteViewActionListener implements ActionListener {
             ClientesCadastro clienteCadastro = new ClientesCadastro();
             if (VerificaFrame.verificaFrame(clientes.getPainel(), clienteCadastro)) {
                 VerificaFrame.exibirFrame(clientes.getPainel(), clienteCadastro);
+                clientes.addChild(clienteCadastro);
             }
         } else if (action.equals(Vars.PROP_REMOVE)) {
-            JOptionPane.showMessageDialog(null, "W.I.P.");
+             JTable tabela = clientes.getTable();
+           int cod = (int) tabela.getValueAt(tabela.getSelectedRow(), 1);
+            br.com.secharpe.dao.ClienteDAO clDAO = new br.com.secharpe.dao.ClienteDAO();
+            clDAO.delete(cod);
+            clientes.refreshTable();
         } else if (action.equals(Vars.PROP_EDIT)) {
             JOptionPane.showMessageDialog(null, "W.I.P.");
         } else if (action.equals(Vars.PROP_CLOSE)) {

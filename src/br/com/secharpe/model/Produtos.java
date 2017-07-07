@@ -218,4 +218,8 @@ public class Produtos {
         return "Produtos:\n" + "Codigo: " + codigo + ", Nome=" + nome + ", Descri\u00e7\u00e3o=" + descricao + ", EstoqueAtual=" + estoque + ", EstoqueMin=" + estoqueMin + ", Pre\u00e7oCusto=" + custo + ", Pre\u00e7oFinal=" + valorVenda + ", Tipo=" + tipo + ", Fabricante=" + fabricante + ", Unidade=" + unidade + '}';
     }
 
+    public void refreshTable() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }

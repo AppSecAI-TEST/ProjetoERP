@@ -17,6 +17,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
     private final ProdutoCadastroViewActionListener hadlerProdutos = new ProdutoCadastroViewActionListener(this);
     private final Log logimp = new Log();
+    public br.com.secharpe.view.Produtos est = null;
 
     /**
      * Creates new form CadastroProduto
@@ -89,6 +90,9 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
             return null;
         }
         return null;
+    }
+     public br.com.secharpe.view.Produtos getProdutoView() {
+        return this.est;
     }
 
     @SuppressWarnings("unchecked")

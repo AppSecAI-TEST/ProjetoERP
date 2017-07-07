@@ -30,7 +30,7 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
             try {
                 cr = cad.getProduto();
                 ProdutoDAO proddao = new ProdutoDAO();
-                // proddao.delete(cr);
+                proddao.delete(cr.getCodigo());
             } catch (SistemaException ex) {
                 MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
             }
@@ -42,7 +42,8 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
                 ProdutoDAO proddao = new ProdutoDAO();
                 if (cr != null) {
                     System.out.println(cr.toString());
-                    // proddao.insert(cr); 
+                    proddao.insert(cr); 
+                    cad.getProdutoView().refreshTable();
                 }
 
             } catch (SistemaException ex) {

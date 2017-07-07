@@ -30,7 +30,7 @@ public class ClienteCadastroViewActionListener implements ActionListener {
             try {
                 ClienteDAO clientedao = new ClienteDAO();
                 cr = cad.getCliente();
-                // clientedao.delete(cr); 
+                clientedao.delete(cr.getCodigo()); 
             } catch (SistemaException ex) {
                 MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
             }
@@ -43,7 +43,8 @@ public class ClienteCadastroViewActionListener implements ActionListener {
                 cr = cad.getCliente();
                 if (cr != null) {
                     System.out.println(cr.toString());
-                    // clientedao.insert(cr); 
+                    clientedao.insert(cr);
+                    cad.getClienteView().refreshTable();
                 }
 
             } catch (SistemaException ex) {

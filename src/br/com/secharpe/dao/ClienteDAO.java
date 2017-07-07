@@ -19,12 +19,12 @@ public class ClienteDAO {
 
     private Log log = new Log();
 
-    public void delete(Clientes cliente) {
+    public void delete(int cliente) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "delete from clientes where codigo = ?";
+            String sql = "delete from clientes where id = ?";
             ps = conn.prepareStatement(sql);
 
             ps.execute();
@@ -172,7 +172,7 @@ public class ClienteDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereço,numero,complemento from produtos";
+            String sql = "select id,nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereço,numero,complemento from produtos";
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();
@@ -234,7 +234,7 @@ public class ClienteDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select codigo,nome,email,cpf,rg,telefone,celular,estado,cidade,bairro,endereço,numero,complemento from produtos where codigo = ?";
+            String sql = "select id,nome,email,cpf,rg,telefone,celular,estado,cidade,bairro,endereço,numero,complemento from produtos where codigo = ?";
             ps = conn.prepareStatement(sql);
             ps.setInt(1, codigo);
             ResultSet rs = ps.executeQuery();

@@ -17,6 +17,7 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
     private final ClienteCadastroViewActionListener clienteAl = new ClienteCadastroViewActionListener(this);
     private final Log logimp = new Log();
     private Painel painel;
+    public br.com.secharpe.view.Clientes est = null;
 
     public ClientesCadastro() {
         new br.com.secharpe.util.Log().put("ClientesCadastro", "Abrindo janela");
@@ -337,6 +338,10 @@ public class ClientesCadastro extends javax.swing.JInternalFrame {
      */
     public Painel getPainel() {
         return this.painel;
+    }
+
+    public br.com.secharpe.view.Clientes getClienteView() {
+        return this.est;
     }
 
 }
