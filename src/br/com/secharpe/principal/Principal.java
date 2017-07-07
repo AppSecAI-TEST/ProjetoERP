@@ -1,5 +1,7 @@
 package br.com.secharpe.principal;
 
+import br.com.secharpe.dao.ProdutoDAO;
+
 /* Classe Principal
  *
  * @author luandr <stringigualanull@outlook.com>

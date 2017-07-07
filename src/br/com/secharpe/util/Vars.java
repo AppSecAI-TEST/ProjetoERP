@@ -9,7 +9,8 @@ import java.io.File;
 public final class Vars {
 
     //LANG
-    public static final String[] LANG_LIST = {"br", "us", "es", "config"};
+    public static final String[] LANG_LIST = {"br", "us", "es"};
+    public static final String[] LANG_LIST_FULLNAME = {"Português", "English", "Español"};
     public static String LANG_DEFAULT = br.com.secharpe.util.Propriedades.getLang();
 
     //PROP

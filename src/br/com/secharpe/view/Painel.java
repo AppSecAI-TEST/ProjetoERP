@@ -70,59 +70,59 @@ public class Painel extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         arquivoMenu.setMnemonic('f');
-        arquivoMenu.setText("Arquivo");
+        arquivoMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.file"));
 
-        langMenu.setText("Linguagem");
+        langMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.file.lang"));
         arquivoMenu.add(langMenu);
 
         sairMenuItem.setMnemonic('o');
-        sairMenuItem.setText("Sair");
+        sairMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.file.exit"));
         arquivoMenu.add(sairMenuItem);
 
         menuBar.add(arquivoMenu);
 
         cadastroMenu.setMnemonic('e');
-        cadastroMenu.setText("Cadastros");
+        cadastroMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.register"));
 
-        clientesMenuItem.setText("Clientes");
+        clientesMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.register.costumer"));
         cadastroMenu.add(clientesMenuItem);
 
-        produtosMenuItem.setText("Produtos");
+        produtosMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.register.products"));
         cadastroMenu.add(produtosMenuItem);
 
         menuBar.add(cadastroMenu);
 
-        adicionaisMenu.setText("Adicionais");
+        adicionaisMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.extra"));
 
         unidadesMenuItem.setMnemonic('t');
-        unidadesMenuItem.setText("Unidades");
+        unidadesMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.extra.unitmeasurement"));
         adicionaisMenu.add(unidadesMenuItem);
 
         cidadesMenuItem.setMnemonic('y');
-        cidadesMenuItem.setText("Cidades");
+        cidadesMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.extra.city"));
         adicionaisMenu.add(cidadesMenuItem);
 
         estadosMenuItem.setMnemonic('p');
-        estadosMenuItem.setText("Estados");
+        estadosMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.extra.state"));
         adicionaisMenu.add(estadosMenuItem);
 
         empresaMenuItem.setMnemonic('d');
-        empresaMenuItem.setText("Empresa");
+        empresaMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.extra.company"));
         adicionaisMenu.add(empresaMenuItem);
 
         menuBar.add(adicionaisMenu);
 
-        utilitariosMenu.setText("Utilitários");
+        utilitariosMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.miscellaneous"));
 
-        anotacoesMenuItem.setText("Anotações");
+        anotacoesMenuItem.setText(br.com.secharpe.util.Propriedades.getProp("menu.miscellaneous.notes"));
         utilitariosMenu.add(anotacoesMenuItem);
 
         menuBar.add(utilitariosMenu);
 
         sobreMenu.setMnemonic('h');
-        sobreMenu.setText("Sobre");
+        sobreMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.about"));
 
-        infoMenu.setText("Informação");
+        infoMenu.setText(br.com.secharpe.util.Propriedades.getProp("menu.about.info"));
         sobreMenu.add(infoMenu);
 
         menuBar.add(sobreMenu);

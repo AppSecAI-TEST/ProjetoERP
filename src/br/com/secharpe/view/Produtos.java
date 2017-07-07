@@ -19,7 +19,7 @@ public class Produtos extends javax.swing.JInternalFrame {
     private final ProdutoViewActionListener handlerProdutos = new ProdutoViewActionListener(this);
     private Painel painel;
     private ArrayList<JInternalFrame> childs;
-    private String[] columnNames = {"Codigo","Nome","Descrição","Preço Custo","Preço Final","Fabricante","Unidade","Tipo","Estoque Min","Estoque Atual"};
+    private String[] columnNames = {"Codigo", "Nome", "Descrição", "Custo", "Venda", "Fabricante", "Unidade", "Tipo", "Estoque", "Estoque Min"};
     private DefaultTableModel model = new DefaultTableModel() {
         @Override
         public boolean isCellEditable(int row, int column) {
@@ -35,13 +35,16 @@ public class Produtos extends javax.swing.JInternalFrame {
     public Produtos(Painel painel) {
         new br.com.secharpe.util.Log().put("Produtos", "Abrindo janela");
         this.painel = painel;
+        childs = new ArrayList<>();
         initComponents();
         btNovo.addActionListener(handlerProdutos);
         btEditar.addActionListener(handlerProdutos);
         btFechar.addActionListener(handlerProdutos);
         btRemover.addActionListener(handlerProdutos);
+        model.setColumnIdentifiers(columnNames);
         jtProdutos.setModel(model);
-        
+        jtProdutos.setSelectionMode(0);
+        refreshTable();
     }
 
     @SuppressWarnings("unchecked")
@@ -58,6 +61,11 @@ public class Produtos extends javax.swing.JInternalFrame {
         setClosable(true);
         setIconifiable(true);
         setTitle("Produtos");
+        addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                formFocusGained(evt);
+            }
+        });
         addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
             }
@@ -89,24 +97,9 @@ public class Produtos extends javax.swing.JInternalFrame {
 
             },
             new String [] {
-                "Codigo", "Nome", "Descrição", "Preço Custo", "Preço Final", "Fabricante", "Unidade", "Tipo", "Estq. Min", "Estq. Atual"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Integer.class, java.lang.String.class, java.lang.String.class, java.lang.Double.class, java.lang.Double.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Integer.class, java.lang.Integer.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false, false, false
-            };
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
             }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
+        ));
         jScrollPane1.setViewportView(jtProdutos);
         if (jtProdutos.getColumnModel().getColumnCount() > 0) {
             jtProdutos.getColumnModel().getColumn(0).setPreferredWidth(20);
@@ -149,8 +142,12 @@ public class Produtos extends javax.swing.JInternalFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_formInternalFrameOpened
-       refreshTable();
+        refreshTable();
     }//GEN-LAST:event_formInternalFrameOpened
+
+    private void formFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_formFocusGained
+        refreshTable();
+    }//GEN-LAST:event_formFocusGained
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -167,13 +164,13 @@ public class Produtos extends javax.swing.JInternalFrame {
     public Painel getPainel() {
         return this.painel;
     }
-    
+
     public void refreshTable() {
         model.setRowCount(0);
-        ProdutoDAO estado = new ProdutoDAO();
-        List<br.com.secharpe.model.Produtos> listProdutos = estado.getAll();
+        ProdutoDAO produto = new ProdutoDAO();
+        List<br.com.secharpe.model.Produtos> listProdutos = produto.getAll();
         for (br.com.secharpe.model.Produtos est : listProdutos) {
-            model.addRow(new Object[]{est.getCodigo(),est.getNome(),est.getDescrição(),est.getPreçoCusto(),est.getPreçoFinal(),est.getFabricante(),est.getUnidade(),est.getEstoqueMin(),est.getEstoqueAtual()});
+            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getDescricao(), est.getCusto(), est.getValorVenda(), est.getFabricante(), est.getUnidade().getSigla(), est.getEstoque(), est.getEstoqueMin(),});
         }
     }
 
@@ -195,5 +192,3 @@ public class Produtos extends javax.swing.JInternalFrame {
         return this.jtProdutos;
     }
 }
-
-

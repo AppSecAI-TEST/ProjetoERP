@@ -42,8 +42,8 @@ public class Unidades extends javax.swing.JInternalFrame {
         btRemover.addActionListener(handlerUnidades);
         btEditar.addActionListener(handlerUnidades);
         model.setColumnIdentifiers(columnNames);
-        jtUnidades.setSelectionMode(0);
         jtUnidades.setModel(model);
+        jtUnidades.setSelectionMode(0);
 
     }
 

@@ -45,6 +45,7 @@ public class Cidades extends javax.swing.JInternalFrame {
         model.setColumnIdentifiers(columnNames);
         jtCidades.setModel(model);
         jtCidades.setAutoCreateRowSorter(true);
+        jtCidades.setSelectionMode(0);
     }
 
     @SuppressWarnings("unchecked")

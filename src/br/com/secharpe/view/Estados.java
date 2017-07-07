@@ -38,6 +38,7 @@ public class Estados extends javax.swing.JInternalFrame {
         btRemover.addActionListener(handlerEstados);
         model.setColumnIdentifiers(columnNames);
         jtEstados.setModel(model);
+        jtEstados.setSelectionMode(0);
     }
 
     @SuppressWarnings("unchecked")

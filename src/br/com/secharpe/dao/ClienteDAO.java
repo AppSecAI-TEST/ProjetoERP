@@ -172,7 +172,7 @@ public class ClienteDAO {
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "select id,nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereço,numero,complemento from produtos";
+            String sql = "select id,nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereco,numero,complemento from clientes";//mds cara para de usar caractere especial que merda
             ps = conn.prepareStatement(sql);
 
             ResultSet rs = ps.executeQuery();

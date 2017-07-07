@@ -7,18 +7,24 @@
         <Menu class="javax.swing.JMenu" name="arquivoMenu">
           <Properties>
             <Property name="mnemonic" type="int" value="102"/>
-            <Property name="text" type="java.lang.String" value="Arquivo"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.file&quot;)" type="code"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="langMenu">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Linguagem"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.file.lang&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="sairMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="111"/>
-                <Property name="text" type="java.lang.String" value="Sair"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.file.exit&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -26,60 +32,80 @@
         <Menu class="javax.swing.JMenu" name="cadastroMenu">
           <Properties>
             <Property name="mnemonic" type="int" value="101"/>
-            <Property name="text" type="java.lang.String" value="Cadastros"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.register&quot;)" type="code"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="clientesMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Clientes"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.register.costumer&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="produtosMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Produtos"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.register.products&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="adicionaisMenu">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Adicionais"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.extra&quot;)" type="code"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="unidadesMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="116"/>
-                <Property name="text" type="java.lang.String" value="Unidades"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.extra.unitmeasurement&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="cidadesMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="121"/>
-                <Property name="text" type="java.lang.String" value="Cidades"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.extra.city&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="estadosMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="112"/>
-                <Property name="text" type="java.lang.String" value="Estados"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.extra.state&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="empresaMenuItem">
               <Properties>
                 <Property name="mnemonic" type="int" value="100"/>
-                <Property name="text" type="java.lang.String" value="Empresa"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.extra.company&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
           </SubComponents>
         </Menu>
         <Menu class="javax.swing.JMenu" name="utilitariosMenu">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Utilit&#xe1;rios"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.miscellaneous&quot;)" type="code"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="anotacoesMenuItem">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Anota&#xe7;&#xf5;es"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.miscellaneous.notes&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
           </SubComponents>
@@ -87,12 +113,16 @@
         <Menu class="javax.swing.JMenu" name="sobreMenu">
           <Properties>
             <Property name="mnemonic" type="int" value="104"/>
-            <Property name="text" type="java.lang.String" value="Sobre"/>
+            <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+              <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.about&quot;)" type="code"/>
+            </Property>
           </Properties>
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="infoMenu">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Informa&#xe7;&#xe3;o"/>
+                <Property name="text" type="java.lang.String" editor="org.netbeans.modules.form.RADConnectionPropertyEditor">
+                  <Connection code="br.com.secharpe.util.Propriedades.getProp(&quot;menu.about.info&quot;)" type="code"/>
+                </Property>
               </Properties>
             </MenuItem>
           </SubComponents>

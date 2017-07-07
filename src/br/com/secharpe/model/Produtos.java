@@ -36,43 +36,12 @@ public class Produtos {
 
     /**
      *
-     * @return descrição
-     */
-    public String getDescrição() {
-        return descricao;
-    }
-
-    /**
-     *
-     * @return estoque
-     */
-    public int getEstoqueAtual() {
-        return estoque;
-    }
-
-    /**
-     *
      * @return estoque mínimo
      */
     public int getEstoqueMin() {
         return estoqueMin;
     }
 
-    /**
-     *
-     * @return valor de custo
-     */
-    public float getPreçoCusto() {
-        return custo;
-    }
-
-    /**
-     *
-     * @return valor de venda
-     */
-    public float getPreçoFinal() {
-        return valorVenda;
-    }
 
     /**
      *

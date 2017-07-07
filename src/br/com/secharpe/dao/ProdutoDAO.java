@@ -20,7 +20,6 @@ import java.io.StringWriter;
 public class ProdutoDAO {
 
     private Log log = new Log();
-    
 
     public void delete(int id) {
         java.sql.Connection conn = null;
@@ -74,25 +73,21 @@ public class ProdutoDAO {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         Date data = new java.sql.Date(new java.util.Date().getTime());
-        String User = new br.com.secharpe.util.Util().lerArquivo();
-
 
         try {
             conn = Connection.getConnection();
-            String sql = "insert into produtos (id,nome,descricao,estoque,estoque_min,tipo,fabricante,id_unidade,preco_custo,preco_final,data_registro,add_by) values(?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into produtos (nome,descricao,estoque,estoque_min,tipo,fabricante,id_unidade,preco_custo,preco_final,data_registro) values(?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
-            ps.setInt(1, produto.getCodigo());
-            ps.setString(2, produto.getNome());
-            ps.setString(3, produto.getDescrição());
-            ps.setInt(4, produto.getEstoqueAtual());
-            ps.setInt(5, produto.getEstoqueMin());
-            ps.setFloat(9, produto.getPreçoCusto());
-            ps.setFloat(10, produto.getPreçoFinal());
-            ps.setString(6, produto.getTipo());
-            ps.setString(7, produto.getFabricante());
-            ps.setInt(8, produto.getUnidade().getCodigo());
-            ps.setDate(11, data);
-            ps.setString(12, User);
+            ps.setString(1, produto.getNome());
+            ps.setString(2, produto.getDescricao());
+            ps.setInt(3, produto.getEstoque());
+            ps.setInt(4, produto.getEstoqueMin());
+            ps.setString(5, produto.getTipo());
+            ps.setString(6, produto.getFabricante());
+            ps.setInt(7, produto.getUnidade().getCodigo());
+            ps.setFloat(8, produto.getCusto());
+            ps.setFloat(9, produto.getValorVenda());
+            ps.setDate(10, data);
 
             ps.execute();
 

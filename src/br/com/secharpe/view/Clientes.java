@@ -20,7 +20,7 @@ public class Clientes extends javax.swing.JInternalFrame {
     private final ClienteViewActionListener handlerClientes = new ClienteViewActionListener(this);
     private Painel painel;
     private ArrayList<JInternalFrame> childs;
-    private String[] columnNames = {"Codigo","Nome","CPF","RG","Estado","Cidade","Bairro","Telefone","Celular","Email"};
+    private String[] columnNames = {"Codigo", "Nome", "CPF", "RG", "Estado", "Cidade", "Bairro", "Telefone", "Celular", "Email"};
     private DefaultTableModel model = new DefaultTableModel() {
         @Override
         public boolean isCellEditable(int row, int column) {
@@ -34,10 +34,11 @@ public class Clientes extends javax.swing.JInternalFrame {
     public Clientes(Painel painel) {
         new br.com.secharpe.util.Log().put("Clientes", "Abrindo janela");
         this.painel = painel;
+        childs = new ArrayList<>();
         initComponents();
         btSalvar.addActionListener(handlerClientes);
         btFechar.addActionListener(handlerClientes);
-         jtClientes.setModel(model);
+        jtClientes.setModel(model);
     }
 
     @SuppressWarnings("unchecked")
@@ -161,12 +162,13 @@ public class Clientes extends javax.swing.JInternalFrame {
     public Painel getPainel() {
         return this.painel;
     }
+
     public void refreshTable() {
         model.setRowCount(0);
         ClienteDAO estado = new ClienteDAO();
         List<br.com.secharpe.model.Clientes> listClientes = estado.getAll();
         for (br.com.secharpe.model.Clientes est : listClientes) {
-            model.addRow(new Object[]{est.getCodigo(),est.getNome(),est.getCPF(),est.getRG(),est.getEstado(),est.getCidade(),est.getBairro(),est.getTelefone(),est.getCelular(),est.getEmail()});
+            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getCPF(), est.getRG(), est.getEstado(), est.getCidade(), est.getBairro(), est.getTelefone(), est.getCelular(), est.getEmail()});
         }
     }
 
@@ -188,5 +190,3 @@ public class Clientes extends javax.swing.JInternalFrame {
         return this.jtClientes;
     }
 }
-
-
