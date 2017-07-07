@@ -65,7 +65,7 @@ public class ClienteDAO {
         Date data = new java.sql.Date(new java.util.Date().getTime());
         try {
             conn = Connection.getConnection();
-            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereco,numero,complemento,data_cadastro) values(?,?,?,?,?,?,?,?,?,?,?,?,?)";
+            String sql = "insert into clientes (nome,email,cpf,rg,telefone,celular,id_cidade,bairro,endereco,numero,complemento,data_cadastro) values(?,?,?,?,?,?,?,?,?,?,?,?)";
             ps = conn.prepareStatement(sql);
 
             ps.setString(1, cliente.getNome());
@@ -75,11 +75,11 @@ public class ClienteDAO {
             ps.setInt(5, cliente.getTelefone());
             ps.setInt(6, cliente.getCelular());
             ps.setInt(7, cliente.getCidade().getCodigo());
-            ps.setString(9, cliente.getBairro());
-            ps.setString(10, cliente.getEndereco());
-            ps.setInt(11, cliente.getNumero());
-            ps.setString(12, cliente.getComplemento());
-            ps.setDate(13, data);
+            ps.setString(8, cliente.getBairro());
+            ps.setString(9, cliente.getEndereco());
+            ps.setInt(10, cliente.getNumero());
+            ps.setString(11, cliente.getComplemento());
+            ps.setDate(12, data);
 
             ps.execute();
 

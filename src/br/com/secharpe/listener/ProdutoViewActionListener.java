@@ -55,6 +55,7 @@ public class ProdutoViewActionListener implements ActionListener {
             p.setUnidade(new UnidadeDAO().getUnidade((String) tabela.getValueAt(tabela.getSelectedRow(), 6)));
             p.setTipo((String) tabela.getValueAt(tabela.getSelectedRow(), 7).toString());
             p.setEstoque((int) tabela.getValueAt(tabela.getSelectedRow(), 8));
+            
             int temp = 0;
             if (tabela.getValueAt(tabela.getSelectedRow(), 8) != null) {
                 temp = (int) tabela.getValueAt(tabela.getSelectedRow(), 8);

@@ -170,7 +170,7 @@ public class Produtos extends javax.swing.JInternalFrame {
         ProdutoDAO produto = new ProdutoDAO();
         List<br.com.secharpe.model.Produtos> listProdutos = produto.getAll();
         for (br.com.secharpe.model.Produtos est : listProdutos) {
-            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getDescricao(), est.getCusto(), est.getValorVenda(), est.getFabricante(), est.getUnidade().getSigla(), est.getEstoque(), est.getEstoqueMin(),});
+            model.addRow(new Object[]{est.getCodigo(), est.getNome(), est.getDescricao(), est.getCusto(), est.getValorVenda(), est.getFabricante(), est.getUnidade().getSigla(), est.getEstoque(), est.getEstoqueMin()});
         }
     }
 

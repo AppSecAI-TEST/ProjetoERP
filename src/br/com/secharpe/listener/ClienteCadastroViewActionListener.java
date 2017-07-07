@@ -35,6 +35,7 @@ public class ClienteCadastroViewActionListener implements ActionListener {
                 MessageCtrl.callMessage(ex.getMessage(), Vars.TITLE_MESSAGE_DEFAULT, 8);
             }
         } else if (action.equals(Vars.PROP_NEW)) {
+            
 
         } else if (action.equals(Vars.PROP_SAVE)) {
             Clientes cr = new Clientes();
