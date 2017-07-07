@@ -25,8 +25,9 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
     private final ProdutoCadastroViewActionListener hadlerProdutos = new ProdutoCadastroViewActionListener(this);
     private final Log logimp = new Log();
     public br.com.secharpe.view.Produtos est = null;
-    UnidadeDAO daouni = new UnidadeDAO();
-    ArrayList<br.com.secharpe.model.Unidades> uniList = daouni.getAll();
+    private UnidadeDAO daouni = new UnidadeDAO();
+    private ArrayList<br.com.secharpe.model.Unidades> uniList = daouni.getAll();
+    private Produtos produto;
 
     /**
      * Creates new form CadastroProduto
@@ -37,6 +38,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
 
     public ProdutosCadastro(br.com.secharpe.view.Produtos produtos, Produtos p) {
         init(produtos);
+        this.produto = p;
         pDescricao.setText(p.getDescricao());
         pEstoqueAtual.setText(String.valueOf(p.getEstoque()));
         pEstoqueMinimo.setText(String.valueOf(p.getEstoque()));
@@ -46,6 +48,7 @@ public class ProdutosCadastro extends javax.swing.JInternalFrame {
         pPrecoVenda.setText(String.valueOf(p.getValorVenda()));
         pTipo.setSelectedItem(p.getTipo());
         pUnidade.setSelectedItem(p.getUnidade().getNome());
+        pSalvar.setActionCommand("edit");
     }
 
     private void init(br.com.secharpe.view.Produtos produtos) {

@@ -129,15 +129,25 @@ public class ProdutoDAO {
         }
     }
 
-    public void update(Produtos produto) {
+    public void update(Produtos p) {
         java.sql.Connection conn = null;
         PreparedStatement ps = null;
         try {
             conn = Connection.getConnection();
-            String sql = "update produtos set descricao = ? where codigo = ?";
+            String sql = "update produtos set nome=?,descricao=?,estoque=?,estoque_min=?,tipo=?,fabricante=?,id_unidade=?,preco_custo=?,preco_final=?,data_registro=now() where id=?";
             ps = conn.prepareStatement(sql);
+            ps.setString(1, p.getNome());
+            ps.setString(2, p.getDescricao());
+            ps.setInt(3, p.getEstoque());
+            ps.setInt(4, p.getEstoqueMin());
+            ps.setString(5, p.getTipo());
+            ps.setString(6, p.getFabricante());
+            ps.setInt(7, p.getUnidade().getCodigo());
+            ps.setFloat(8, p.getCusto());
+            ps.setFloat(9, p.getValorVenda());
+            ps.setInt(10, p.getCodigo());
 
-            ps.setInt(2, produto.getCodigo());
+            ps.setInt(2, p.getCodigo());
             ps.execute();
 
             conn.commit();

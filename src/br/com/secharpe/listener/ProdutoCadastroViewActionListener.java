@@ -42,7 +42,7 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
                 ProdutoDAO proddao = new ProdutoDAO();
                 if (cr != null) {
                     System.out.println(cr.toString());
-                    proddao.insert(cr); 
+                    proddao.insert(cr);
                     cad.getProdutoView().refreshTable();
                 }
 
@@ -52,6 +52,15 @@ public class ProdutoCadastroViewActionListener implements ActionListener {
 
         } else if (action.equals(Vars.PROP_CLOSE)) {
             cad.dispose();
+        } else {
+            ProdutoDAO proddao = new ProdutoDAO();
+            try {
+                proddao.update(cad.getProduto());
+            } catch (NullPointerException ex) {
+                MessageCtrl.callMessage("Ooops!", "Contate o admin", 2);
+            } catch (SistemaException ex) {
+                MessageCtrl.callMessage("Ooops!", "Contate o admin", 2);
+            }
         }
 
     }
